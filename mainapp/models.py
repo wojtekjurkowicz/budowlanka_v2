@@ -13,6 +13,7 @@ class Appointment(models.Model):
 
 class Message(models.Model):
     """A message class"""
+    appointment = models.ForeignKey(Appointment, on_delete=models.CASCADE)
     content = models.CharField(max_length=160)
     date = models.DateTimeField(auto_now_add=True)
 
@@ -36,6 +37,7 @@ class Realization(models.Model):
 
 class Comments(models.Model):
     """A comments class"""
+    realization = models.ForeignKey(Realization, on_delete=models.CASCADE)
     content = models.CharField(max_length=200)
     date = models.DateTimeField(auto_now_add=True)
 

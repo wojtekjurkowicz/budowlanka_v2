@@ -1,0 +1,15 @@
+{% extends 'mainapp/base.html' %}
+
+{% block content %}
+    
+    <p>Aktualności</p>
+    <ul>
+        {% for entry in entries %}
+            <li>{{ entry.title }}
+            {{ entry.content }}</li>
+        {% empty %}
+            Nic tu jeszcze nie ma :D    
+        {% endfor %}
+    </ul>
+    
+{% endblock content %}

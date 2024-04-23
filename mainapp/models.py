@@ -46,8 +46,9 @@ class Comments(models.Model):
         return self.content
 
 
+"""
 class User(models.Model):
-    """A user class"""
+    # A user class
     nick = models.CharField(max_length=30)
     name = models.CharField(max_length=30)
     surname = models.CharField(max_length=40)
@@ -56,6 +57,6 @@ class User(models.Model):
     phone_number = models.CharField(max_length=15)
 
     def __str__(self):
-        """Return a string representation"""
+        # Return a string representation
         return self.nick
-
+"""

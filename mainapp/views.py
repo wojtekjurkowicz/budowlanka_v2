@@ -9,9 +9,9 @@ def index(request):
 
 def blog(request):
     """Show all entries"""
-    entries = Realization.objects.order_by('date')
-    context = {'topics': entries}
-    return render(request, 'mainapp/blog.html', context)
+    entries = Realization.objects.all()
+    context = {'entries': entries}
+    return render(request, 'mainapp/blog.html', context=context)
 
 
 # def entry(request, entry_id):

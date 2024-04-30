@@ -5,8 +5,8 @@
     <p>Aktualności</p>
     <ul>
         {% for entry in entries %}
-            <li>{{ entry.title }}
-            {{ entry.content }}</li>
+            <li>{{ entry.title }}</li>
+            {{ entry.content }} <br><br>
         {% empty %}
             Nic tu jeszcze nie ma :D    
         {% endfor %}

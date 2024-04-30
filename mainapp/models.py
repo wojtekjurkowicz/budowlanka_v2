@@ -1,25 +1,26 @@
 from django.db import models
 
-
+"""
 class Appointment(models.Model):
-    """An appointment class"""
+    # An appointment class
     description = models.CharField(max_length=500)
     date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        """Return a string representation"""
+        # Return a string representation
         return self.description
 
 
 class Message(models.Model):
-    """A message class"""
+    # A message class
     appointment = models.ForeignKey(Appointment, on_delete=models.CASCADE)
     content = models.CharField(max_length=160)
     date = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        """Return a string representation"""
+        # Return a string representation
         return self.content
+"""
 
 
 class Realization(models.Model):

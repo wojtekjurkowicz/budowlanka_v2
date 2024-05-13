@@ -1,0 +1,8 @@
+{% extends 'mainapp/base.html' %}
+
+{% block content %}
+    
+    <h1>{{ entry.title }}</h1>
+    <p>{{ entry.content|linebreaks }}</p>
+     
+{% endblock content %}

@@ -2,16 +2,16 @@
 
 {% block content %}
     
-    <p>Aktualności</p>
+    <p>Umów wizytę</p>
+    
     <ul>
-        {% for entry in entries %}
+        {% for appointment in appointments %}
             <li>
-                <p><a href="/blog/{{ entry.id }}">{{ entry.title }}</a> </p>
-                <p>{{ entry.content|linebreaks }}</p>
+                <p>{{ appointment.description }}</p>
             </li>
         {% empty %}
             Nic tu jeszcze nie ma :D    
         {% endfor %}
     </ul>
-    
+     
 {% endblock content %}

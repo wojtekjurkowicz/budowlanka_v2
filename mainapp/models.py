@@ -1,6 +1,6 @@
 from django.db import models
 
-"""
+
 class Appointment(models.Model):
     # An appointment class
     description = models.CharField(max_length=500)
@@ -20,7 +20,7 @@ class Message(models.Model):
     def __str__(self):
         # Return a string representation
         return self.content
-"""
+
 
 
 class Realization(models.Model):
@@ -29,11 +29,11 @@ class Realization(models.Model):
     content = models.CharField(max_length=500)
     date = models.DateTimeField(auto_now_add=True)
     # Path to file
-    image = models.CharField(max_length=50)
+    # image = models.CharField(max_length=50)
 
     def __str__(self):
         """Return a string representation"""
-        return self.content
+        return f"{self.content[:10]}..."
 
 
 class Comments(models.Model):

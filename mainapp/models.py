@@ -48,7 +48,7 @@ class Comment(models.Model):
     realization = models.ForeignKey(Realization, on_delete=models.CASCADE)
     author = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
     content = models.CharField(max_length=200)
-    date = models.DateTimeField(auto_now_add=True)
+    date = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
         """Return a string representation"""

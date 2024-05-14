@@ -17,9 +17,9 @@ class Appointment(models.Model):
 
 class Message(models.Model):
     # A message class
-    appointment = models.ForeignKey(Appointment, on_delete=models.CASCADE)
-    content = models.CharField(max_length=160)
-    date = models.DateTimeField(auto_now_add=True)
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    content = models.CharField(max_length=160, verbose_name="Treść")
+    date = models.DateTimeField(default=timezone.now, verbose_name="Data")
 
     def __str__(self):
         # Return a string representation
@@ -46,7 +46,7 @@ class Realization(models.Model):
 class Comment(models.Model):
     """A comments class"""
     realization = models.ForeignKey(Realization, on_delete=models.CASCADE)
-    author = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
     content = models.CharField(max_length=200)
     date = models.DateTimeField(default=timezone.now)
 

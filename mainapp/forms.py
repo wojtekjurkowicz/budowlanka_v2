@@ -1,6 +1,6 @@
 from django import forms
 
-from .models import Appointment, Comment
+from .models import Appointment, Comment, Message
 
 
 class AppointmentForm(forms.ModelForm):
@@ -12,4 +12,10 @@ class AppointmentForm(forms.ModelForm):
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
-        fields = ['author', 'content', 'date']
+        fields = ['content', 'date']
+
+
+class MessageForm(forms.ModelForm):
+    class Meta:
+        model = Message
+        fields = ['content']

@@ -5,17 +5,22 @@
     <h1>{{ entry.title }}</h1>
     <p>{{ entry.content|linebreaks }}</p>
     <p>Dodano: {{ entry.date }}</p>
-    <form action="{% url '/blog/{{ entry.id }}' method="post">
+    <form action="{% url 'mainapp:detail' entry.id %}" method="post">
         {% csrf_token %}
-        {{ form.as_div }}
-        <button name="submit">Dodaj komentarz</button>
+        {{ comment_form.as_p }}
+        <button name="submit">Dodaj</button>
     </form>
+    
     <ul>
-        {% for comment in entry_id.comments %}
-            <p>{{ comment.content }}</p>
+        {% for comment in comments %}
+            <li>
+                <p>{{ comment.author }}</p>
+                <p>{{ comment.content }}</p>
+                <p>{{ comment.date }}</p>
+            </li>
         {% empty %}
-            Brak komentarzy, napisz pierwszy!   
+            Brak komentarzy, napisz pierwszy!
         {% endfor %}
     </ul>
-     
+
 {% endblock content %}

@@ -8,6 +8,7 @@
             <li>
                 <p><a href="/blog/{{ entry.id }}">{{ entry.title }}</a> </p>
                 <p>{{ entry.content|linebreaks }}</p>
+                <p>Dodano: {{ entry.date }}</p>
             </li>
         {% empty %}
             Nic tu jeszcze nie ma :D    

@@ -1,7 +1,9 @@
 from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib.auth.decorators import login_required
 
-from .models import Realization, Appointment
+from .models import Realization, Appointment, Comment
 from .forms import AppointmentForm
+
 
 def index(request):
     """The home page for Budowlanka"""
@@ -18,7 +20,8 @@ def blog(request):
 def detail(request, entry_id):
     # show entry and its comments
     entry = get_object_or_404(Realization, pk=entry_id)
-    context = {'entry': entry, 'content': entry.content}
+    comments = Comment.objects.all()
+    context = {'entry': entry, 'comments': comments}
     return render(request, 'mainapp/detail.html', context)
 
 
@@ -41,3 +44,4 @@ def appointment(request):
 def contact(request):
     """Contact page"""
     return render(request, 'mainapp/contact.html')
+

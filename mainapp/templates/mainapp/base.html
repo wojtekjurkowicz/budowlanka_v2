@@ -2,7 +2,12 @@
     <a href="{% url 'budowlanka_project:index' %}">Strona główna</a> ---
     <a href="{% url 'budowlanka_project:blog' %}">Aktualności</a> ---
     <a href="{% url 'budowlanka_project:appointment' %}">Umów wizytę</a> ---
-    <a href="{% url 'budowlanka_project:contact' %}">Kontakt</a>
+    <a href="{% url 'budowlanka_project:contact' %}">Kontakt</a> ---
+    {% if user.is_authenticated %}
+        Witaj, {{ user.username }}.
+    {% else %}
+        <a href="{% url 'accounts:login' %}">Zaloguj się</a>
+    {% endif %}
 </p>
 
 {% block content %}{% endblock content %}

@@ -1,7 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 
 from .models import Realization, Appointment
-
+from .forms import AppointmentForm
 
 def index(request):
     """The home page for Budowlanka"""
@@ -23,9 +23,18 @@ def detail(request, entry_id):
 
 
 def appointment(request):
-    """Home page for appointments"""
-    appointments = Appointment.objects.all()
-    context = {'appointments': appointments}
+    """Try to reserve an appointment"""
+    if request.method != 'POST':
+        # No data submitted
+        form = AppointmentForm()
+    else:
+        # POST data submitted
+        form = AppointmentForm(data=request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('budowlanka_project:appointment')
+
+    context = {'form': form}
     return render(request, 'mainapp/appointment.html', context)
 
 

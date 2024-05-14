@@ -4,14 +4,10 @@
     
     <p>Umów wizytę</p>
     
-    <ul>
-        {% for appointment in appointments %}
-            <li>
-                <p>{{ appointment.description }}</p>
-            </li>
-        {% empty %}
-            Nic tu jeszcze nie ma :D    
-        {% endfor %}
-    </ul>
+    <form action="{% url 'budowlanka_project:appointment' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_div }}
+        <button name="Rezerwuj">Rezerwuj</button>
+    </form>
      
 {% endblock content %}

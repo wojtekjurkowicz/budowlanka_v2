@@ -1,0 +1,16 @@
+{% extends 'mainapp/base.html' %}
+
+{% block content %}
+
+    {% if form.errors %}
+        <p>Twoja nazwa użytkownika lub hasło są niepoprawne. Spróbuj jeszcze raz.</p>
+    {% endif %}
+
+    <form action="{% url 'accounts:login' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_div }}
+
+        <button name="zaloguj">Zaloguj się</button>
+    </form>
+
+{% endblock content %}

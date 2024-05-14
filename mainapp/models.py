@@ -1,10 +1,11 @@
 from django.db import models
+from django.utils import timezone
 
 
 class Appointment(models.Model):
     # An appointment class
-    description = models.CharField(max_length=500)
-    date = models.DateTimeField(auto_now_add=True)
+    description = models.CharField(max_length=500, verbose_name="Opis projektu")
+    date = models.DateTimeField(default=timezone.now, verbose_name="Data")
 
     def __str__(self):
         # Return a string representation

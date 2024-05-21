@@ -20,7 +20,7 @@ class MessageModelTest(TestCase):
 class RealizationModelTest(TestCase):
     def test_str_representation(self):
         realization = Realization(title="Test", content="Test Realization", date="2024-05-21")
-        self.assertEqual(str(realization), "Test Realization")
+        self.assertEqual(str(realization), "Test Realization...")
 
 
 class CommentModelTest(TestCase):
@@ -36,8 +36,13 @@ class AppointmentFormTest(TestCase):
 
 
 class MessageFormTest(TestCase):
+    def setUp(self):
+        self.user = User.objects.create_user(username='testuser', password='password')
+
     def test_valid_form(self):
-        form = MessageForm(data={'description': 'Test Description'})
+        form = MessageForm(data={'content': 'Test Message'})
+        message = form.save(commit=False)
+        message.author = self.user
         self.assertTrue(form.is_valid())
 
 
@@ -51,7 +56,6 @@ class TestViews(TestCase):
     def setUp(self):
         self.client = Client()
         self.list_url = reverse('mainapp:blog')
-        self.detail_url = reverse('mainapp:detail', args=[1])
         self.message_url = reverse('mainapp:message')
         self.appointment_url = reverse('mainapp:appointment')
         self.contact_url = reverse('mainapp:contact')
@@ -61,7 +65,7 @@ class TestViews(TestCase):
 
         # Create a test realization and comment
         self.realization = Realization.objects.create(title="Test Title", content="Test Content")
-        self.comment = Comment.objects.create(realization=self.realization, author=self.user, content="Test Comment")
+        self.detail_url = reverse('mainapp:detail', args=[self.realization.id])
 
     def test_blog_view(self):
         response = self.client.get(self.list_url)
@@ -69,31 +73,28 @@ class TestViews(TestCase):
         self.assertTemplateUsed(response, 'mainapp/blog.html')
 
     def test_detail_view(self):
+        self.client.login(username='testuser', password='password')
         response = self.client.get(self.detail_url)
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'mainapp/detail.html')
 
     def test_message_view_get(self):
-        # Test GET request for message view
         self.client.login(username='testuser', password='password')
         response = self.client.get(self.message_url)
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'mainapp/message.html')
 
     def test_message_view_post(self):
-        # Test POST request for message view
         self.client.login(username='testuser', password='password')
         response = self.client.post(self.message_url, {'content': 'Test Message'})
         self.assertEqual(response.status_code, 302)  # Should redirect after successful post
 
     def test_appointment_view_get(self):
-        # Test GET request for appointment view
         response = self.client.get(self.appointment_url)
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'mainapp/appointment.html')
 
     def test_appointment_view_post(self):
-        # Test POST request for appointment view
         response = self.client.post(self.appointment_url, {'description': 'Test Appointment', 'date': '2024-05-21'})
         self.assertEqual(response.status_code, 302)  # Should redirect after successful post
 
@@ -106,4 +107,4 @@ class TestViews(TestCase):
         self.client.login(username='testuser', password='password')
         response = self.client.post(self.detail_url, {'content': 'New Test Comment', 'date': '2024-05-21'})
         self.assertEqual(response.status_code, 302)  # Should redirect after successful post
-        self.assertEqual(Comment.objects.count(), 2)  # Ensure that the comment is created
+        self.assertEqual(Comment.objects.count(), 1)  # Ensure that the comment is created

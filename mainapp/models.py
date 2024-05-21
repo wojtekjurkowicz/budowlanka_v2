@@ -46,7 +46,7 @@ class Realization(models.Model):
 
     def __str__(self):
         """Return a string representation"""
-        return f"{self.content[:10]}..."
+        return f"{self.content[:25]}..."
 
     class Meta:
         verbose_name_plural = "Realizacje"

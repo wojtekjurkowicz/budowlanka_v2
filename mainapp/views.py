@@ -1,10 +1,19 @@
+from django.core.mail import send_mail
+from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from django.http import Http404
 from django.shortcuts import render, get_object_or_404, redirect
 from django.views.decorators.http import require_http_methods
+from django.utils.safestring import mark_safe
+from django.utils import timezone
+
+from calendar import HTMLCalendar
+import logging
 
 from .forms import AppointmentForm, CommentForm, MessageForm
-from .models import Realization, Comment
+from .models import Realization, Comment, Appointment
+
+logger = logging.getLogger(__name__)
 
 
 def index(request):
@@ -76,6 +85,41 @@ def message(request):
         return render(request, 'mainapp/error.html', {'error': str(e)})
 
 
+class CalendarView(HTMLCalendar):
+    def formatday(self, day, weekday, appointments):
+        """
+        Return a day as a table cell.
+        """
+        appointments_per_day = appointments.filter(date__day=day)
+        d = ''
+        for appointment in appointments_per_day:
+            d += f'<li> {appointment.description} </li>'
+
+        if day != 0:
+            return f"<td><span class='date'>{day}</span><ul> {d} </ul></td>"
+        return '<td></td>'
+
+    def formatweek(self, theweek, appointments):
+        """
+        Return a complete week as a table row.
+        """
+        s = ''.join(self.formatday(d, wd, appointments) for (d, wd) in theweek)
+        return f'<tr> {s} </tr>'
+
+    def formatmonth(self, theyear, themonth, withyear=True):
+        """
+        Return a formatted month as a table.
+        """
+        appointments = Appointment.objects.filter(date__year=theyear, date__month=themonth)
+
+        cal = f'<table border="0" cellpadding="0" cellspacing="0" class="calendar">\n'
+        cal += f'{self.formatmonthname(theyear, themonth, withyear=withyear)}\n'
+        cal += f'{self.formatweekheader()}\n'
+        for week in self.monthdays2calendar(theyear, themonth):
+            cal += f'{self.formatweek(week, appointments)}\n'
+        return cal
+
+
 @require_http_methods(["GET", "POST"])
 def appointment(request):
     """Try to reserve an appointment"""
@@ -87,12 +131,34 @@ def appointment(request):
             # POST data submitted
             form = AppointmentForm(data=request.POST)
             if form.is_valid():
-                form.save()
-                return redirect('budowlanka_project:appointment')
+                appointment = form.save()
+                now = timezone.now()
 
-        context = {'form': form}
+                send_mail(
+                    'Potwierdzenie wizyty',
+                    f'Twoja wizyta została umówiona na {appointment.date}. Opis: {appointment.description}',
+                    settings.DEFAULT_FROM_EMAIL,
+                    [request.user.email],
+                    fail_silently=False,
+                )
+
+                return redirect('mainapp:appointment')
+            else:
+                logger.error(f"Forma nie jest dobra: {form.errors}")
+
+        cal = CalendarView()
+        now = timezone.now()
+        html_cal = cal.formatmonth(now.year, now.month)
+
+        context = {
+            'form': form,
+            'calendar': mark_safe(html_cal),
+            'current_year': now.year,
+            'current_month': now.month,
+        }
         return render(request, 'mainapp/appointment.html', context)
     except Exception as e:
+        logger.error(f"Wyjątek w widoku wizyty: {e}")
         return render(request, 'mainapp/error.html', {'error': str(e)})
 
 

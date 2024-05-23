@@ -1,5 +1,7 @@
 from django.test import TestCase, Client
 from django.urls import reverse
+from django.core import mail
+from django.utils import timezone
 from django.contrib.auth.models import User
 from .models import Appointment, Message, Realization, Comment
 from .forms import AppointmentForm, MessageForm, CommentForm
@@ -95,7 +97,11 @@ class TestViews(TestCase):
         self.assertTemplateUsed(response, 'mainapp/appointment.html')
 
     def test_appointment_view_post(self):
-        response = self.client.post(self.appointment_url, {'description': 'Test Appointment', 'date': '2024-05-21'})
+        self.client.login(username='testuser', password='password')
+        response = self.client.post(self.appointment_url, {
+            'description': 'Test Appointment',
+            'date': '2024-05-21T10:00:00Z'
+        })
         self.assertEqual(response.status_code, 302)  # Should redirect after successful post
 
     def test_contact_view(self):
@@ -108,3 +114,31 @@ class TestViews(TestCase):
         response = self.client.post(self.detail_url, {'content': 'New Test Comment', 'date': '2024-05-21'})
         self.assertEqual(response.status_code, 302)  # Should redirect after successful post
         self.assertEqual(Comment.objects.count(), 1)  # Ensure that the comment is created
+
+
+class AppointmentEmailTest(TestCase):
+    def setUp(self):
+        # Create a user for authentication
+        self.user = User.objects.create_user(username='testuser', password='12345', email='testuser@example.com')
+        self.client = Client()
+        self.client.login(username='testuser', password='12345')
+
+    def test_appointment_email_sent(self):
+        # Make a POST request to create an appointment
+        response = self.client.post(reverse('mainapp:appointment'), {
+            'description': 'Test appointment',
+            'date': '2024-05-21T10:00:00Z'
+        })
+
+        # Check if the response is a redirect
+        self.assertEqual(response.status_code, 302)
+
+        # Check if an email was sent
+        self.assertEqual(len(mail.outbox), 1)
+
+        # Verify the email subject and recipient
+        email = mail.outbox[0]
+        self.assertEqual(email.subject, 'Potwierdzenie wizyty')
+        self.assertEqual(email.to, [self.user.email])
+        self.assertIn('Test appointment', email.body)
+

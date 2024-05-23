@@ -9,5 +9,10 @@
         {{ form.as_div }}
         <button name="Rezerwuj">Rezerwuj</button>
     </form>
+    
+    <h2>Kalendarz Wizyt</h2>
+    <div class="calendar">
+        {{ calendar|safe }}
+    </div>
      
 {% endblock content %}

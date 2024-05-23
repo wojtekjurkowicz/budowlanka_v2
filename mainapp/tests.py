@@ -125,9 +125,9 @@ class AppointmentEmailTest(TestCase):
 
     def test_appointment_email_sent(self):
         # Make a POST request to create an appointment
-        response = self.client.post(reverse('mainapp:appointment'), {
+        response = self.client.post(reverse('budowlanka_project:appointment'), {
             'description': 'Test appointment',
-            'date': '2024-05-21T10:00:00Z'
+            'data': '2024-05-21T10:00:00Z'
         })
 
         # Check if the response is a redirect

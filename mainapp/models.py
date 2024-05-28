@@ -36,7 +36,7 @@ class Realization(models.Model):
     """A realization class"""
     title = models.CharField(max_length=100, verbose_name="Tytuł")
     content = models.CharField(max_length=500, verbose_name="Opis")
-    date = models.DateTimeField(auto_now_add=True, verbose_name="Data dodania")
+    date = models.DateTimeField(default=timezone.now(), verbose_name="Data dodania")
 
     # Path to file
     # image = models.CharField(max_length=50)

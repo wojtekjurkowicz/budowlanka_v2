@@ -141,4 +141,3 @@ class AppointmentEmailTest(TestCase):
         self.assertEqual(email.subject, 'Potwierdzenie wizyty')
         self.assertEqual(email.to, [self.user.email])
         self.assertIn('Test appointment', email.body)
-

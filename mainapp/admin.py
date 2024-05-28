@@ -40,6 +40,7 @@ class RealizationAdmin(admin.ModelAdmin):
     list_filter = ('date',)
     search_fields = ('title', 'content')
     ordering = ('-date',)
+
     fieldsets = (
         (None, {
             'fields': ('title',)

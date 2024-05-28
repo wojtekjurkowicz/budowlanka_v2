@@ -1,5 +1,4 @@
 from django import forms
-
 from .models import Appointment, Comment, Message
 
 
@@ -10,6 +9,7 @@ class AppointmentForm(forms.ModelForm):
 
 
 class CommentForm(forms.ModelForm):
+
     class Meta:
         model = Comment
         fields = ['content', 'date']

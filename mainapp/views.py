@@ -13,14 +13,17 @@ import logging
 from .forms import AppointmentForm, CommentForm, MessageForm
 from .models import Realization, Comment, Appointment
 
+# Get an instance of a logger
 logger = logging.getLogger(__name__)
 
 
 def index(request):
     """The home page for Budowlanka"""
     try:
+        logger.debug("Renderowanie strony głównej")
         return render(request, 'mainapp/index.html')
     except Exception as e:
+        logger.error(f"Problem przy renderowaniu strony głównej: {e}")
         return render(request, 'mainapp/error.html', {'error': str(e)})
 
 
@@ -29,10 +32,13 @@ def blog(request):
     try:
         entries = Realization.objects.all()
         context = {'entries': entries}
+        logger.debug("Pobrano wszystkie wpisy")
         return render(request, 'mainapp/blog.html', context=context)
     except Realization.DoesNotExist:
+        logger.error("Żadne wpisy nie istnieją")
         raise Http404("Żaden wpis nie istnieje")
     except Exception as e:
+        logger.error(f"Błąd podczas pobierania wpisów: {e}")
         return render(request, 'mainapp/error.html', {'error': str(e)})
 
 
@@ -51,14 +57,18 @@ def detail(request, entry_id):
                 comment.author = request.user
                 comment.realization = entry
                 comment.save()
+                logger.info(f"Nowy komentarz dodany przez {request.user} do realizacji {entry_id}")
                 return redirect('mainapp:detail', entry_id=entry.id)
         else:
             comment_form = CommentForm()
         context = {'entry': entry, 'comments': comments, 'comment_form': comment_form}
+        logger.debug(f"Widok szczegółowy dla realizacji {entry_id}")
         return render(request, 'mainapp/detail.html', context)
     except Realization.DoesNotExist:
+        logger.error(f"Realizacja o id {entry_id} nie istnieje")
         raise Http404("Podany wpis nie istnieje")
     except Exception as e:
+        logger.error(f"Błąd w widoku szczegółowym dla realizacji {entry_id}: {e}")
         return render(request, 'mainapp/error.html', {'error': str(e)})
 
 
@@ -70,6 +80,7 @@ def message(request):
         if request.method != 'POST':
             # No data submitted
             form = MessageForm()
+            logger.debug("Renderowanie formularza wiadomości")
         else:
             # POST data submitted
             form = MessageForm(data=request.POST)
@@ -77,11 +88,15 @@ def message(request):
                 message = form.save(commit=False)
                 message.author = request.user
                 message.save()
+                logger.info(f"Wiadomość wysłana przez {request.user}")
                 return redirect('mainapp:message')
+            else:
+                logger.error(f"Formularz wiadomości nie jest poprawny: {form.errors}")
 
         context = {'form': form}
         return render(request, 'mainapp/message.html', context)
     except Exception as e:
+        logger.error(f"Błąd w widoku wiadomości: {e}")
         return render(request, 'mainapp/error.html', {'error': str(e)})
 
 
@@ -127,6 +142,7 @@ def appointment(request):
         if request.method != 'POST':
             # No data submitted
             form = AppointmentForm()
+            logger.debug("Renderowanie formularza wizyty")
         else:
             # POST data submitted
             form = AppointmentForm(data=request.POST)
@@ -141,10 +157,10 @@ def appointment(request):
                     [request.user.email],
                     fail_silently=False,
                 )
-
+                logger.info(f"Wizyta utworzona na {appointment.date} z opisem {appointment.description}")
                 return redirect('mainapp:appointment')
             else:
-                logger.error(f"Forma nie jest dobra: {form.errors}")
+                logger.error(f"Formularz wizyty nie jest poprawny: {form.errors}")
 
         cal = CalendarView()
         now = timezone.now()
@@ -158,13 +174,15 @@ def appointment(request):
         }
         return render(request, 'mainapp/appointment.html', context)
     except Exception as e:
-        logger.error(f"Wyjątek w widoku wizyty: {e}")
+        logger.error(f"Błąd w widoku wizyty: {e}")
         return render(request, 'mainapp/error.html', {'error': str(e)})
 
 
 def contact(request):
     """Contact page"""
     try:
+        logger.debug("Renderowanie strony kontaktowej")
         return render(request, 'mainapp/contact.html')
     except Exception as e:
+        logger.error(f"Błąd podczas renderowania strony kontaktowej: {e}")
         return render(request, 'mainapp/error.html', {'error': str(e)})

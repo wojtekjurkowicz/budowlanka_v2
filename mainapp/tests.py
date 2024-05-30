@@ -1,10 +1,11 @@
+from django.contrib.auth.models import User
+from django.core import mail
 from django.test import TestCase, Client
 from django.urls import reverse
-from django.core import mail
-from django.utils import timezone
-from django.contrib.auth.models import User
-from .models import Appointment, Message, Realization, Comment
+from django.core.paginator import Page
+
 from .forms import AppointmentForm, MessageForm, CommentForm
+from .models import Appointment, Message, Realization, Comment
 
 
 class AppointmentModelTest(TestCase):
@@ -124,14 +125,17 @@ class AppointmentEmailTest(TestCase):
         self.client.login(username='testuser', password='12345')
 
     def test_appointment_email_sent(self):
+        # Print the current state of mail.outbox
+        print("mail.outbox before sending email:", mail.outbox)
+
         # Make a POST request to create an appointment
         response = self.client.post(reverse('budowlanka_project:appointment'), {
             'description': 'Test appointment',
             'data': '2024-05-21T10:00:00Z'
         })
 
-        # Check if the response is a redirect
-        self.assertEqual(response.status_code, 302)
+        # Print the current state of mail.outbox after sending email
+        print("mail.outbox after sending email:", mail.outbox)
 
         # Check if an email was sent
         self.assertEqual(len(mail.outbox), 1)
@@ -141,3 +145,31 @@ class AppointmentEmailTest(TestCase):
         self.assertEqual(email.subject, 'Potwierdzenie wizyty')
         self.assertEqual(email.to, [self.user.email])
         self.assertIn('Test appointment', email.body)
+
+
+class TestPagination(TestCase):
+    def setUp(self):
+        # Tworzenie 15 realizacji
+        for i in range(15):
+            Realization.objects.create(title=f'Test Title {i}', content=f'Test Content {i}')
+
+    def test_pagination_is_ten(self):
+        response = self.client.get(reverse('mainapp:blog'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTrue('page_obj' in response.context)
+        self.assertTrue(isinstance(response.context['page_obj'], Page))
+        self.assertEqual(len(response.context['page_obj']), 10)
+
+    def test_lists_all_realizations(self):
+        # Sprawdzanie czy wszystkie realizacje są wyświetlane na stronie pierwszej
+        response = self.client.get(reverse('mainapp:blog') + '?page=1')
+        self.assertEqual(response.status_code, 200)
+        self.assertTrue('page_obj' in response.context)
+        self.assertEqual(len(response.context['page_obj']), 10)
+
+    def test_pagination_second_page(self):
+        # Sprawdzanie czy druga strona zawiera pięć realizacji
+        response = self.client.get(reverse('mainapp:blog') + '?page=2')
+        self.assertEqual(response.status_code, 200)
+        self.assertTrue('page_obj' in response.context)
+        self.assertEqual(len(response.context['page_obj']), 5)

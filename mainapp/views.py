@@ -1,14 +1,19 @@
-from django.core.mail import send_mail
-from django.conf import settings
-from django.contrib.auth.decorators import login_required
-from django.http import Http404
-from django.shortcuts import render, get_object_or_404, redirect
-from django.views.decorators.http import require_http_methods
-from django.utils.safestring import mark_safe
-from django.utils import timezone
-
-from calendar import HTMLCalendar
 import logging
+from calendar import HTMLCalendar
+
+from django.conf import settings
+from django.contrib import admin
+from django.contrib.auth.decorators import login_required
+from django.core.mail import send_mail
+from django.core.paginator import Paginator
+from django.http import Http404
+from django.http import HttpResponse
+from django.shortcuts import render, get_object_or_404, redirect
+from django.utils import timezone
+from django.utils.safestring import mark_safe
+from django.views.decorators.http import require_http_methods
+from reportlab.lib.pagesizes import letter
+from reportlab.platypus import SimpleDocTemplate, Paragraph
 
 from .forms import AppointmentForm, CommentForm, MessageForm
 from .models import Realization, Comment, Appointment
@@ -31,8 +36,11 @@ def blog(request):
     """Show all entries"""
     try:
         entries = Realization.objects.all()
-        context = {'entries': entries}
-        logger.debug("Pobrano wszystkie wpisy")
+        paginator = Paginator(entries, 10)  # Paginate with 10 entries per page
+        page_number = request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
+        context = {'page_obj': page_obj}
+        logger.debug("Pobrano część wpisów")
         return render(request, 'mainapp/blog.html', context=context)
     except Realization.DoesNotExist:
         logger.error("Żadne wpisy nie istnieją")
@@ -157,7 +165,9 @@ def appointment(request):
                     [request.user.email],
                     fail_silently=False,
                 )
+                logger.info("Wysłano e-mail potwierdzający wizytę.")
                 logger.info(f"Wizyta utworzona na {appointment.date} z opisem {appointment.description}")
+                # Always redirect back to the appointment page after a successful submission
                 return redirect('mainapp:appointment')
             else:
                 logger.error(f"Formularz wizyty nie jest poprawny: {form.errors}")

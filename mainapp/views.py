@@ -22,7 +22,12 @@ logger = logging.getLogger(__name__)
 
 
 def index(request):
-    """The home page for Budowlanka"""
+    """
+    Render the home page for Budowlanka.
+
+    :param request: HttpRequest object.
+    :return: HttpResponse object.
+    """
     try:
         logger.debug("Renderowanie strony głównej")
         return render(request, 'mainapp/index.html')
@@ -32,7 +37,12 @@ def index(request):
 
 
 def blog(request):
-    """Show all entries"""
+    """
+    Show all entries.
+
+    :param request: HttpRequest object.
+    :return: HttpResponse object.
+    """
     try:
         entries = Realization.objects.all()
         paginator = Paginator(entries, 10)  # Paginate with 10 entries per page
@@ -52,7 +62,13 @@ def blog(request):
 @login_required
 @require_http_methods(["GET", "POST"])
 def detail(request, entry_id):
-    # show entry and its comments
+    """
+    Show entry and its comments.
+
+    :param request: HttpRequest object.
+    :param entry_id: ID of the entry.
+    :return: HttpResponse object.
+    """
     try:
         entry = get_object_or_404(Realization, pk=entry_id)
         comments = Comment.objects.filter(realization=entry)
@@ -82,7 +98,12 @@ def detail(request, entry_id):
 @login_required
 @require_http_methods(["GET", "POST"])
 def message(request):
-    """Message page"""
+    """
+    Message page.
+
+    :param request: HttpRequest object.
+    :return: HttpResponse object.
+    """
     try:
         if request.method != 'POST':
             # No data submitted
@@ -111,6 +132,11 @@ class CalendarView(HTMLCalendar):
     def formatday(self, day, weekday, appointments):
         """
         Return a day as a table cell.
+
+        :param day: The day number.
+        :param weekday: The weekday number (0-6).
+        :param appointments: QuerySet of appointments for the given day.
+        :return: HTML representation of the day's cell.
         """
         appointments_per_day = appointments.filter(date__day=day)
         d = ''
@@ -124,6 +150,10 @@ class CalendarView(HTMLCalendar):
     def formatweek(self, theweek, appointments):
         """
         Return a complete week as a table row.
+
+        :param theweek: List of tuples containing (day, weekday) for the week.
+        :param appointments: QuerySet of appointments for the given week.
+        :return: HTML representation of the week's row.
         """
         s = ''.join(self.formatday(d, wd, appointments) for (d, wd) in theweek)
         return f'<tr> {s} </tr>'
@@ -144,7 +174,12 @@ class CalendarView(HTMLCalendar):
 
 @require_http_methods(["GET", "POST"])
 def appointment(request):
-    """Try to reserve an appointment"""
+    """
+    Try to reserve an appointment.
+
+    :param request: HttpRequest object.
+    :return: HttpResponse object.
+    """
     try:
         if request.method != 'POST':
             # No data submitted
@@ -154,6 +189,7 @@ def appointment(request):
             # POST data submitted
             form = AppointmentForm(data=request.POST)
             if form.is_valid():
+                # Form is valid, process the data
                 appointment = form.save()
                 now = timezone.now()
 
@@ -188,7 +224,12 @@ def appointment(request):
 
 
 def contact(request):
-    """Contact page"""
+    """
+    Contact page.
+
+    :param request: HttpRequest object.
+    :return: HttpResponse object.
+    """
     try:
         logger.debug("Renderowanie strony kontaktowej")
         return render(request, 'mainapp/contact.html')
@@ -198,6 +239,12 @@ def contact(request):
 
 
 def show_pdf(request):
+    """
+    Display a PDF file.
+
+    :param request: HttpRequest object.
+    :return: FileResponse object.
+    """
     buffer = io.BytesIO()
     p = canvas.Canvas(buffer)
     p.drawString(100, 100, "Hello world.")

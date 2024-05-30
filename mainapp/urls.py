@@ -18,4 +18,5 @@ urlpatterns = [
     path('wiadomosc/', views.message, name='message'),
     # Contact page
     path('kontakt/', views.contact, name='contact'),
+    path('pdf', views.show_pdf, name='show_pdf'),
 ]

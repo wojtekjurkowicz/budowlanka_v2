@@ -1,19 +1,18 @@
 import logging
+import io
 from calendar import HTMLCalendar
 
 from django.conf import settings
-from django.contrib import admin
 from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
 from django.core.paginator import Paginator
 from django.http import Http404
-from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 from django.utils.safestring import mark_safe
 from django.views.decorators.http import require_http_methods
-from reportlab.lib.pagesizes import letter
-from reportlab.platypus import SimpleDocTemplate, Paragraph
+from django.http import FileResponse
+from reportlab.pdfgen import canvas
 
 from .forms import AppointmentForm, CommentForm, MessageForm
 from .models import Realization, Comment, Appointment
@@ -196,3 +195,14 @@ def contact(request):
     except Exception as e:
         logger.error(f"Błąd podczas renderowania strony kontaktowej: {e}")
         return render(request, 'mainapp/error.html', {'error': str(e)})
+
+
+def show_pdf(request):
+    buffer = io.BytesIO()
+    p = canvas.Canvas(buffer)
+    p.drawString(100, 100, "Hello world.")
+    p.showPage()
+    p.save()
+
+    buffer.seek(0)
+    return FileResponse(buffer, as_attachment=True, filename="hello.pdf")

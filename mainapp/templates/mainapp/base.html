@@ -1,20 +1,100 @@
-<p>
-    <a href="{% url 'budowlanka_project:index' %}">Strona główna</a> ---
-    <a href="{% url 'budowlanka_project:blog' %}">Aktualności</a> ---
-    <a href="{% url 'budowlanka_project:appointment' %}">Umów wizytę</a> ---
-    <a href="{% url 'budowlanka_project:message' %}">Wiadomości</a> ---
-    <a href="{% url 'budowlanka_project:contact' %}">Kontakt</a> ---
-    {% if user.is_authenticated %}
-        Witaj, {{ user.username }}.
-        <hr />
-        <form action="{% url 'accounts:logout' %}" method='post'>
-            {% csrf_token %}
-            <button name="submit">Wyloguj się</button>
-        </form>
-    {% else %}
-        <a href="{% url 'accounts:register' %}">Zarejestruj się</a> ---
-        <a href="{% url 'accounts:login' %}">Zaloguj się</a>
-    {% endif %}
-</p>
+<!doctype html>
+<!-- blue: #127586 border: #1a6374
+     red: #bf0c0c border: 632935
+     grey: #313445 border: 2e4050-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jasion Dachy</title>
+        {% load django_bootstrap5 %}
+        {% bootstrap_css %}
+        {% bootstrap_javascript %}
+        {% load static %}
+    <style>
+        div,h1
+        {
+            border: 1px red solid;
+        }
+        a
+        {
+            border: 3px green solid;
+            border-radius: 5px;
+            padding: 5px;
+            font-size: 15pt;
+            color: #127586;
+        }
+        .text-blue,p
+        {
+            color: #127586;
+            background-color: #313445;
+        }
+        body
+        {
+            background-color: #313445;
+        }
+    </style>
+</head>
+<body>
+    <div class = "container-fluid container-md-10">
+        <div class = "row">
+               <nav class="navbar navbar-expand-lg ">
+                     <a class="navbar-brand" href="#"><img class="img-responsive rounded-circle" src="{% static 'mainapp/logo.jpg' %}" alt="Logo" style="max-height: 80px;"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ">
+                            <li class="nav-item active"><a class="nav-link text-blue" href="{% url 'budowlanka_project:index' %}">Strona główna</a></li>
+                            <li class="nav-item"><a class="nav-link text-blue" href="{% url 'budowlanka_project:blog' %}">Aktualności</a></li>
+                            <li class="nav-item"><a class="nav-link text-blue" href="{% url 'budowlanka_project:appointment' %}">Umów wizytę</a></li>
+                            <li class="nav-item"><a class="nav-link text-blue" href="{% url 'budowlanka_project:message' %}">Wiadomości</a></li>
+                            <li class="nav-item"><a class="nav-link text-blue" href="{% url 'budowlanka_project:contact' %}">Kontakt</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img src="{% static 'mainapp/rejestracja.png' %}" alt="Ikona" style="max-height: 30px;">
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    {% if user.is_authenticated %}
+                                    <p class="dropdown-item text-blue">Witaj, {{ user.username }}.</p>
+                                    <a class="dropdown-item text-blue" href="{% url 'accounts:logout' %}">Wyloguj</a>
 
-{% block content %}{% endblock content %}
+                                    {% else %}
+
+                                    <a class="dropdown-item text-blue" href="{% url 'accounts:login' %}">Zaloguj się</a>
+                                    <a class="dropdown-item text-blue" href="{% url 'accounts:register' %}">Zarejestruj się</a>
+
+                                    {% endif %}
+                                </div>
+
+                        </ul>
+                    </div>
+                </nav>
+        </div>
+        </div>
+        <div class = "container-xxl-12 container-md-8">
+            <div class="row">
+                 {% block content3 %}{% endblock content3 %}
+            </div>
+            <div class="row">
+                <div class="col-xxl-4 order-xxl-last col-md-12 order-md-first">
+                    <h1>To jest 2 kolumna</h1>
+
+                </div>
+                <div class="col-xxl-8 order-xxl-first col-md-12 order-md-last">
+                    {% block content %}{% endblock content %}
+                </div>
+            </div>
+        </div>
+    <div class="row">
+        <h1 class="col-sm-12 text-center">FOOTER</h1>
+
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    </body>
+</html>

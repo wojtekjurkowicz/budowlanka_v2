@@ -2,18 +2,16 @@
 
 {% block content %}
     
-    <p>Aktualności</p>
-    <ul>
+    <h1>Aktualności</h1>
         {% for entry in page_obj %}
-            <li>
-                <p><a href="/blog/{{ entry.id }}">{{ entry.title }}</a> </p>
-                <p>{{ entry.content|linebreaks }}</p>
-                <p>Dodano: {{ entry.date }}</p>
-            </li>
+                <article class="">
+                    <a href="/blog/{{ entry.id }}"><h3>{{ entry.title }}</h3></a>
+                    <p>{{ entry.content|linebreaks }}</p>
+                    <p>Dodano: {{ entry.date }}</p>
+                </article>
         {% empty %}
             Nic tu jeszcze nie ma    
         {% endfor %}
-    </ul>
     
     {% if page_obj.has_other_pages %}
         <div class="pagination">

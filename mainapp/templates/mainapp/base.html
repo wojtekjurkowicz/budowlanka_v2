@@ -15,7 +15,7 @@
     <style>
         div,h1
         {
-            border: 1px red solid;
+            #border: 1px red solid;
         }
         a
         {
@@ -39,13 +39,13 @@
         {
             background-color: #2c2e3c;
             border-radius: 10px;
-            padding: 5px;
+            padding: 15px;
             margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
-    <div class = "container-fluid container-md-10">
+    <div class = "container-fluid">
         <div class = "row" style="font-size: large;">
             <div class="col-12">
                <nav class="navbar navbar-expand-lg justify-content-center">
@@ -82,25 +82,20 @@
             </div>
         </div>
         </div>
-        <div class = "container-xxl-12 container-md-8">
-            <div class="row">
-                 {% block content3 %}{% endblock content3 %}
-            </div>
+        <div class = "container-fluid container-md-8">
             <div class="row">
                 <div class="col-xxl-4 order-xxl-last col-md-12 order-md-first">
                     <h1>To jest 2 kolumna</h1>
-
                 </div>
                 <div class="col-xxl-8 order-xxl-first col-md-12 order-md-last">
                     {% block content %}{% endblock content %}
                 </div>
             </div>
-        </div>
-    <div class="row">
-        <h1 class="col-sm-12 text-center">FOOTER</h1>
-
-
+         <div class="row">
+            <h1 class="col text-center">FOOTER</h1>
+         </div>
     </div>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

@@ -12,7 +12,10 @@ class CommentForm(forms.ModelForm):
 
     class Meta:
         model = Comment
-        fields = ['content', 'date']
+        fields = ['content']
+        widgets = {
+            'content': forms.Textarea(attrs={'class': 'form-control'})
+        }
 
 
 class MessageForm(forms.ModelForm):

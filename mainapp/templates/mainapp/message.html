@@ -2,10 +2,10 @@
 
 {% block content %}
     
-    <p>Napisz se wiadomosc tak o</p>
+    <h1>Napisz se wiadomosc tak o</h1>
      <form action="{% url 'budowlanka_project:message' %}" method="post">
         {% csrf_token %}
-        {{ form.as_div }}
+        {{ form.as_p }}
         <button name="submit">Wyślij</button>
     </form>
 {% endblock content %}

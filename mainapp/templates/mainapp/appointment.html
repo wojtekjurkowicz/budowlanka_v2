@@ -1,18 +1,19 @@
 {% extends 'mainapp/base.html' %}
 
 {% block content %}
-    
-    <p>Umów wizytę</p>
-    
+    <article>
+    <h1>Umów wizytę</h1>
+
     <form action="{% url 'budowlanka_project:appointment' %}" method="post">
         {% csrf_token %}
-        {{ form.as_div }}
+        {{ form.as_p }}
         <button name="Rezerwuj">Rezerwuj</button>
     </form>
-    
+
     <h2>Kalendarz Wizyt</h2>
     <div class="calendar">
         {{ calendar|safe }}
     </div>
-     
+    </article>
+
 {% endblock content %}

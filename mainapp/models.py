@@ -18,20 +18,6 @@ class Appointment(models.Model):
         verbose_name_plural = "Wizyty"
 
 
-class Message(models.Model):
-    # A message class
-    author = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name="Autor")
-    content = models.CharField(max_length=160, verbose_name="Treść")
-    date = models.DateTimeField(default=timezone.now, verbose_name="Data")
-
-    def __str__(self):
-        # Return a string representation
-        return self.content
-
-    class Meta:
-        verbose_name_plural = "Wiadomości"
-
-
 class Realization(models.Model):
     """A realization class"""
     title = models.CharField(max_length=100, verbose_name="Tytuł")

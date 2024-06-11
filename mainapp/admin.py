@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Realization, Appointment, Message, Comment
+from .models import Realization, Appointment, Comment
 from django.http import HttpResponse
 from reportlab.pdfgen import canvas
 from django.template.loader import render_to_string
@@ -51,23 +51,6 @@ class AppointmentAdmin(admin.ModelAdmin, ExportPDFMixin):
     actions = ['export_to_pdf']
 
 
-class MessageAdmin(admin.ModelAdmin, ExportPDFMixin):
-    list_display = ('author', 'content', 'date')
-    list_filter = ('date', 'author')
-    search_fields = ('content',)
-    ordering = ('-date',)
-    fieldsets = (
-        (None, {
-            'fields': ('author',)
-        }),
-        ('Informacje o wiadomości', {
-            'fields': ('content', 'date'),
-            'description': 'Pola powiązane z treścią i datą komentarza'
-        }),
-    )
-    actions = ['export_to_pdf']
-
-
 class RealizationAdmin(admin.ModelAdmin, ExportPDFMixin):
     list_display = ('title', 'content', 'date', 'was_published_recently')
     list_filter = ('date',)
@@ -104,6 +87,5 @@ class CommentAdmin(admin.ModelAdmin, ExportPDFMixin):
 
 
 admin.site.register(Appointment, AppointmentAdmin)
-admin.site.register(Message, MessageAdmin)
 admin.site.register(Comment, CommentAdmin)
 admin.site.register(Realization, RealizationAdmin)

@@ -13,8 +13,9 @@ from django.utils.safestring import mark_safe
 from django.views.decorators.http import require_http_methods
 from django.http import FileResponse
 from reportlab.pdfgen import canvas
+from django.contrib import messages
 
-from .forms import AppointmentForm, CommentForm, MessageForm
+from .forms import AppointmentForm, CommentForm, ContactForm
 from .models import Realization, Comment, Appointment
 
 # Get an instance of a logger
@@ -95,39 +96,6 @@ def detail(request, entry_id):
         return render(request, 'mainapp/error.html', {'error': str(e)})
 
 
-@login_required
-@require_http_methods(["GET", "POST"])
-def message(request):
-    """
-    Message page.
-
-    :param request: HttpRequest object.
-    :return: HttpResponse object.
-    """
-    try:
-        if request.method != 'POST':
-            # No data submitted
-            form = MessageForm()
-            logger.debug("Renderowanie formularza wiadomości")
-        else:
-            # POST data submitted
-            form = MessageForm(data=request.POST)
-            if form.is_valid():
-                message = form.save(commit=False)
-                message.author = request.user
-                message.save()
-                logger.info(f"Wiadomość wysłana przez {request.user}")
-                return redirect('mainapp:message')
-            else:
-                logger.error(f"Formularz wiadomości nie jest poprawny: {form.errors}")
-
-        context = {'form': form}
-        return render(request, 'mainapp/message.html', context)
-    except Exception as e:
-        logger.error(f"Błąd w widoku wiadomości: {e}")
-        return render(request, 'mainapp/error.html', {'error': str(e)})
-
-
 class CalendarView(HTMLCalendar):
     def formatday(self, day, weekday, appointments):
         """
@@ -196,7 +164,7 @@ def appointment(request):
                 send_mail(
                     'Potwierdzenie wizyty',
                     f'Twoja wizyta została umówiona na {appointment.date}. Opis: {appointment.description}',
-                    settings.DEFAULT_FROM_EMAIL,
+                    "wojtek.jurkowicz@gmail.com"
                     [request.user.email],
                     fail_silently=False,
                 )
@@ -223,6 +191,8 @@ def appointment(request):
         return render(request, 'mainapp/error.html', {'error': str(e)})
 
 
+@login_required
+@require_http_methods(["GET", "POST"])
 def contact(request):
     """
     Contact page.
@@ -231,10 +201,38 @@ def contact(request):
     :return: HttpResponse object.
     """
     try:
-        logger.debug("Renderowanie strony kontaktowej")
-        return render(request, 'mainapp/contact.html')
+        if request.method != 'POST':
+            # No data submitted
+            form = ContactForm()
+            logger.debug("Renderowanie formularza kontaktowego")
+        else:
+            # POST data submitted
+            form = ContactForm(data=request.POST)
+            if form.is_valid():
+                # przetwarzanie danych z formularza
+                first_name = form.cleaned_data['first_name']
+                last_name = form.cleaned_data['last_name']
+                email = form.cleaned_data['email']
+                message = form.cleaned_data['message']
+
+                send_mail(
+                    f'Wiadomość od {first_name} {last_name}',
+                    message,
+                    email,
+                    ['wojtek.jurkowicz@gmail.com'],
+                    fail_silently=False,
+                )
+
+                messages.success(request, "Wiadomość została wysłana.")
+                logger.info(f"Wiadomość wysłana przez {request.user}")
+                return redirect('mainapp:index')
+            else:
+                logger.error(f"Formularz wiadomości nie jest poprawny: {form.errors}")
+
+        context = {'form': form}
+        return render(request, 'mainapp/contact.html', context)
     except Exception as e:
-        logger.error(f"Błąd podczas renderowania strony kontaktowej: {e}")
+        logger.error(f"Błąd w widoku wiadomości: {e}")
         return render(request, 'mainapp/error.html', {'error': str(e)})
 
 

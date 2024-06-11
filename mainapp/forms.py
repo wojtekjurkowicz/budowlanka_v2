@@ -1,5 +1,5 @@
 from django import forms
-from .models import Appointment, Comment, Message
+from .models import Appointment, Comment
 
 
 class AppointmentForm(forms.ModelForm):
@@ -18,7 +18,8 @@ class CommentForm(forms.ModelForm):
         }
 
 
-class MessageForm(forms.ModelForm):
-    class Meta:
-        model = Message
-        fields = ['content']
+class ContactForm(forms.Form):
+    first_name = forms.CharField(label='Imię', max_length=100)
+    last_name = forms.CharField(label='Nazwisko', max_length=100)
+    email = forms.EmailField(label='Email')
+    message = forms.CharField(label='Treść wiadomości', widget=forms.Textarea)

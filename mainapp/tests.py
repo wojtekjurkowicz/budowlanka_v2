@@ -85,7 +85,7 @@ class TestViews(TestCase):
         self.client.login(username='testuser', password='password')
         response = self.client.get(self.message_url)
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'mainapp/message.html')
+        self.assertTemplateUsed(response, 'mainapp/contact.html')
 
     def test_message_view_post(self):
         self.client.login(username='testuser', password='password')

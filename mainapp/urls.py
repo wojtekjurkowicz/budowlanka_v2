@@ -14,8 +14,6 @@ urlpatterns = [
     path('blog/<int:entry_id>/', views.detail, name='detail'),
     # Appointments page
     path('umowwizyte/', views.appointment, name='appointment'),
-    # Message page
-    path('wiadomosc/', views.message, name='message'),
     # Contact page
     path('kontakt/', views.contact, name='contact'),
     path('pdf', views.show_pdf, name='show_pdf'),

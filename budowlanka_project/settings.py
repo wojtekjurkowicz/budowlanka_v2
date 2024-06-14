@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 import environ
 import os
+import logging
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -146,42 +147,46 @@ EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
-    'formatters': {
-        'verbose': {
-            'format': '{levelname} {asctime} {module} {message}',
-            'style': '{',
-        },
-        'simple': {
-            'format': '{levelname} {message}',
-            'style': '{',
-        },
-    },
     'handlers': {
         'file': {
-            'level': 'DEBUG',
+            'level': 'DEBUG', # Ustawienie poziomu logowania na DEBUG dla handlera 'file'
             'class': 'logging.handlers.RotatingFileHandler',
-            'filename': os.path.join(BASE_DIR, 'debug.log'),
+            'filename': 'debug.log',
+            'maxBytes': 1024 * 1024,  # 1 MB
+            'backupCount': 5,         # Maksymalnie 5 plików
             'formatter': 'verbose',
-            'maxBytes': 2 * 1024 * 1024,  # 2 MB
-            'backupCount': 5,  # Przechowuje 5 kopii pliku dziennika
-        },
-        'console': {
-            'level': 'DEBUG',
-            'class': 'logging.StreamHandler',
-            'formatter': 'simple',
         },
     },
     'loggers': {
-        'django': {
-            'handlers': ['file', 'console'],
-            'level': 'DEBUG',
-            'propagate': True,
-        },
-        # Add a logger for your mainapp
-        'mainapp': {
-            'handlers': ['file', 'console'],
+        '': {
+            'handlers': ['file'],
             'level': 'DEBUG',
             'propagate': True,
         },
     },
+    'formatters': {
+        'verbose': {
+            'format': '%(asctime)s [%(levelname)s] %(message)s',
+        },
+    },
 }
+
+
+# Automatyczne czyszczenie pliku debug.log
+def clean_debug_log():
+    log_file = 'debug.log'
+    max_size_bytes = 1024 * 1024  # 1 MB
+
+    if os.path.exists(log_file):
+        log_size = os.path.getsize(log_file)
+        if log_size > max_size_bytes:
+            # Jeśli przekroczono maksymalny rozmiar, usuń istniejący plik
+            os.remove(log_file)
+
+            # Otwórz nowy plik do zapisu
+            with open(log_file, 'w'):
+                pass  # Pusty plik
+            logging.info(f"Plik {log_file} został wyczyszczony i nadpisany.")
+
+# Uruchomienie funkcji clean_debug_log po starcie aplikacji
+clean_debug_log()

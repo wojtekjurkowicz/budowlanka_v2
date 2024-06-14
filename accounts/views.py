@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib import messages
+from .forms import UserCreationFormWithEmail
 
 
 def login_view(request):
@@ -28,10 +29,10 @@ def register_view(request):
     # register a new user
     if request.method != 'POST':
         # Display blank registration form
-        form = UserCreationForm()
+        form = UserCreationFormWithEmail(data=request.POST)
     else:
         # Process completed form
-        form = UserCreationForm(data=request.POST)
+        form = UserCreationFormWithEmail(data=request.POST)
         if form.is_valid():
             new_user = form.save()
             # Log the user in and then redirect to home page

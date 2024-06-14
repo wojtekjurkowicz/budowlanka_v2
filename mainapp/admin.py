@@ -16,8 +16,6 @@ class ExportPDFMixin:
             data = render_to_string('mainapp/realization_pdf_template.html', {'data': queryset})
         elif self.model == Appointment:
             data = render_to_string('mainapp/appointment_pdf_template.html', {'data': queryset})
-        elif self.model == Message:
-            data = render_to_string('mainapp/message_pdf_template.html', {'data': queryset})
         elif self.model == Comment:
             data = render_to_string('mainapp/comment_pdf_template.html', {'data': queryset})
 

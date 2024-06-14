@@ -22,7 +22,7 @@ class Realization(models.Model):
     """A realization class"""
     title = models.CharField(max_length=100, verbose_name="Tytuł")
     content = models.CharField(max_length=500, verbose_name="Opis")
-    date = models.DateTimeField(default=timezone.now(), verbose_name="Data dodania")
+    date = models.DateTimeField(default=timezone.now, verbose_name="Data dodania")
 
     # Path to file
     # image = models.CharField(max_length=50)
@@ -36,6 +36,7 @@ class Realization(models.Model):
 
     class Meta:
         verbose_name_plural = "Realizacje"
+        ordering = ['date']
 
 
 class Comment(models.Model):

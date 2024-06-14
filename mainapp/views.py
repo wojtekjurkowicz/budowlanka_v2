@@ -156,6 +156,7 @@ def appointment(request):
         else:
             # POST data submitted
             form = AppointmentForm(data=request.POST)
+            logger.debug(f"Data submitted: {request.POST}")
             if form.is_valid():
                 # Form is valid, process the data
                 appointment = form.save()
@@ -164,7 +165,7 @@ def appointment(request):
                 send_mail(
                     'Potwierdzenie wizyty',
                     f'Twoja wizyta została umówiona na {appointment.date}. Opis: {appointment.description}',
-                    "wojtek.jurkowicz@gmail.com"
+                    "wojtek.jurkowicz@gmail.com",
                     [request.user.email],
                     fail_silently=False,
                 )

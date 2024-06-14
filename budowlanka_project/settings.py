@@ -136,6 +136,7 @@ LOGOUT_REDIRECT_URL = 'mainapp:index'
 LOGIN_URL = 'accounts:login'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.locmem.EmailBackend' # testowy
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True

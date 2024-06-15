@@ -3677,3 +3677,209 @@ DEBUG 2024-06-14 17:27:31,691 utils (0.000) SELECT "django_content_type"."id", "
 2024-06-14 17:34:55,264 [INFO] Watching for file changes with StatReloader
 2024-06-14 17:34:59,292 [INFO] Watching for file changes with StatReloader
 2024-06-14 17:35:16,562 [DEBUG] Pobrano czêœæ wpisów
+2024-06-14 17:44:09,177 [INFO] Watching for file changes with StatReloader
+2024-06-15 13:06:32,842 [INFO] Watching for file changes with StatReloader
+2024-06-15 13:10:22,935 [INFO] C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\mainapp\admin.py changed, reloading.
+2024-06-15 13:10:24,481 [INFO] Watching for file changes with StatReloader
+2024-06-15 13:11:21,370 [INFO] C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\mainapp\admin.py changed, reloading.
+2024-06-15 13:11:22,752 [INFO] Watching for file changes with StatReloader
+2024-06-15 13:11:31,219 [ERROR] Internal Server Error: /admin/mainapp/comment/
+Traceback (most recent call last):
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\reportlab\lib\utils.py", line 523, in open_for_read
+    return open_for_read_by_name(name,mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\reportlab\lib\utils.py", line 463, in open_for_read_by_name
+    return open(name,mode)
+           ^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'static/mainapp/calibri.ttf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\reportlab\lib\utils.py", line 530, in open_for_read
+    return BytesIO((datareader if name[:5].lower()=='data:' else rlUrlRead)(name))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\reportlab\lib\utils.py", line 476, in rlUrlRead
+    return urlopen(name).read()
+           ^^^^^^^^^^^^^
+  File "C:\Users\wojte\AppData\Local\Programs\Python\Python311\Lib\urllib\request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\AppData\Local\Programs\Python\Python311\Lib\urllib\request.py", line 503, in open
+    req = Request(fullurl, data)
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\AppData\Local\Programs\Python\Python311\Lib\urllib\request.py", line 322, in __init__
+    self.full_url = url
+    ^^^^^^^^^^^^^
+  File "C:\Users\wojte\AppData\Local\Programs\Python\Python311\Lib\urllib\request.py", line 348, in full_url
+    self._parse()
+  File "C:\Users\wojte\AppData\Local\Programs\Python\Python311\Lib\urllib\request.py", line 377, in _parse
+    raise ValueError("unknown url type: %r" % self.full_url)
+ValueError: unknown url type: 'static/mainapp/calibri.ttf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\reportlab\pdfbase\ttfonts.py", line 151, in TTFOpenFile
+    f = open_for_read(fn,'rb')
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\reportlab\lib\utils.py", line 534, in open_for_read
+    return open_for_read(name,mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\reportlab\lib\utils.py", line 532, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: Cannot open resource "static/mainapp/calibri.ttf"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\contrib\admin\options.py", line 1959, in changelist_view
+    response = self.response_action(
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\contrib\admin\options.py", line 1593, in response_action
+    response = func(self, request, queryset)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\mainapp\admin.py", line 17, in export_to_pdf
+    pdfmetrics.registerFont(TTFont('Calibri', 'static/mainapp/calibri.ttf'))
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\reportlab\pdfbase\ttfonts.py", line 1192, in __init__
+    self.face = TTFontFace(filename, validate=validate, subfontIndex=subfontIndex)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\reportlab\pdfbase\ttfonts.py", line 1073, in __init__
+    TTFontFile.__init__(self, filename, validate=validate, subfontIndex=subfontIndex)
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\reportlab\pdfbase\ttfonts.py", line 439, in __init__
+    TTFontParser.__init__(self, file, validate=validate,subfontIndex=subfontIndex)
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\reportlab\pdfbase\ttfonts.py", line 175, in __init__
+    self.readFile(file)
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\reportlab\pdfbase\ttfonts.py", line 251, in readFile
+    self.filename, f = TTFOpenFile(f)
+                       ^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\reportlab\pdfbase\ttfonts.py", line 161, in TTFOpenFile
+    raise TTFError('Can\'t open file "%s"' % fn)
+reportlab.pdfbase.ttfonts.TTFError: Can't open file "static/mainapp/calibri.ttf"
+2024-06-15 13:12:20,139 [INFO] C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\mainapp\admin.py changed, reloading.
+2024-06-15 13:12:21,582 [INFO] Watching for file changes with StatReloader
+2024-06-15 13:12:24,370 [ERROR] Internal Server Error: /admin/mainapp/comment/
+Traceback (most recent call last):
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\reportlab\lib\utils.py", line 523, in open_for_read
+    return open_for_read_by_name(name,mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\reportlab\lib\utils.py", line 463, in open_for_read_by_name
+    return open(name,mode)
+           ^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'mainapp/calibri.ttf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\reportlab\lib\utils.py", line 530, in open_for_read
+    return BytesIO((datareader if name[:5].lower()=='data:' else rlUrlRead)(name))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\reportlab\lib\utils.py", line 476, in rlUrlRead
+    return urlopen(name).read()
+           ^^^^^^^^^^^^^
+  File "C:\Users\wojte\AppData\Local\Programs\Python\Python311\Lib\urllib\request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\AppData\Local\Programs\Python\Python311\Lib\urllib\request.py", line 503, in open
+    req = Request(fullurl, data)
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\AppData\Local\Programs\Python\Python311\Lib\urllib\request.py", line 322, in __init__
+    self.full_url = url
+    ^^^^^^^^^^^^^
+  File "C:\Users\wojte\AppData\Local\Programs\Python\Python311\Lib\urllib\request.py", line 348, in full_url
+    self._parse()
+  File "C:\Users\wojte\AppData\Local\Programs\Python\Python311\Lib\urllib\request.py", line 377, in _parse
+    raise ValueError("unknown url type: %r" % self.full_url)
+ValueError: unknown url type: 'mainapp/calibri.ttf'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\reportlab\pdfbase\ttfonts.py", line 151, in TTFOpenFile
+    f = open_for_read(fn,'rb')
+        ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\reportlab\lib\utils.py", line 534, in open_for_read
+    return open_for_read(name,mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\reportlab\lib\utils.py", line 532, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: Cannot open resource "mainapp/calibri.ttf"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\contrib\admin\options.py", line 1959, in changelist_view
+    response = self.response_action(
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\contrib\admin\options.py", line 1593, in response_action
+    response = func(self, request, queryset)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\mainapp\admin.py", line 17, in export_to_pdf
+    pdfmetrics.registerFont(TTFont('Calibri', 'mainapp/calibri.ttf'))
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\reportlab\pdfbase\ttfonts.py", line 1192, in __init__
+    self.face = TTFontFace(filename, validate=validate, subfontIndex=subfontIndex)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\reportlab\pdfbase\ttfonts.py", line 1073, in __init__
+    TTFontFile.__init__(self, filename, validate=validate, subfontIndex=subfontIndex)
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\reportlab\pdfbase\ttfonts.py", line 439, in __init__
+    TTFontParser.__init__(self, file, validate=validate,subfontIndex=subfontIndex)
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\reportlab\pdfbase\ttfonts.py", line 175, in __init__
+    self.readFile(file)
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\reportlab\pdfbase\ttfonts.py", line 251, in readFile
+    self.filename, f = TTFOpenFile(f)
+                       ^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\reportlab\pdfbase\ttfonts.py", line 161, in TTFOpenFile
+    raise TTFError('Can\'t open file "%s"' % fn)
+reportlab.pdfbase.ttfonts.TTFError: Can't open file "mainapp/calibri.ttf"
+2024-06-15 13:12:43,580 [INFO] C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\mainapp\admin.py changed, reloading.
+2024-06-15 13:12:45,062 [INFO] Watching for file changes with StatReloader

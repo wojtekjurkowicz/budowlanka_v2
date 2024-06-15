@@ -2,26 +2,43 @@ from django.contrib import admin
 from .models import Realization, Appointment, Comment
 from django.http import HttpResponse
 from reportlab.pdfgen import canvas
-from django.template.loader import render_to_string
 import io
+from reportlab.lib.pagesizes import letter
+from reportlab.pdfbase.ttfonts import TTFont
+from reportlab.pdfbase import pdfmetrics
 
 
 class ExportPDFMixin:
     def export_to_pdf(self, request, queryset):
         buffer = io.BytesIO()
-        p = canvas.Canvas(buffer)
+        p = canvas.Canvas(buffer, pagesize=letter)
+
+        # Zarejestruj czcionkę Arial
+        pdfmetrics.registerFont(TTFont('Calibri', 'mainapp/static/mainapp/calibri.ttf'))
+        p.setFont('Calibri', 12)
 
         # Pobierz dane z widoku Django i umieść je w pliku PDF
         if self.model == Realization:
-            data = render_to_string('mainapp/realization_pdf_template.html', {'data': queryset})
+            for obj in queryset:
+                p.drawString(100, 750, f"Tytuł: {obj.title}")
+                p.drawString(100, 730, f"Opis: {obj.content}")
+                p.drawString(100, 710, f"Data: {obj.date.strftime('%Y-%m-%d %H:%M:%S')}")
+                p.showPage()
+
         elif self.model == Appointment:
-            data = render_to_string('mainapp/appointment_pdf_template.html', {'data': queryset})
+            for obj in queryset:
+                p.drawString(100, 750, f"Opis projektu: {obj.description}")
+                p.drawString(100, 730, f"Data: {obj.date.strftime('%Y-%m-%d %H:%M:%S')}")
+                p.showPage()
+
         elif self.model == Comment:
-            data = render_to_string('mainapp/comment_pdf_template.html', {'data': queryset})
+            for obj in queryset:
+                p.drawString(100, 750, f"Realizacja: {obj.realization}")
+                p.drawString(100, 730, f"Autor: {obj.author}")
+                p.drawString(100, 710, f"Treść: {obj.content}")
+                p.drawString(100, 690, f"Data: {obj.date.strftime('%Y-%m-%d %H:%M:%S')}")
+                p.showPage()
 
-        p.drawString(100, 100, data)
-
-        p.showPage()
         p.save()
 
         buffer.seek(0)

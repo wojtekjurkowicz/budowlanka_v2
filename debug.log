@@ -3883,3 +3883,18 @@ Traceback (most recent call last):
 reportlab.pdfbase.ttfonts.TTFError: Can't open file "mainapp/calibri.ttf"
 2024-06-15 13:12:43,580 [INFO] C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\mainapp\admin.py changed, reloading.
 2024-06-15 13:12:45,062 [INFO] Watching for file changes with StatReloader
+2024-06-15 13:19:31,516 [INFO] Watching for file changes with StatReloader
+2024-06-15 13:22:05,960 [WARNING] Not Found: /contact/
+2024-06-15 13:22:10,404 [DEBUG] Renderowanie strony g³ównej
+2024-06-15 13:22:13,426 [DEBUG] Pobrano czêœæ wpisów
+2024-06-15 13:22:19,545 [DEBUG] Renderowanie formularza wizyty
+2024-06-15 13:22:33,527 [DEBUG] Pobrano czêœæ wpisów
+2024-06-15 13:22:34,636 [DEBUG] Widok szczegó³owy dla realizacji 1
+2024-06-15 13:22:59,547 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-15 13:24:00,836 [DEBUG] Renderowanie formularza wizyty
+2024-06-15 13:24:39,418 [DEBUG] Pobrano czêœæ wpisów
+2024-06-15 13:25:07,445 [DEBUG] Widok szczegó³owy dla realizacji 1
+2024-06-15 13:28:52,784 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-15 13:29:22,051 [DEBUG] Renderowanie formularza wizyty
+2024-06-15 13:31:06,002 [DEBUG] Pobrano czêœæ wpisów
+2024-06-15 13:31:43,207 [DEBUG] Widok szczegó³owy dla realizacji 1

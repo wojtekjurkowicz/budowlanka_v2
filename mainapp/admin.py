@@ -13,7 +13,7 @@ class ExportPDFMixin:
         buffer = io.BytesIO()
         p = canvas.Canvas(buffer, pagesize=letter)
 
-        # Zarejestruj czcionkę Arial
+        # Zarejestruj czcionkę Calibri
         pdfmetrics.registerFont(TTFont('Calibri', 'mainapp/static/mainapp/calibri.ttf'))
         p.setFont('Calibri', 12)
 

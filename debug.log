@@ -3898,3 +3898,84 @@ reportlab.pdfbase.ttfonts.TTFError: Can't open file "mainapp/calibri.ttf"
 2024-06-15 13:29:22,051 [DEBUG] Renderowanie formularza wizyty
 2024-06-15 13:31:06,002 [DEBUG] Pobrano czêœæ wpisów
 2024-06-15 13:31:43,207 [DEBUG] Widok szczegó³owy dla realizacji 1
+2024-06-15 15:25:36,918 [DEBUG] Data submitted: <QueryDict: {'description': ['Testowa wizyta'], 'date': ['2024-05-21T10:00:00Z']}>
+2024-06-15 15:25:37,819 [INFO] Wys³ano e-mail potwierdzaj¹cy wizytê.
+2024-06-15 15:25:37,820 [INFO] Wizyta utworzona na 2024-05-21 10:00:00+00:00 z opisem Testowa wizyta
+2024-06-15 15:25:37,845 [DEBUG] Pobrano czêœæ wpisów
+2024-06-15 15:25:37,888 [DEBUG] Pobrano czêœæ wpisów
+2024-06-15 15:25:37,904 [DEBUG] Pobrano czêœæ wpisów
+2024-06-15 15:25:39,692 [DEBUG] Renderowanie formularza wizyty
+2024-06-15 15:25:41,388 [DEBUG] Data submitted: <QueryDict: {'description': ['Test Appointment'], 'date': ['2024-05-21T10:00:00Z']}>
+2024-06-15 15:25:41,391 [INFO] Wys³ano e-mail potwierdzaj¹cy wizytê.
+2024-06-15 15:25:41,392 [INFO] Wizyta utworzona na 2024-05-21 10:00:00+00:00 z opisem Test Appointment
+2024-06-15 15:25:43,047 [DEBUG] Pobrano czêœæ wpisów
+2024-06-15 15:25:45,531 [INFO] Nowy komentarz dodany przez testuser do realizacji 1
+2024-06-15 15:25:47,190 [INFO] Wiadomoœæ wys³ana przez testuser
+2024-06-15 15:25:47,192 [DEBUG] Renderowanie strony g³ównej
+2024-06-15 15:25:48,856 [DEBUG] Widok szczegó³owy dla realizacji 1
+2024-06-15 15:32:26,032 [DEBUG] Data submitted: <QueryDict: {'description': ['Testowa wizyta'], 'date': ['2024-05-21T10:00:00Z']}>
+2024-06-15 15:32:26,929 [INFO] Wys³ano e-mail potwierdzaj¹cy wizytê.
+2024-06-15 15:32:26,930 [INFO] Wizyta utworzona na 2024-05-21 10:00:00+00:00 z opisem Testowa wizyta
+2024-06-15 15:32:26,969 [DEBUG] Pobrano czêœæ wpisów
+2024-06-15 15:32:27,012 [DEBUG] Pobrano czêœæ wpisów
+2024-06-15 15:32:27,024 [DEBUG] Pobrano czêœæ wpisów
+2024-06-15 15:32:28,803 [DEBUG] Renderowanie formularza wizyty
+2024-06-15 15:32:30,496 [DEBUG] Data submitted: <QueryDict: {'description': ['Test Appointment'], 'date': ['2024-05-21T10:00:00Z']}>
+2024-06-15 15:32:30,499 [INFO] Wys³ano e-mail potwierdzaj¹cy wizytê.
+2024-06-15 15:32:30,500 [INFO] Wizyta utworzona na 2024-05-21 10:00:00+00:00 z opisem Test Appointment
+2024-06-15 15:32:32,150 [DEBUG] Pobrano czêœæ wpisów
+2024-06-15 15:32:34,636 [INFO] Nowy komentarz dodany przez testuser do realizacji 1
+2024-06-15 15:32:36,302 [INFO] Wiadomoœæ wys³ana przez testuser
+2024-06-15 15:32:36,304 [DEBUG] Renderowanie strony g³ównej
+2024-06-15 15:32:37,963 [DEBUG] Widok szczegó³owy dla realizacji 1
+2024-06-15 15:40:18,290 [DEBUG] Data submitted: <QueryDict: {'description': ['Testowa wizyta'], 'date': ['2024-05-21T10:00:00Z']}>
+2024-06-15 15:40:19,204 [INFO] Wys³ano e-mail potwierdzaj¹cy wizytê.
+2024-06-15 15:40:19,205 [INFO] Wizyta utworzona na 2024-05-21 10:00:00+00:00 z opisem Testowa wizyta
+2024-06-15 15:40:19,228 [DEBUG] Pobrano czêœæ wpisów
+2024-06-15 15:40:19,268 [DEBUG] Pobrano czêœæ wpisów
+2024-06-15 15:40:19,280 [DEBUG] Pobrano czêœæ wpisów
+2024-06-15 15:40:21,057 [DEBUG] Renderowanie formularza wizyty
+2024-06-15 15:40:22,759 [DEBUG] Data submitted: <QueryDict: {'description': ['Test Appointment'], 'date': ['2024-05-21T10:00:00Z']}>
+2024-06-15 15:40:22,763 [INFO] Wys³ano e-mail potwierdzaj¹cy wizytê.
+2024-06-15 15:40:22,763 [INFO] Wizyta utworzona na 2024-05-21 10:00:00+00:00 z opisem Test Appointment
+2024-06-15 15:40:24,433 [DEBUG] Pobrano czêœæ wpisów
+2024-06-15 15:40:26,943 [INFO] Nowy komentarz dodany przez testuser do realizacji 1
+2024-06-15 15:40:28,607 [INFO] Wiadomoœæ wys³ana przez testuser
+2024-06-15 15:40:28,609 [DEBUG] Renderowanie strony g³ównej
+2024-06-15 15:40:30,266 [DEBUG] Widok szczegó³owy dla realizacji 1
+2024-06-15 15:42:25,799 [DEBUG] Data submitted: <QueryDict: {'description': ['Testowa wizyta'], 'date': ['2024-05-21T10:00:00Z']}>
+2024-06-15 15:42:26,705 [INFO] Wys³ano e-mail potwierdzaj¹cy wizytê.
+2024-06-15 15:42:26,706 [INFO] Wizyta utworzona na 2024-05-21 10:00:00+00:00 z opisem Testowa wizyta
+2024-06-15 15:42:26,728 [DEBUG] Pobrano czêœæ wpisów
+2024-06-15 15:42:26,773 [DEBUG] Pobrano czêœæ wpisów
+2024-06-15 15:42:26,786 [DEBUG] Pobrano czêœæ wpisów
+2024-06-15 15:42:28,552 [DEBUG] Renderowanie formularza wizyty
+2024-06-15 15:42:30,259 [DEBUG] Data submitted: <QueryDict: {'description': ['Test Appointment'], 'date': ['2024-05-21T10:00:00Z']}>
+2024-06-15 15:42:30,262 [INFO] Wys³ano e-mail potwierdzaj¹cy wizytê.
+2024-06-15 15:42:30,263 [INFO] Wizyta utworzona na 2024-05-21 10:00:00+00:00 z opisem Test Appointment
+2024-06-15 15:42:31,923 [DEBUG] Pobrano czêœæ wpisów
+2024-06-15 15:42:34,406 [INFO] Nowy komentarz dodany przez testuser do realizacji 1
+2024-06-15 15:42:36,065 [INFO] Wiadomoœæ wys³ana przez testuser
+2024-06-15 15:42:36,067 [DEBUG] Renderowanie strony g³ównej
+2024-06-15 15:42:37,729 [DEBUG] Widok szczegó³owy dla realizacji 1
+2024-06-15 15:44:21,099 [DEBUG] Data submitted: <QueryDict: {'description': ['Testowa wizyta'], 'date': ['2024-05-21T10:00:00Z']}>
+2024-06-15 15:44:21,976 [INFO] Wys³ano e-mail potwierdzaj¹cy wizytê.
+2024-06-15 15:44:21,977 [INFO] Wizyta utworzona na 2024-05-21 10:00:00+00:00 z opisem Testowa wizyta
+2024-06-15 15:44:22,005 [DEBUG] Pobrano czêœæ wpisów
+2024-06-15 15:44:22,044 [DEBUG] Pobrano czêœæ wpisów
+2024-06-15 15:44:22,057 [DEBUG] Pobrano czêœæ wpisów
+2024-06-15 15:44:23,839 [DEBUG] Renderowanie formularza wizyty
+2024-06-15 15:44:25,528 [DEBUG] Data submitted: <QueryDict: {'description': ['Test Appointment'], 'date': ['2024-05-21T10:00:00Z']}>
+2024-06-15 15:44:25,532 [INFO] Wys³ano e-mail potwierdzaj¹cy wizytê.
+2024-06-15 15:44:25,532 [INFO] Wizyta utworzona na 2024-05-21 10:00:00+00:00 z opisem Test Appointment
+2024-06-15 15:44:27,182 [DEBUG] Pobrano czêœæ wpisów
+2024-06-15 15:44:28,946 [INFO] Nowy komentarz dodany przez testuser do realizacji 1
+2024-06-15 15:44:30,679 [INFO] Wiadomoœæ wys³ana przez testuser
+2024-06-15 15:44:30,683 [DEBUG] Renderowanie strony g³ównej
+2024-06-15 15:44:32,353 [DEBUG] Widok szczegó³owy dla realizacji 1
+2024-06-15 15:49:20,926 [INFO] Watching for file changes with StatReloader
+2024-06-15 15:49:31,568 [DEBUG] Renderowanie formularza wizyty
+2024-06-15 15:49:46,105 [DEBUG] Data submitted: <QueryDict: {'csrfmiddlewaretoken': ['2RE946tl1PDD2YpaT3QbmH0JDkOaQJZ3s46xXTpDW8LDay4nmAGfvYPRbZCAMK8n'], 'description': ['tescior'], 'date': ['16.06.2024 15:49:31'], 'initial-date': ['2024-06-15 15:49:31'], 'Rezerwuj': ['']}>
+2024-06-15 15:49:46,133 [INFO] Wys³ano e-mail potwierdzaj¹cy wizytê.
+2024-06-15 15:49:46,134 [INFO] Wizyta utworzona na 2024-06-16 15:49:31+02:00 z opisem tescior
+2024-06-15 15:49:46,145 [DEBUG] Renderowanie formularza wizyty

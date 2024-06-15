@@ -8,30 +8,37 @@ from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.pdfbase import pdfmetrics
 
 
+# Mixin class to add PDF export functionality
 class ExportPDFMixin:
+    def get_model(self, queryset):
+        # Get the model class from the queryset
+        return queryset.model
+
     def export_to_pdf(self, request, queryset):
         buffer = io.BytesIO()
         p = canvas.Canvas(buffer, pagesize=letter)
 
-        # Zarejestruj czcionkę Calibri
+        # Register font Calibri
         pdfmetrics.registerFont(TTFont('Calibri', 'mainapp/static/mainapp/calibri.ttf'))
         p.setFont('Calibri', 12)
 
-        # Pobierz dane z widoku Django i umieść je w pliku PDF
-        if self.model == Realization:
+        model = self.get_model(queryset)
+
+        # Download date from views Django and change them to PDF
+        if model == Realization:
             for obj in queryset:
                 p.drawString(100, 750, f"Tytuł: {obj.title}")
                 p.drawString(100, 730, f"Opis: {obj.content}")
                 p.drawString(100, 710, f"Data: {obj.date.strftime('%Y-%m-%d %H:%M:%S')}")
                 p.showPage()
 
-        elif self.model == Appointment:
+        elif model == Appointment:
             for obj in queryset:
                 p.drawString(100, 750, f"Opis projektu: {obj.description}")
                 p.drawString(100, 730, f"Data: {obj.date.strftime('%Y-%m-%d %H:%M:%S')}")
                 p.showPage()
 
-        elif self.model == Comment:
+        elif model == Comment:
             for obj in queryset:
                 p.drawString(100, 750, f"Realizacja: {obj.realization}")
                 p.drawString(100, 730, f"Autor: {obj.author}")
@@ -49,6 +56,7 @@ class ExportPDFMixin:
     export_to_pdf.short_description = "Export to PDF"
 
 
+# Admin class for Appointment model with PDF export functionality
 class AppointmentAdmin(admin.ModelAdmin, ExportPDFMixin):
     list_display = ('description', 'date')
     list_filter = ('date',)
@@ -66,6 +74,7 @@ class AppointmentAdmin(admin.ModelAdmin, ExportPDFMixin):
     actions = ['export_to_pdf']
 
 
+# Admin class for Realization model with PDF export functionality
 class RealizationAdmin(admin.ModelAdmin, ExportPDFMixin):
     list_display = ('title', 'content', 'date', 'was_published_recently')
     list_filter = ('date',)
@@ -84,6 +93,7 @@ class RealizationAdmin(admin.ModelAdmin, ExportPDFMixin):
     actions = ['export_to_pdf']
 
 
+# Admin class for Comment model with PDF export functionality
 class CommentAdmin(admin.ModelAdmin, ExportPDFMixin):
     list_display = ('realization', 'author', 'content', 'date')
     list_filter = ('date', 'author')
@@ -101,6 +111,7 @@ class CommentAdmin(admin.ModelAdmin, ExportPDFMixin):
     actions = ['export_to_pdf']
 
 
+# Register the models with their respective admin classes
 admin.site.register(Appointment, AppointmentAdmin)
 admin.site.register(Comment, CommentAdmin)
 admin.site.register(Realization, RealizationAdmin)

@@ -8,13 +8,19 @@ app_name = 'budowlanka_project'
 urlpatterns = [
     # Home page
     path('', views.index, name='index'),
+
     # Blog page
     path('blog/', views.blog, name='blog'),
+
     # Detail page for a single entry on blog
     path('blog/<int:entry_id>/', views.detail, name='detail'),
+
     # Appointments page
     path('umowwizyte/', views.appointment, name='appointment'),
+
     # Contact page
     path('kontakt/', views.contact, name='contact'),
+
+    # PDF page (only for admin)
     path('pdf', views.show_pdf, name='show_pdf'),
 ]

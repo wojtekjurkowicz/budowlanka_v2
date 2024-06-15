@@ -1,8 +1,7 @@
 import logging
-import io
 from calendar import HTMLCalendar
 
-from django.conf import settings
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
 from django.core.paginator import Paginator
@@ -11,9 +10,6 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 from django.utils.safestring import mark_safe
 from django.views.decorators.http import require_http_methods
-from django.http import FileResponse
-from reportlab.pdfgen import canvas
-from django.contrib import messages
 
 from .forms import AppointmentForm, CommentForm, ContactForm
 from .models import Realization, Comment, Appointment
@@ -72,11 +68,12 @@ def detail(request, entry_id):
     """
     try:
         entry = get_object_or_404(Realization, pk=entry_id)
-        comments = Comment.objects.filter(realization=entry)
+        comments = Comment.objects.filter(realization=entry)  # Get comments related to the realization
 
         if request.method == 'POST':
             comment_form = CommentForm(request.POST)
             if comment_form.is_valid():
+                # Save comment with author and related realization
                 comment = comment_form.save(commit=False)
                 comment.author = request.user
                 comment.realization = entry
@@ -107,13 +104,8 @@ class CalendarView(HTMLCalendar):
         :return: HTML representation of the day's cell.
         """
         appointments_per_day = appointments.filter(date__day=day)
-        d = ''
-        for appointment in appointments_per_day:
-            d += f'<li> {appointment.description} </li>'
-
-        if day != 0:
-            return f"<td><span class='date'>{day}</span><ul> {d} </ul></td>"
-        return '<td></td>'
+        d = ''.join(f'<li> {appointment.description} </li>' for appointment in appointments_per_day)
+        return f"<td><span class='date'>{day}</span><ul> {d} </ul></td>" if day != 0 else '<td></td>'
 
     def formatweek(self, theweek, appointments):
         """
@@ -123,21 +115,20 @@ class CalendarView(HTMLCalendar):
         :param appointments: QuerySet of appointments for the given week.
         :return: HTML representation of the week's row.
         """
-        s = ''.join(self.formatday(d, wd, appointments) for (d, wd) in theweek)
-        return f'<tr> {s} </tr>'
+        return f'<tr> {" ".join(self.formatday(d, wd, appointments) for (d, wd) in theweek)} </tr>'
 
     def formatmonth(self, theyear, themonth, withyear=True):
         """
         Return a formatted month as a table.
         """
         appointments = Appointment.objects.filter(date__year=theyear, date__month=themonth)
-
-        cal = f'<table border="0" cellpadding="0" cellspacing="0" class="calendar">\n'
-        cal += f'{self.formatmonthname(theyear, themonth, withyear=withyear)}\n'
-        cal += f'{self.formatweekheader()}\n'
-        for week in self.monthdays2calendar(theyear, themonth):
-            cal += f'{self.formatweek(week, appointments)}\n'
-        return cal
+        return ''.join([
+            f'<table border="0" cellpadding="0" cellspacing="0" class="calendar">\n',
+            f'{self.formatmonthname(theyear, themonth, withyear=withyear)}\n',
+            f'{self.formatweekheader()}\n',
+            ''.join(self.formatweek(week, appointments) for week in self.monthdays2calendar(theyear, themonth)),
+            '\n</table>'
+        ])
 
 
 @require_http_methods(["GET", "POST"])
@@ -149,18 +140,13 @@ def appointment(request):
     :return: HttpResponse object.
     """
     try:
-        if request.method != 'POST':
-            # No data submitted
-            form = AppointmentForm()
-            logger.debug("Renderowanie formularza wizyty")
-        else:
+        if request.method == 'POST':
             # POST data submitted
             form = AppointmentForm(data=request.POST)
             logger.debug(f"Data submitted: {request.POST}")
             if form.is_valid():
                 # Form is valid, process the data
-                appointment = form.save()
-                now = timezone.now()
+                form.save()
 
                 send_mail(
                     'Potwierdzenie wizyty',
@@ -169,12 +155,16 @@ def appointment(request):
                     [request.user.email],
                     fail_silently=False,
                 )
-                logger.info("Wysłano e-mail potwierdzający wizytę.")
                 logger.info(f"Wizyta utworzona na {appointment.date} z opisem {appointment.description}")
+                logger.info("Wysłano e-mail potwierdzający wizytę.")
                 # Always redirect back to the appointment page after a successful submission
                 return redirect('mainapp:appointment')
             else:
                 logger.error(f"Formularz wizyty nie jest poprawny: {form.errors}")
+        else:
+            # No data submitted
+            form = AppointmentForm()
+            logger.debug("Renderowanie formularza wizyty")
 
         cal = CalendarView()
         now = timezone.now()
@@ -202,15 +192,11 @@ def contact(request):
     :return: HttpResponse object.
     """
     try:
-        if request.method != 'POST':
-            # No data submitted
-            form = ContactForm()
-            logger.debug("Renderowanie formularza kontaktowego")
-        else:
+        if request.method == 'POST':
             # POST data submitted
             form = ContactForm(data=request.POST)
             if form.is_valid():
-                # przetwarzanie danych z formularza
+                # Form is valid; process the data
                 first_name = form.cleaned_data['first_name']
                 last_name = form.cleaned_data['last_name']
                 email = form.cleaned_data['email']
@@ -229,26 +215,13 @@ def contact(request):
                 return redirect('mainapp:index')
             else:
                 logger.error(f"Formularz wiadomości nie jest poprawny: {form.errors}")
+        else:
+            # No data submitted
+            form = ContactForm()
+            logger.debug("Renderowanie formularza kontaktowego")
 
         context = {'form': form}
         return render(request, 'mainapp/contact.html', context)
     except Exception as e:
         logger.error(f"Błąd w widoku wiadomości: {e}")
         return render(request, 'mainapp/error.html', {'error': str(e)})
-
-
-def show_pdf(request):
-    """
-    Display a PDF file.
-
-    :param request: HttpRequest object.
-    :return: FileResponse object.
-    """
-    buffer = io.BytesIO()
-    p = canvas.Canvas(buffer)
-    p.drawString(100, 100, "Hello world.")
-    p.showPage()
-    p.save()
-
-    buffer.seek(0)
-    return FileResponse(buffer, as_attachment=True, filename="hello.pdf")

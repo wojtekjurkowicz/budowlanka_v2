@@ -146,7 +146,7 @@ def appointment(request):
             logger.debug(f"Data submitted: {request.POST}")
             if form.is_valid():
                 # Form is valid, process the data
-                form.save()
+                appointment = form.save()
 
                 send_mail(
                     'Potwierdzenie wizyty',

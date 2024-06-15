@@ -240,18 +240,6 @@ class TestCalendarView(TestCase):
         self.assertNotIn('<li>', day_html)
 
 
-# ShowPDFView test
-class TestShowPDFView(TestCase):
-    """Tests for ShowPDFView"""
-
-    def test_show_pdf(self):
-        """Test displaying a PDF"""
-        response = self.client.get(reverse('mainapp:show_pdf'))
-        self.assertEqual(response.status_code, 200)
-        self.assertEqual(response['Content-Type'], 'application/pdf')
-        self.assertIn('attachment; filename="hello.pdf"', response['Content-Disposition'])
-
-
 # ContactForm tests
 class TestContactForm(TestCase):
     """Tests for ContactForm"""

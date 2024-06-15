@@ -20,7 +20,4 @@ urlpatterns = [
 
     # Contact page
     path('kontakt/', views.contact, name='contact'),
-
-    # PDF page (only for admin)
-    path('pdf', views.show_pdf, name='show_pdf'),
 ]

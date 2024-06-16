@@ -10,7 +10,7 @@
     <form action="{% url 'mainapp:detail' entry.id %}" method="post">
         {% csrf_token %}
         {{ comment_form.as_p }}
-        <button name="submit">Dodaj</button>
+        <button name="submit" class="btn btn-primary">Dodaj</button><br><br>
     </form>
         {% for comment in comments %}
             <article>

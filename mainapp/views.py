@@ -104,8 +104,8 @@ class CalendarView(HTMLCalendar):
         :return: HTML representation of the day's cell.
         """
         appointments_per_day = appointments.filter(date__day=day)
-        d = ''.join(f'<li> {appointment.description} </li>' for appointment in appointments_per_day)
-        return f"<td><span class='date'>{day}</span><ul> {d} </ul></td>" if day != 0 else '<td></td>'
+        d = ''.join(f'<li> Zajęty termin</li>' for appointment in appointments_per_day) #{appointment.description}
+        return f"<td><span class='date'>{day}</span><ul style='list-style-type:none;'> {d} </ul></td>" if day != 0 else '<td></td>'
 
     def formatweek(self, theweek, appointments):
         """
@@ -123,7 +123,7 @@ class CalendarView(HTMLCalendar):
         """
         appointments = Appointment.objects.filter(date__year=theyear, date__month=themonth)
         return ''.join([
-            f'<table border="0" cellpadding="0" cellspacing="0" class="calendar">\n',
+            f'<table class="table table-bordered">\n',
             f'{self.formatmonthname(theyear, themonth, withyear=withyear)}\n',
             f'{self.formatweekheader()}\n',
             ''.join(self.formatweek(week, appointments) for week in self.monthdays2calendar(theyear, themonth)),

@@ -46,7 +46,7 @@ class Comment(models.Model):
     realization = models.ForeignKey(Realization, on_delete=models.CASCADE,
                                     verbose_name="Realizacja")  # Associated realization
     author = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Autor komentarza')  # Author of the comment
-    content = models.CharField(max_length=200, verbose_name='Treść komentarza')  # Content of the comment
+    content = models.CharField(max_length=200, verbose_name='')  # Content of the comment
     date = models.DateTimeField(default=timezone.now, verbose_name='Data')  # Date and time when the comment was added
 
     def __str__(self):

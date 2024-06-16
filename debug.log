@@ -4023,3 +4023,761 @@ reportlab.pdfbase.ttfonts.TTFError: Can't open file "mainapp/calibri.ttf"
 2024-06-15 16:05:42,259 [INFO] Wiadomoœæ wys³ana przez testuser
 2024-06-15 16:05:42,261 [DEBUG] Renderowanie strony g³ównej
 2024-06-15 16:05:43,930 [DEBUG] Widok szczegó³owy dla realizacji 1
+2024-06-16 16:34:04,835 [INFO] Watching for file changes with StatReloader
+2024-06-16 16:34:11,130 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 16:34:12,950 [WARNING] Not Found: /favicon.ico
+2024-06-16 16:34:48,058 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 16:34:48,800 [DEBUG] Pobrano czêœæ wpisów
+2024-06-16 16:34:50,242 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 16:35:16,950 [WARNING] Not Found: /adnim
+2024-06-16 16:38:09,832 [WARNING] Forbidden (CSRF token from POST incorrect.): /accounts/login/
+2024-06-16 16:38:15,351 [WARNING] Forbidden (CSRF token from POST incorrect.): /accounts/login/
+2024-06-16 16:38:20,663 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 16:38:23,916 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 16:38:34,820 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 16:38:36,909 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 16:41:16,437 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 16:41:17,589 [DEBUG] Pobrano czêœæ wpisów
+2024-06-16 16:41:19,101 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 16:41:22,456 [DEBUG] Pobrano czêœæ wpisów
+2024-06-16 16:41:23,639 [DEBUG] Widok szczegó³owy dla realizacji 1
+2024-06-16 16:43:58,408 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 16:46:41,445 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 16:50:58,844 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\forms.py changed, reloading.
+2024-06-16 16:50:59,620 [INFO] Watching for file changes with StatReloader
+2024-06-16 16:51:57,138 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\forms.py changed, reloading.
+2024-06-16 16:51:57,868 [INFO] Watching for file changes with StatReloader
+2024-06-16 16:52:00,470 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 16:52:22,446 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\forms.py changed, reloading.
+2024-06-16 16:52:23,159 [INFO] Watching for file changes with StatReloader
+2024-06-16 16:52:23,458 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 16:53:11,364 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\forms.py changed, reloading.
+2024-06-16 16:53:12,108 [INFO] Watching for file changes with StatReloader
+2024-06-16 16:53:14,606 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 16:53:46,042 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\forms.py changed, reloading.
+2024-06-16 16:53:46,766 [INFO] Watching for file changes with StatReloader
+2024-06-16 16:53:48,460 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 16:54:02,990 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\forms.py changed, reloading.
+2024-06-16 16:54:03,744 [INFO] Watching for file changes with StatReloader
+2024-06-16 16:54:04,602 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 16:55:16,892 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\forms.py changed, reloading.
+2024-06-16 16:55:17,619 [INFO] Watching for file changes with StatReloader
+2024-06-16 16:55:18,722 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 16:56:15,207 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\forms.py changed, reloading.
+2024-06-16 16:56:15,959 [INFO] Watching for file changes with StatReloader
+2024-06-16 16:56:30,949 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\forms.py changed, reloading.
+2024-06-16 16:56:31,643 [INFO] Watching for file changes with StatReloader
+2024-06-16 16:56:34,183 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\forms.py changed, reloading.
+2024-06-16 16:56:34,923 [INFO] Watching for file changes with StatReloader
+2024-06-16 16:56:36,375 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 16:56:48,081 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\forms.py changed, reloading.
+2024-06-16 16:56:48,804 [INFO] Watching for file changes with StatReloader
+2024-06-16 17:00:44,216 [INFO] Watching for file changes with StatReloader
+2024-06-16 17:01:38,401 [INFO] Watching for file changes with StatReloader
+2024-06-16 17:03:44,739 [INFO] Watching for file changes with StatReloader
+2024-06-16 17:03:50,272 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 17:03:50,282 [ERROR] B³¹d w widoku wiadomoœci: 'CharField' object has no attribute 'is_hidden'
+2024-06-16 17:04:02,042 [DEBUG] Pobrano czêœæ wpisów
+2024-06-16 17:04:03,163 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 17:04:03,899 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 17:04:03,900 [ERROR] B³¹d w widoku wiadomoœci: 'CharField' object has no attribute 'is_hidden'
+2024-06-16 17:04:43,815 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\forms.py changed, reloading.
+2024-06-16 17:04:44,550 [INFO] Watching for file changes with StatReloader
+2024-06-16 17:04:44,736 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 17:04:44,747 [ERROR] B³¹d w widoku wiadomoœci: 'CharField' object has no attribute 'is_hidden'
+2024-06-16 17:05:04,766 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\forms.py changed, reloading.
+2024-06-16 17:05:05,523 [INFO] Watching for file changes with StatReloader
+2024-06-16 17:18:52,312 [INFO] Watching for file changes with StatReloader
+2024-06-16 17:18:55,917 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 17:27:49,768 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 17:27:52,754 [DEBUG] Pobrano czêœæ wpisów
+2024-06-16 17:27:56,901 [DEBUG] Widok szczegó³owy dla realizacji 1
+2024-06-16 17:28:10,615 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 17:28:41,599 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 17:28:44,786 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 17:28:46,716 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 17:35:00,050 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 17:43:32,295 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\forms.py changed, reloading.
+2024-06-16 17:43:33,163 [INFO] Watching for file changes with StatReloader
+2024-06-16 17:43:36,074 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 17:44:43,344 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\forms.py changed, reloading.
+2024-06-16 17:44:44,061 [INFO] Watching for file changes with StatReloader
+2024-06-16 17:44:44,478 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 17:45:33,911 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:20:48,001 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\views.py changed, reloading.
+2024-06-16 18:20:48,739 [INFO] Watching for file changes with StatReloader
+2024-06-16 18:20:54,630 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:21:02,927 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\views.py changed, reloading.
+2024-06-16 18:21:03,631 [INFO] Watching for file changes with StatReloader
+2024-06-16 18:21:06,438 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:21:24,022 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\views.py changed, reloading.
+2024-06-16 18:21:24,783 [INFO] Watching for file changes with StatReloader
+2024-06-16 18:26:46,064 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\views.py changed, reloading.
+2024-06-16 18:26:46,809 [INFO] Watching for file changes with StatReloader
+2024-06-16 18:27:01,568 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\views.py changed, reloading.
+2024-06-16 18:27:02,272 [INFO] Watching for file changes with StatReloader
+2024-06-16 18:27:02,427 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:27:15,241 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\views.py changed, reloading.
+2024-06-16 18:27:16,000 [INFO] Watching for file changes with StatReloader
+2024-06-16 18:27:17,486 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:27:20,400 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:27:21,564 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:27:22,419 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:27:23,087 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:27:29,287 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\views.py changed, reloading.
+2024-06-16 18:27:29,996 [INFO] Watching for file changes with StatReloader
+2024-06-16 18:27:30,315 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:27:36,855 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\views.py changed, reloading.
+2024-06-16 18:27:37,581 [INFO] Watching for file changes with StatReloader
+2024-06-16 18:27:38,402 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:28:22,820 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\views.py changed, reloading.
+2024-06-16 18:28:23,521 [INFO] Watching for file changes with StatReloader
+2024-06-16 18:28:25,169 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:28:26,186 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:28:30,080 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:28:31,377 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:29:06,828 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\views.py changed, reloading.
+2024-06-16 18:29:07,631 [INFO] Watching for file changes with StatReloader
+2024-06-16 18:29:09,291 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:29:10,947 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:29:11,650 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:29:12,871 [DEBUG] Pobrano czêœæ wpisów
+2024-06-16 18:29:13,608 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:29:25,968 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\views.py changed, reloading.
+2024-06-16 18:29:26,693 [INFO] Watching for file changes with StatReloader
+2024-06-16 18:29:28,294 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:30:28,669 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:30:29,607 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:31:39,211 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\views.py changed, reloading.
+2024-06-16 18:31:40,016 [INFO] Watching for file changes with StatReloader
+2024-06-16 18:31:40,787 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:31:51,916 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\views.py changed, reloading.
+2024-06-16 18:31:52,660 [INFO] Watching for file changes with StatReloader
+2024-06-16 18:32:48,162 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:33:10,479 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:33:21,649 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\views.py changed, reloading.
+2024-06-16 18:33:22,379 [INFO] Watching for file changes with StatReloader
+2024-06-16 18:33:22,863 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:34:08,627 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\views.py changed, reloading.
+2024-06-16 18:34:09,344 [INFO] Watching for file changes with StatReloader
+2024-06-16 18:34:10,038 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:34:35,836 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\views.py changed, reloading.
+2024-06-16 18:34:36,550 [INFO] Watching for file changes with StatReloader
+2024-06-16 18:34:37,064 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:34:52,601 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\views.py changed, reloading.
+2024-06-16 18:34:53,329 [INFO] Watching for file changes with StatReloader
+2024-06-16 18:34:55,438 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:34:56,971 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:37:16,189 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\views.py changed, reloading.
+2024-06-16 18:37:16,922 [INFO] Watching for file changes with StatReloader
+2024-06-16 18:37:19,560 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:37:34,196 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\views.py changed, reloading.
+2024-06-16 18:37:34,961 [INFO] Watching for file changes with StatReloader
+2024-06-16 18:37:38,612 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:38:19,241 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\views.py changed, reloading.
+2024-06-16 18:38:19,969 [INFO] Watching for file changes with StatReloader
+2024-06-16 18:38:21,893 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:38:49,715 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\views.py changed, reloading.
+2024-06-16 18:38:50,458 [INFO] Watching for file changes with StatReloader
+2024-06-16 18:38:51,990 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:40:44,905 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:40:58,403 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:41:09,406 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\views.py changed, reloading.
+2024-06-16 18:41:10,196 [INFO] Watching for file changes with StatReloader
+2024-06-16 18:41:11,476 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:42:16,186 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:43:24,837 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:43:25,742 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:43:26,194 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:43:26,420 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:43:26,618 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:43:26,780 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:43:26,969 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:43:27,132 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:43:27,329 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:43:46,244 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:44:02,271 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:44:14,800 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:44:22,479 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:44:33,289 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:45:17,289 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:45:36,568 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:46:06,805 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\views.py changed, reloading.
+2024-06-16 18:46:07,523 [INFO] Watching for file changes with StatReloader
+2024-06-16 18:46:09,403 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:47:50,007 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:48:11,778 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:49:12,216 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:50:00,669 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:50:01,767 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:50:02,150 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:50:02,349 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:50:02,503 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:51:29,529 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:51:48,899 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:51:49,907 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:51:56,946 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:51:57,433 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:51:57,629 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:51:57,820 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:52:08,180 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:52:25,461 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:52:26,055 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:52:26,271 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:52:26,471 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:52:26,654 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:52:26,823 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:52:26,960 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:52:27,116 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:53:00,049 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:53:06,114 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:53:17,051 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:53:24,746 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 18:53:50,593 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 18:54:25,741 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 18:56:43,405 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 18:57:26,388 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 18:58:24,479 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 18:58:32,360 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 18:58:33,050 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 18:58:33,270 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 18:58:33,425 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 18:58:50,073 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 18:58:53,571 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 18:59:18,990 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 18:59:19,989 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 18:59:21,349 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 18:59:21,958 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 18:59:22,462 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 18:59:52,820 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 19:00:34,557 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 19:00:49,874 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 19:01:07,424 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:02:05,625 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:02:07,343 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:02:07,962 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:02:08,479 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:02:22,816 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:02:23,564 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:03:12,070 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:03:17,167 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:03:36,697 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:04:00,771 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:04:28,233 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:04:40,466 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:04:45,850 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:04:51,689 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:04:57,105 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:05:05,258 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:05:13,441 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:05:14,276 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:05:14,635 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:05:15,028 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:05:20,828 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:05:27,229 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:05:59,164 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:06:38,949 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:06:45,119 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:06:50,600 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:06:55,790 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:07:00,527 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:07:45,045 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:08:39,603 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:08:55,437 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:09:02,228 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:09:08,581 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:09:27,121 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:10:02,119 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:10:08,317 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:10:15,294 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:10:25,390 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:10:55,139 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:11:10,682 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:11:21,102 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:11:33,591 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:12:24,559 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:13:33,965 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:14:39,603 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:15:21,800 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:16:03,339 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:17:48,497 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:17:57,217 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:17:58,159 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:17:58,497 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:17:58,672 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:17:58,840 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:17:58,969 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:17:59,067 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:17:59,238 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:17:59,363 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:17:59,541 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:17:59,652 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:17:59,807 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:17:59,974 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:18:00,105 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:18:00,271 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:18:00,423 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:18:00,584 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:18:00,742 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:18:00,898 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:18:01,053 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:18:01,211 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:18:01,372 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:18:01,536 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:18:01,693 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:18:01,842 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:18:02,027 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:18:02,147 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:18:02,324 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:18:02,473 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:18:07,408 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:18:17,371 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:18:18,058 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:18:18,223 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:18:18,371 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:18:18,506 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:18:18,604 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:18:18,739 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:18:18,891 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:18:19,050 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:18:19,178 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:18:19,348 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:18:19,508 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:18:19,635 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:18:19,804 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:18:19,935 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:18:20,068 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:18:20,221 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:18:20,379 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:18:20,550 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:18:53,614 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:19:59,194 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:20:11,999 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:20:28,923 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:20:40,418 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:23:19,904 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:24:57,472 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:25:18,343 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:25:52,380 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:26:47,569 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:26:49,228 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:26:49,746 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:26:50,168 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:26:50,552 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:26:50,860 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:26:51,072 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:26:51,272 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:26:51,435 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:26:51,618 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:26:51,779 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:26:51,946 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:26:52,203 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:26:52,309 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:26:52,469 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:26:52,737 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:26:52,946 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:26:53,123 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:26:53,308 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:26:53,499 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:26:53,675 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:26:54,673 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:26:54,874 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:26:55,058 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:26:55,255 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:26:55,426 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:26:55,585 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:26:55,770 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:26:55,942 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:26:56,118 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:26:56,258 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:26:56,451 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:26:56,619 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:26:56,783 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:26:56,940 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:26:58,040 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:26:58,807 [DEBUG] Pobrano czêœæ wpisów
+2024-06-16 19:27:00,019 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 19:27:02,963 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 19:27:04,021 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:27:07,427 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:27:07,884 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:27:08,142 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:27:08,237 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:27:08,397 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:27:08,524 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:27:08,685 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:27:08,854 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:27:09,007 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:27:09,151 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:27:09,300 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:27:09,468 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:27:09,628 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:27:09,789 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:27:09,924 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:27:10,084 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:27:10,244 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:27:10,422 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:27:10,573 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:27:10,761 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:27:10,904 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:27:11,068 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:27:11,220 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:27:11,387 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:27:11,540 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:27:11,709 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:27:11,895 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:27:18,766 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:27:21,880 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:27:22,374 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:27:22,552 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:27:22,722 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:27:22,903 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:27:23,071 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:27:23,236 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:27:23,410 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:27:29,590 [INFO] Watching for file changes with StatReloader
+2024-06-16 19:27:32,501 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 19:27:35,794 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:27:45,720 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:27:56,624 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:28:29,492 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:28:41,366 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:28:44,029 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:28:44,551 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:28:44,974 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:28:45,359 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:28:45,718 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:28:46,109 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:28:46,359 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:28:46,590 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:28:46,840 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:28:46,974 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:28:47,134 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:29:52,000 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:30:13,087 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:30:18,442 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:33:28,855 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:34:09,418 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:34:20,001 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:34:31,196 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:35:03,903 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:35:15,065 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:35:26,585 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:37:03,666 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:37:18,853 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:37:48,601 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:39:05,355 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:39:06,098 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:39:06,457 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:39:06,643 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:39:06,802 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:39:06,971 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:39:07,107 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:39:07,258 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:39:07,386 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:39:07,554 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:39:07,714 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:39:07,875 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:39:08,058 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:39:08,245 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:39:08,396 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:39:08,665 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:39:08,793 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:39:08,957 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:39:09,131 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:39:13,593 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:39:19,449 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:39:25,349 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:40:03,096 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:40:10,721 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:40:22,370 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:40:30,707 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:40:42,124 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:40:59,453 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:42:20,793 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:42:21,738 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:42:50,484 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:42:51,075 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:42:51,292 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:42:51,457 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:42:51,586 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:43:37,394 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:43:54,401 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:44:09,751 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:44:38,528 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:44:46,014 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:45:05,219 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:45:05,714 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:45:05,897 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:45:06,057 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:45:06,204 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:45:06,355 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:45:13,403 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:45:23,435 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:45:38,581 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:45:50,486 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:46:08,745 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:46:28,474 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:46:40,507 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:46:50,332 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:46:51,340 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:46:51,832 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:46:52,014 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:46:52,215 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:46:52,374 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:46:52,508 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:46:52,661 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:46:52,829 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:46:52,964 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:46:53,091 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:47:15,639 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:47:23,257 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 19:47:32,926 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 19:47:51,193 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 19:48:12,123 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 19:48:32,035 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 19:48:33,120 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 19:48:33,771 [DEBUG] Pobrano czêœæ wpisów
+2024-06-16 19:48:36,823 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 19:48:41,283 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:48:48,833 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 19:49:09,379 [DEBUG] Data submitted: <QueryDict: {'csrfmiddlewaretoken': ['vU40vPix2CrOP6DxZJlzi7pkuDuncrm2f2OhortZqu3oIjA1rdyDJJFsyjOHQ52z'], 'description': ['WYcena'], 'date': ['19.06.2024'], 'initial-date': ['2024-06-16 19:48:48'], 'Rezerwuj': ['']}>
+2024-06-16 19:49:09,448 [INFO] Wizyta utworzona na 2024-06-19 00:00:00+02:00 z opisem WYcena
+2024-06-16 19:49:09,448 [INFO] Wys³ano e-mail potwierdzaj¹cy wizytê.
+2024-06-16 19:49:09,451 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 19:50:02,085 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\views.py changed, reloading.
+2024-06-16 19:50:02,822 [INFO] Watching for file changes with StatReloader
+2024-06-16 19:50:04,123 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 19:50:05,677 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 19:50:11,312 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 19:50:15,094 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 19:50:23,372 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\views.py changed, reloading.
+2024-06-16 19:50:24,062 [INFO] Watching for file changes with StatReloader
+2024-06-16 19:50:24,175 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 19:50:27,504 [DEBUG] Pobrano czêœæ wpisów
+2024-06-16 19:50:28,680 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 19:51:02,246 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 19:51:12,304 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 19:51:13,568 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 19:51:14,151 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 19:51:14,543 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 19:51:14,894 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 19:51:15,120 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 19:51:15,286 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 19:51:15,440 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 19:51:15,608 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 19:51:15,736 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 19:51:15,896 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 19:51:16,057 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 19:51:16,224 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 19:51:16,385 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 19:51:35,243 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 19:51:37,599 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 19:51:40,223 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 19:51:42,798 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 19:51:43,901 [DEBUG] Pobrano czêœæ wpisów
+2024-06-16 19:51:44,959 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 19:52:13,717 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\views.py changed, reloading.
+2024-06-16 19:52:14,480 [INFO] Watching for file changes with StatReloader
+2024-06-16 19:52:16,525 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 19:52:55,659 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\views.py changed, reloading.
+2024-06-16 19:52:56,369 [INFO] Watching for file changes with StatReloader
+2024-06-16 19:52:57,563 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 19:54:14,824 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\views.py changed, reloading.
+2024-06-16 19:54:15,563 [INFO] Watching for file changes with StatReloader
+2024-06-16 19:54:24,344 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\views.py changed, reloading.
+2024-06-16 19:54:25,103 [INFO] Watching for file changes with StatReloader
+2024-06-16 19:54:28,236 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 19:54:30,404 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 19:54:33,726 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 19:54:34,403 [DEBUG] Pobrano czêœæ wpisów
+2024-06-16 19:54:34,939 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 19:55:05,300 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\budowlanka_project\settings.py changed, reloading.
+2024-06-16 19:55:06,019 [INFO] Watching for file changes with StatReloader
+2024-06-16 19:55:08,115 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 19:55:25,365 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\budowlanka_project\settings.py changed, reloading.
+2024-06-16 19:55:26,061 [INFO] Watching for file changes with StatReloader
+2024-06-16 19:56:09,046 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\budowlanka_project\settings.py changed, reloading.
+2024-06-16 19:56:09,766 [INFO] Watching for file changes with StatReloader
+2024-06-16 19:56:14,356 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\budowlanka_project\settings.py changed, reloading.
+2024-06-16 19:56:15,084 [INFO] Watching for file changes with StatReloader
+2024-06-16 19:56:23,157 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 19:56:24,746 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 19:56:29,443 [DEBUG] Pobrano czêœæ wpisów
+2024-06-16 19:56:31,167 [DEBUG] Widok szczegó³owy dla realizacji 1
+2024-06-16 19:56:36,362 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 19:56:36,942 [DEBUG] Pobrano czêœæ wpisów
+2024-06-16 19:56:39,176 [DEBUG] Widok szczegó³owy dla realizacji 1
+2024-06-16 19:57:01,464 [DEBUG] Widok szczegó³owy dla realizacji 1
+2024-06-16 19:57:53,515 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\forms.py changed, reloading.
+2024-06-16 19:57:54,239 [INFO] Watching for file changes with StatReloader
+2024-06-16 19:57:56,768 [DEBUG] Widok szczegó³owy dla realizacji 1
+2024-06-16 19:58:19,064 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\forms.py changed, reloading.
+2024-06-16 19:58:19,750 [INFO] Watching for file changes with StatReloader
+2024-06-16 19:58:22,289 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\forms.py changed, reloading.
+2024-06-16 19:58:22,991 [INFO] Watching for file changes with StatReloader
+2024-06-16 19:58:23,591 [DEBUG] Widok szczegó³owy dla realizacji 1
+2024-06-16 19:58:28,610 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\forms.py changed, reloading.
+2024-06-16 19:58:29,344 [INFO] Watching for file changes with StatReloader
+2024-06-16 19:58:29,763 [DEBUG] Widok szczegó³owy dla realizacji 1
+2024-06-16 19:59:09,230 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\forms.py changed, reloading.
+2024-06-16 19:59:09,934 [INFO] Watching for file changes with StatReloader
+2024-06-16 19:59:22,572 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\forms.py changed, reloading.
+2024-06-16 19:59:23,264 [INFO] Watching for file changes with StatReloader
+2024-06-16 19:59:48,066 [DEBUG] Widok szczegó³owy dla realizacji 1
+2024-06-16 20:00:44,860 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\forms.py changed, reloading.
+2024-06-16 20:00:45,546 [INFO] Watching for file changes with StatReloader
+2024-06-16 20:01:22,291 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\models.py changed, reloading.
+2024-06-16 20:01:22,987 [INFO] Watching for file changes with StatReloader
+2024-06-16 20:01:26,378 [DEBUG] Widok szczegó³owy dla realizacji 1
+2024-06-16 20:01:37,153 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\models.py changed, reloading.
+2024-06-16 20:01:37,969 [INFO] Watching for file changes with StatReloader
+2024-06-16 20:01:44,623 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\models.py changed, reloading.
+2024-06-16 20:01:45,328 [INFO] Watching for file changes with StatReloader
+2024-06-16 20:01:46,804 [DEBUG] Widok szczegó³owy dla realizacji 1
+2024-06-16 20:01:58,923 [DEBUG] Widok szczegó³owy dla realizacji 1
+2024-06-16 20:02:05,049 [DEBUG] Widok szczegó³owy dla realizacji 1
+2024-06-16 20:02:10,866 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 20:02:13,041 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 20:02:13,980 [DEBUG] Pobrano czêœæ wpisów
+2024-06-16 20:02:15,736 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 20:02:17,877 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 20:02:35,870 [ERROR] B³¹d w widoku wiadomoœci: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials 4fb4d7f45d1cf-57cb741e81bsm5342129a12.72 - gsmtp')
+2024-06-16 20:02:37,700 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 20:02:40,261 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 20:10:45,204 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\accounts\forms.py changed, reloading.
+2024-06-16 20:10:45,932 [INFO] Watching for file changes with StatReloader
+2024-06-16 20:15:52,903 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\accounts\forms.py changed, reloading.
+2024-06-16 20:15:53,592 [INFO] Watching for file changes with StatReloader
+2024-06-16 20:19:24,058 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\accounts\forms.py changed, reloading.
+2024-06-16 20:19:24,789 [INFO] Watching for file changes with StatReloader
+2024-06-16 20:20:45,501 [INFO] Watching for file changes with StatReloader
+2024-06-16 20:20:52,357 [INFO] Watching for file changes with StatReloader
+2024-06-16 20:21:12,526 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\accounts\forms.py changed, reloading.
+2024-06-16 20:21:13,221 [INFO] Watching for file changes with StatReloader
+2024-06-16 20:22:57,488 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\accounts\forms.py changed, reloading.
+2024-06-16 20:22:58,210 [INFO] Watching for file changes with StatReloader
+2024-06-16 20:28:53,250 [ERROR] Internal Server Error: /accounts/login/
+Traceback (most recent call last):
+  File "C:\Users\mixer\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mixer\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mixer\PycharmProjects\budowlanka\accounts\views.py", line 25, in login_view
+    return render(request, 'registration/login.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mixer\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mixer\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mixer\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mixer\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mixer\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mixer\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mixer\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mixer\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\mixer\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mixer\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\mixer\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\mixer\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mixer\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\mixer\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\Users\mixer\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mixer\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\loader_tags.py", line 232, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mixer\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\base.py", line 484, in parse
+    raise self.error(token, e)
+  File "C:\Users\mixer\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\base.py", line 482, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mixer\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\base.py", line 600, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mixer\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\django\template\base.py", line 703, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '={'placeholder':'Imie','style':'width: 300px','class': 'form-control'}' from 'form.username.widget_attrs={'placeholder':'Imie','style':'width: 300px','class': 'form-control'}'
+2024-06-16 20:30:41,135 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\accounts\forms.py changed, reloading.
+2024-06-16 20:30:41,866 [INFO] Watching for file changes with StatReloader
+2024-06-16 20:30:56,032 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\accounts\forms.py changed, reloading.
+2024-06-16 20:30:56,744 [INFO] Watching for file changes with StatReloader
+2024-06-16 20:31:10,959 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\accounts\forms.py changed, reloading.
+2024-06-16 20:31:11,721 [INFO] Watching for file changes with StatReloader
+2024-06-16 20:34:46,036 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\accounts\forms.py changed, reloading.
+2024-06-16 20:34:46,751 [INFO] Watching for file changes with StatReloader
+2024-06-16 20:35:05,065 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\accounts\forms.py changed, reloading.
+2024-06-16 20:35:05,781 [INFO] Watching for file changes with StatReloader
+2024-06-16 20:36:20,173 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\accounts\forms.py changed, reloading.
+2024-06-16 20:36:21,097 [INFO] Watching for file changes with StatReloader
+2024-06-16 20:39:59,491 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\accounts\forms.py changed, reloading.
+2024-06-16 20:40:00,212 [INFO] Watching for file changes with StatReloader
+2024-06-16 20:40:58,802 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\accounts\forms.py changed, reloading.
+2024-06-16 20:40:59,524 [INFO] Watching for file changes with StatReloader
+2024-06-16 20:42:04,541 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\accounts\forms.py changed, reloading.
+2024-06-16 20:42:05,230 [INFO] Watching for file changes with StatReloader
+2024-06-16 20:42:54,681 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\accounts\forms.py changed, reloading.
+2024-06-16 20:42:55,419 [INFO] Watching for file changes with StatReloader
+2024-06-16 20:44:58,309 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 20:45:05,532 [DEBUG] Pobrano czêœæ wpisów
+2024-06-16 20:45:14,540 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 20:45:16,247 [DEBUG] Pobrano czêœæ wpisów
+2024-06-16 20:45:17,310 [DEBUG] Widok szczegó³owy dla realizacji 1
+2024-06-16 20:45:23,548 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 20:45:33,136 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 20:45:46,665 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 20:45:57,626 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 20:47:39,369 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\accounts\forms.py changed, reloading.
+2024-06-16 20:47:40,147 [INFO] Watching for file changes with StatReloader
+2024-06-16 20:47:43,313 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 20:48:02,662 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\accounts\forms.py changed, reloading.
+2024-06-16 20:48:03,583 [INFO] Watching for file changes with StatReloader
+2024-06-16 20:48:14,565 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\accounts\forms.py changed, reloading.
+2024-06-16 20:48:15,322 [INFO] Watching for file changes with StatReloader
+2024-06-16 20:48:42,137 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\accounts\forms.py changed, reloading.
+2024-06-16 20:48:42,997 [INFO] Watching for file changes with StatReloader
+2024-06-16 20:50:08,079 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\accounts\forms.py changed, reloading.
+2024-06-16 20:50:08,865 [INFO] Watching for file changes with StatReloader
+2024-06-16 20:51:41,999 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\accounts\forms.py changed, reloading.
+2024-06-16 20:51:42,787 [INFO] Watching for file changes with StatReloader
+2024-06-16 20:52:12,641 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\accounts\forms.py changed, reloading.
+2024-06-16 20:52:13,452 [INFO] Watching for file changes with StatReloader
+2024-06-16 20:53:08,451 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\accounts\forms.py changed, reloading.
+2024-06-16 20:53:09,253 [INFO] Watching for file changes with StatReloader
+2024-06-16 20:57:04,828 [WARNING] Forbidden (CSRF token from POST incorrect.): /accounts/register/
+2024-06-16 20:57:16,765 [WARNING] Forbidden (CSRF token from POST incorrect.): /accounts/register/
+2024-06-16 20:57:23,016 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 20:57:25,681 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 20:57:59,290 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 20:58:14,511 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 20:59:09,777 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\accounts\forms.py changed, reloading.
+2024-06-16 20:59:10,619 [INFO] Watching for file changes with StatReloader
+2024-06-16 21:00:04,141 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\accounts\forms.py changed, reloading.
+2024-06-16 21:00:04,885 [INFO] Watching for file changes with StatReloader

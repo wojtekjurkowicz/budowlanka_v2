@@ -1,11 +1,33 @@
 {% extends 'mainapp/base.html' %}
 
 {% block content %}
-    
-    <h1>Napisz do nas wiadomość</h1>
-     <form action="{% url 'budowlanka_project:contact' %}" method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" name="submit">Wyślij</button>
-    </form>
+    <article>
+        <div style="max-width: 350px; margin:auto">
+            <h1>Napisz do nas wiadomość</h1>
+            <form action="{% url 'budowlanka_project:contact' %}" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" name="submit" class="btn btn-primary">Wyślij</button>
+            </form>
+        </div>
+
+    </article>
+
 {% endblock content %}
+{% block content2 %}
+    <article>
+        <h2>Kontakt:</h2>
+        <ul style="list-style-type:none; font-size: large">
+            <li><i class="fas fa-map-marker-alt"></i> Adres: ul. Przykładowa 123, 00-000 Warszawa</li>
+            <li><i class="fas fa-phone-alt"></i> Telefon: +48 123 456 789</li>
+            <li><i class="fas fa-envelope"></i> E-mail: kontakt@example.com</li>
+        </ul>
+        </article>
+
+            <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBodspz_Kmn8r3KOdGX8q5Dnoc-uHuFkQE&callback=console.debug&libraries=maps,marker&v=beta">
+            </script>
+            <gmp-map center="54.110198974609375,22.935564041137695" zoom="14" map-id="DEMO_MAP_ID" class="col-12">
+                <gmp-advanced-marker position="54.110198974609375,22.935564041137695" title="My location"></gmp-advanced-marker>
+            </gmp-map>
+
+{% endblock content2 %}

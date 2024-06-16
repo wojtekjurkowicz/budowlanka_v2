@@ -1,27 +1,15 @@
 {% extends 'mainapp/base.html' %}
 
 {% block content %}
-    <p>To jest strona domowa</p>
+    <article>
+        <p>To jest strona domowa</p>
+    </article>
+
 {% endblock content %}
 
 {% block content2 %}
-    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBb2UF9YukDAeKX_UrmlnmGp9D5iiZVu9w&callback=console.debug&libraries=maps,marker&v=beta">
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBodspz_Kmn8r3KOdGX8q5Dnoc-uHuFkQE&callback=console.debug&libraries=maps,marker&v=beta">
     </script>
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      gmp-map {
-        height: 100%;
-      }
-
-      /* Optional: Makes the sample page fill the window. */
-      html,
-      body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
     <gmp-map center="54.110198974609375,22.935564041137695" zoom="14" map-id="DEMO_MAP_ID">
       <gmp-advanced-marker position="54.110198974609375,22.935564041137695" title="My location"></gmp-advanced-marker>
     </gmp-map>

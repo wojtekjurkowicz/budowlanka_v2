@@ -1,12 +1,15 @@
 {% extends 'mainapp/base.html' %}
 
 {% block content %}
-
-    <form action="{% url 'accounts:register' %}" method="post">
+<article>
+    <h1>Zarejestruj się</h1>
+     <form action="{% url 'accounts:register' %}" method="post">
         {% csrf_token %}
-        {{ form.as_div }}
+        {{ form }}
 
-        <button name="submit">Zarejestruj się</button>
+        <button name="submit" class="btn btn-primary">Zarejestruj się</button>
     </form>
+</article>
+   
 
 {% endblock content %}

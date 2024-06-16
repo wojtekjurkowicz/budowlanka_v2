@@ -2,18 +2,21 @@
 
 {% block content %}
     <article>
-    <h1>Umów wizytę</h1>
-
-    <form action="{% url 'budowlanka_project:appointment' %}" method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button name="Rezerwuj">Rezerwuj</button>
-    </form>
-
-    <h2>Kalendarz Wizyt</h2>
-    <div class="calendar">
+        <h1 style="max-width: 350px; margin:auto">Kalendarz Wizyt</h1><br>
         {{ calendar|safe }}
-    </div>
     </article>
 
 {% endblock content %}
+{% block content2 %}
+    <article class="row justify-content-center">
+    <div class="col" style="max-width: 350px; margin:auto">
+        <h2>Umów wizytę</h2>
+        <form action="{% url 'budowlanka_project:appointment' %}" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button name="Rezerwuj" class="btn btn-primary" style="justify-content: center">Rezerwuj</button>
+        </form>
+    </div>
+
+    </article>
+{% endblock content2 %}

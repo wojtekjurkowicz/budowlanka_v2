@@ -8,6 +8,9 @@
         {% for entry in page_obj %}
                 <article class="">
                     <a href="/blog/{{ entry.id }}"><h3>{{ entry.title }}</h3></a>
+                    {% if entry.image %}
+                        <img src="{{ entry.image.url }}" alt="{{ entry.title }}">
+                    {% endif %}
                     <p>{{ entry.content|linebreaks }}</p>
                     <p>Dodano: {{ entry.date }}</p>
                 </article>

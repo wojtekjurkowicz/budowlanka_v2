@@ -5,6 +5,9 @@
         <article>
     <h1>{{ entry.title }}</h1>
     <p>{{ entry.content|linebreaks }}</p>
+    {% if entry.image %}
+        <img src="{{ entry.image.url }}" alt="{{ entry.title }}">
+    {% endif %}
     <p>Dodano: {{ entry.date }}</p>
     </article>
     <h2>Komentarze</h2>

@@ -22,8 +22,11 @@ def index(request):
     """
     Render the home page for Budowlanka.
 
-    :param request: HttpRequest object.
-    :return: HttpResponse object.
+    Args:
+        request (HttpRequest): The request object.
+
+    Returns:
+        HttpResponse: The rendered home page.
     """
     try:
         logger.debug("Renderowanie strony głównej")
@@ -37,8 +40,11 @@ def blog(request):
     """
     Show all entries.
 
-    :param request: HttpRequest object.
-    :return: HttpResponse object.
+    Args:
+        request (HttpRequest): The request object.
+
+    Returns:
+        HttpResponse: The rendered blog page with paginated entries.
     """
     try:
         entries = Realization.objects.all()
@@ -62,9 +68,12 @@ def detail(request, entry_id):
     """
     Show entry and its comments.
 
-    :param request: HttpRequest object.
-    :param entry_id: ID of the entry.
-    :return: HttpResponse object.
+    Args:
+        request (HttpRequest): The request object.
+        entry_id (int): The ID of the entry.
+
+    Returns:
+        HttpResponse: The rendered detail page of the entry.
     """
     try:
         entry = get_object_or_404(Realization, pk=entry_id)
@@ -78,7 +87,6 @@ def detail(request, entry_id):
                 comment.author = request.user
                 comment.realization = entry
                 comment.save()
-                messages.success(request, "Komentarz został dodany.")
                 logger.info(f"Nowy komentarz dodany przez {request.user} do realizacji {entry_id}")
                 return redirect('mainapp:detail', entry_id=entry.id)
         else:
@@ -95,32 +103,50 @@ def detail(request, entry_id):
 
 
 class CalendarView(HTMLCalendar):
+    """
+    A class to represent a monthly calendar with appointments.
+    """
+
     def formatday(self, day, weekday, appointments):
         """
         Return a day as a table cell.
 
-        :param day: The day number.
-        :param weekday: The weekday number (0-6).
-        :param appointments: QuerySet of appointments for the given day.
-        :return: HTML representation of the day's cell.
+        Args:
+            day (int): The day number.
+            weekday (int): The weekday number (0-6).
+            appointments (QuerySet): QuerySet of appointments for the given day.
+
+        Returns:
+            str: HTML representation of the day's cell.
         """
         appointments_per_day = appointments.filter(date__day=day)
-        d = ''.join(f'<li> Zajęty termin</li>' for appointment in appointments_per_day) #{appointment.description}
+        d = ''.join(f'<li> Zajęty termin</li>' for appointment in appointments_per_day)  # {appointment.description}
         return f"<td><span class='date'>{day}</span><ul style='list-style-type:none;'> {d} </ul></td>" if day != 0 else '<td></td>'
 
     def formatweek(self, theweek, appointments):
         """
         Return a complete week as a table row.
 
-        :param theweek: List of tuples containing (day, weekday) for the week.
-        :param appointments: QuerySet of appointments for the given week.
-        :return: HTML representation of the week's row.
+        Args:
+            theweek (list): List of tuples containing (day, weekday) for the week.
+            appointments (QuerySet): QuerySet of appointments for the given week.
+
+        Returns:
+            str: HTML representation of the week's row.
         """
         return f'<tr> {" ".join(self.formatday(d, wd, appointments) for (d, wd) in theweek)} </tr>'
 
     def formatmonth(self, theyear, themonth, withyear=True):
         """
         Return a formatted month as a table.
+
+        Args:
+            theyear (int): The year of the month.
+            themonth (int): The month to format.
+            withyear (bool): Whether to include the year in the month name.
+
+        Returns:
+            str: HTML representation of the month's table.
         """
         appointments = Appointment.objects.filter(date__year=theyear, date__month=themonth)
         return ''.join([
@@ -137,8 +163,11 @@ def appointment(request):
     """
     Try to reserve an appointment.
 
-    :param request: HttpRequest object.
-    :return: HttpResponse object.
+    Args:
+        request (HttpRequest): The request object.
+
+    Returns:
+        HttpResponse: The rendered appointment page.
     """
     try:
         if request.method == 'POST':
@@ -151,13 +180,12 @@ def appointment(request):
 
                 send_mail(
                     'Potwierdzenie wizyty',
-                    f'Twoja wizyta została umówiona na {appointment.date}. Opis: {appointment.description}',
+                    f'Twoja wizyta została umówiona na {appointment.day}-{appointment.month}-{appointment.year}. Opis: {appointment.description}',
                     "wojtek.jurkowicz@gmail.com",
                     [request.user.email],
                     fail_silently=False,
                 )
-                logger.info(f"Wizyta utworzona na {appointment.date} z opisem {appointment.description}")
-                messages.success(request, f"Wizyta utworzona na {appointment.date.day}-{appointment.date.month}-{appointment.date.year} z opisem {appointment.description}")
+                logger.info(f"Wizyta utworzona na {appointment.day}-{appointment.month}-{appointment.year} z opisem {appointment.description}")
                 logger.info("Wysłano e-mail potwierdzający wizytę.")
                 # Always redirect back to the appointment page after a successful submission
                 return redirect('mainapp:appointment')
@@ -188,10 +216,13 @@ def appointment(request):
 @require_http_methods(["GET", "POST"])
 def contact(request):
     """
-    Contact page.
+    Render the contact page and handle form submission.
 
-    :param request: HttpRequest object.
-    :return: HttpResponse object.
+    Args:
+        request (HttpRequest): The request object.
+
+    Returns:
+        HttpResponse: The rendered contact page.
     """
     try:
         if request.method == 'POST':

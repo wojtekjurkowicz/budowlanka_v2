@@ -42,31 +42,20 @@ class Realization(models.Model):
     content = models.CharField(max_length=500, verbose_name="Opis")  # Description of the realization
     date = models.DateTimeField(default=timezone.now,
                                 verbose_name="Data dodania")  # Date and time when the realization was added
-
-    # Path to file (currently commented out)
-    # image = models.CharField(max_length=50)
-
-    def was_published_recently(self):
-        """
-        Checks if the realization was published within the last day.
-
-        Returns:
-            bool: True if the realization was published within the last day, False otherwise.
-        """
-        return self.date >= timezone.now() - datetime.timedelta(days=1)
+    image = models.ImageField(upload_to='realizations_images/', null=True, blank=True, verbose_name="Zdjęcie") # Image of the realization
 
     def __str__(self):
         """
         Returns a string representation of the realization.
 
         Returns:
-            str: The first 25 characters of the content.
+            str: Title of the realization.
         """
-        return f"{self.content[:25]}..."  # Return the first 25 characters of the content
+        return self.title
 
     class Meta:
         verbose_name_plural = "Realizacje"  # Plural name for the Realization model
-        ordering = ['date']  # Default ordering by date
+        ordering = ['-date']  # Default ordering by date
 
 
 class Comment(models.Model):
@@ -96,3 +85,4 @@ class Comment(models.Model):
 
     class Meta:
         verbose_name_plural = "Komentarze"  # Plural name for the Comment model
+        ordering = ['-date']

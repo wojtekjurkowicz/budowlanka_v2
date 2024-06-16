@@ -76,7 +76,7 @@ class AppointmentAdmin(admin.ModelAdmin, ExportPDFMixin):
 
 # Admin class for Realization model with PDF export functionality
 class RealizationAdmin(admin.ModelAdmin, ExportPDFMixin):
-    list_display = ('title', 'content', 'date', 'was_published_recently')
+    list_display = ('title', 'content', 'date', 'image')
     list_filter = ('date',)
     search_fields = ('title', 'content')
     ordering = ('-date',)
@@ -86,7 +86,7 @@ class RealizationAdmin(admin.ModelAdmin, ExportPDFMixin):
             'fields': ('title',)
         }),
         ('Informacje o realizacji', {
-            'fields': ('content', 'date'),
+            'fields': ('content', 'date', 'image'),
             'description': 'Pola powiązane z realizacją'
         }),
     )

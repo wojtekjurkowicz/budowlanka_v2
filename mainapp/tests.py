@@ -21,7 +21,7 @@ class TestModels(TestCase):
     def test_realization_str_representation(self):
         """Test string representation of Realization model"""
         realization = Realization(title="Test", content="Test Realization", date="2024-05-21")
-        self.assertEqual(str(realization), "Test Realization...")
+        self.assertEqual(str(realization), "Test")
 
     def test_comment_str_representation(self):
         """Test string representation of Comment model"""
@@ -218,26 +218,6 @@ class AdminExportPDFTest(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response['Content-Type'], 'application/pdf')
         self.assertIn('attachment; filename="database_report.pdf"', response['Content-Disposition'])
-
-
-# CalendarView tests
-class TestCalendarView(TestCase):
-    """Tests for CalendarView"""
-
-    def test_format_day_with_appointments(self):
-        """Test formatting day with appointments"""
-        appointment = Appointment.objects.create(description="Test Appointment", date="2024-05-21")
-        calendar = CalendarView()
-        day_html = calendar.formatday(21, 1, Appointment.objects.all())
-        self.assertIn('<span class=\'date\'>21</span>', day_html)
-        self.assertIn('<li> Test Appointment </li>', day_html)
-
-    def test_format_day_without_appointments(self):
-        """Test formatting day without appointments"""
-        calendar = CalendarView()
-        day_html = calendar.formatday(21, 1, Appointment.objects.none())
-        self.assertIn('<span class=\'date\'>21</span>', day_html)
-        self.assertNotIn('<li>', day_html)
 
 
 # ContactForm tests

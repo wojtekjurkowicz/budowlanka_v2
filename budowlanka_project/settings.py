@@ -8,6 +8,17 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
+
+This file contains the settings used by Django for this project.
+
+It includes definitions for:
+
+- Base directory and environment setup
+- Debug and security settings
+- Installed applications and middleware
+- Database configuration
+- Static files, templates, and internationalization settings
+- Email and logging configuration
 """
 
 import environ
@@ -42,6 +53,7 @@ INSTALLED_APPS = [
     # Third-party apps
     'django_bootstrap5',
     'captcha',
+    'django.contrib.admindocs',
 
     # Default apps
     'django.contrib.admin',
@@ -144,19 +156,19 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'xyz'
 EMAIL_HOST_PASSWORD = 'xyz'
 
-#EMAIL_HOST_USER = env('EMAIL_HOST_USER')
-#EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+# EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+# EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
 
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
     'handlers': {
         'file': {
-            'level': 'DEBUG', # Ustawienie poziomu logowania na DEBUG dla handlera 'file'
+            'level': 'DEBUG',  # Ustawienie poziomu logowania na DEBUG dla handlera 'file'
             'class': 'logging.handlers.RotatingFileHandler',
             'filename': 'debug.log',
             'maxBytes': 1024 * 1024,  # 1 MB
-            'backupCount': 5,         # Maksymalnie 5 plików
+            'backupCount': 5,  # Maksymalnie 5 plików
             'formatter': 'verbose',
         },
     },
@@ -175,7 +187,7 @@ LOGGING = {
 }
 
 
-# Automatyczne czyszczenie pliku debug.log
+# Automated debug log cleaning
 def clean_debug_log():
     log_file = 'debug.log'
     max_size_bytes = 1024 * 1024  # 1 MB
@@ -183,13 +195,13 @@ def clean_debug_log():
     if os.path.exists(log_file):
         log_size = os.path.getsize(log_file)
         if log_size > max_size_bytes:
-            # Jeśli przekroczono maksymalny rozmiar, usuń istniejący plik
+            # Remove log file if it's too big
             os.remove(log_file)
 
-            # Otwórz nowy plik do zapisu
+            # Open file for writing
             with open(log_file, 'w'):
-                pass  # Pusty plik
+                pass  # Empty file
             logging.info(f"Plik {log_file} został wyczyszczony i nadpisany.")
 
-# Uruchomienie funkcji clean_debug_log po starcie aplikacji
+
 clean_debug_log()

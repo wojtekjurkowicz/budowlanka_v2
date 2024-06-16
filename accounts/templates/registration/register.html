@@ -1,15 +1,28 @@
 {% extends 'mainapp/base.html' %}
 
 {% block content %}
-<article>
+<div class="col-12">
+            {% if messages %}
+    {% for message in messages %}
+        <div class="alert {% if message.tags == 'error' %}alert-danger{% elif message.tags == 'success' %}alert-success{% endif %} alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    {% endfor %}
+{% endif %}
+<article class="row text-center justify-content-center">
     <h1>Zarejestruj się</h1>
-     <form action="{% url 'accounts:register' %}" method="post">
+    <div class="col-2">
+         <form action="{% url 'accounts:register' %}" method="post">
         {% csrf_token %}
-        {{ form }}
-
+         {{ form.username }}<br>
+         {{ form.email }}<br>
+         {{ form.password1}}<br>
+         {{ form.password2 }}<br>
         <button name="submit" class="btn btn-primary">Zarejestruj się</button>
     </form>
-</article>
-   
+    </div>
+</article>            
+</div>
 
 {% endblock content %}

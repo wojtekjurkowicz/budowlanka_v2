@@ -1,12 +1,21 @@
 {% extends 'mainapp/base.html' %}
 
 {% block content %}
-    <article>
+<div class="col-12">
+        <article>
     <h1>{{ entry.title }}</h1>
     <p>{{ entry.content|linebreaks }}</p>
     <p>Dodano: {{ entry.date }}</p>
     </article>
     <h2>Komentarze</h2>
+    {% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            {{ message }}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    {% endfor %}
+{% endif %}
     <form action="{% url 'mainapp:detail' entry.id %}" method="post">
         {% csrf_token %}
         {{ comment_form.as_p }}
@@ -21,5 +30,6 @@
         {% empty %}
             Brak komentarzy, napisz pierwszy!
         {% endfor %}
+</div>
 
 {% endblock content %}

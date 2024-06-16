@@ -1,15 +1,18 @@
 {% extends 'mainapp/base.html' %}
 
 {% block content %}
-    <article>
-        <h1 style="max-width: 350px; margin:auto">Kalendarz Wizyt</h1><br>
-        {{ calendar|safe }}
-    </article>
 
-{% endblock content %}
-{% block content2 %}
-    <article class="row justify-content-center">
+<div class="col-xxl-4 order-xxl-last col-md-12 order-md-first" style="padding: 5px;">
+        <article class="row justify-content-center">
     <div class="col" style="max-width: 350px; margin:auto">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
+        {% endif %}
         <h2>Umów wizytę</h2>
         <form action="{% url 'budowlanka_project:appointment' %}" method="post">
             {% csrf_token %}
@@ -19,4 +22,12 @@
     </div>
 
     </article>
-{% endblock content2 %}
+</div>
+<div class="col-xxl-8 order-xxl-first col-md-12 order-md-last">
+    <article>
+        <h1 style="max-width: 350px; margin:auto">Kalendarz Wizyt</h1><br>
+        {{ calendar|safe }}
+    </article>
+</div>
+
+{% endblock content %}

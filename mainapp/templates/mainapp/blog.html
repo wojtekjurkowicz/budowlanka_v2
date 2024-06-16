@@ -1,7 +1,9 @@
 {% extends 'mainapp/base.html' %}
 
 {% block content %}
-    
+
+<div class="col-12">
+
     <h1>Aktualności</h1>
         {% for entry in page_obj %}
                 <article class="">
@@ -10,9 +12,9 @@
                     <p>Dodano: {{ entry.date }}</p>
                 </article>
         {% empty %}
-            Nic tu jeszcze nie ma    
+            Nic tu jeszcze nie ma
         {% endfor %}
-    
+
     {% if page_obj.has_other_pages %}
         <div class="pagination">
             <span class="step-links">
@@ -32,5 +34,6 @@
             </span>
         </div>
     {% endif %}
-    
+</div>
+
 {% endblock content %}

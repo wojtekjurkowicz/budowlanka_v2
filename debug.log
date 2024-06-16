@@ -4781,3 +4781,150 @@ django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '
 2024-06-16 20:59:10,619 [INFO] Watching for file changes with StatReloader
 2024-06-16 21:00:04,141 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\accounts\forms.py changed, reloading.
 2024-06-16 21:00:04,885 [INFO] Watching for file changes with StatReloader
+2024-06-16 21:08:05,816 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\accounts\forms.py changed, reloading.
+2024-06-16 21:08:06,594 [INFO] Watching for file changes with StatReloader
+2024-06-16 21:09:03,390 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\accounts\views.py changed, reloading.
+2024-06-16 21:09:04,156 [INFO] Watching for file changes with StatReloader
+2024-06-16 21:09:37,074 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\accounts\views.py changed, reloading.
+2024-06-16 21:09:38,014 [INFO] Watching for file changes with StatReloader
+2024-06-16 21:16:32,433 [INFO] Watching for file changes with StatReloader
+2024-06-16 21:19:27,771 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\accounts\forms.py changed, reloading.
+2024-06-16 21:19:28,574 [INFO] Watching for file changes with StatReloader
+2024-06-16 21:20:01,308 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\accounts\forms.py changed, reloading.
+2024-06-16 21:20:02,069 [INFO] Watching for file changes with StatReloader
+2024-06-16 21:23:51,056 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\accounts\forms.py changed, reloading.
+2024-06-16 21:23:51,814 [INFO] Watching for file changes with StatReloader
+2024-06-16 21:24:26,620 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\accounts\views.py changed, reloading.
+2024-06-16 21:24:27,414 [INFO] Watching for file changes with StatReloader
+2024-06-16 21:26:19,076 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\accounts\views.py changed, reloading.
+2024-06-16 21:26:19,851 [INFO] Watching for file changes with StatReloader
+2024-06-16 21:26:25,516 [DEBUG] Pobrano czêœæ wpisów
+2024-06-16 21:28:11,093 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\accounts\forms.py changed, reloading.
+2024-06-16 21:28:11,861 [INFO] Watching for file changes with StatReloader
+2024-06-16 21:29:01,227 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\accounts\views.py changed, reloading.
+2024-06-16 21:29:01,990 [INFO] Watching for file changes with StatReloader
+2024-06-16 21:38:17,407 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\accounts\forms.py changed, reloading.
+2024-06-16 21:38:18,246 [INFO] Watching for file changes with StatReloader
+2024-06-16 21:38:32,459 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\accounts\forms.py changed, reloading.
+2024-06-16 21:38:33,198 [INFO] Watching for file changes with StatReloader
+2024-06-16 21:55:29,117 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\accounts\views.py changed, reloading.
+2024-06-16 21:55:29,911 [INFO] Watching for file changes with StatReloader
+2024-06-16 22:04:33,860 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\accounts\forms.py changed, reloading.
+2024-06-16 22:04:34,615 [INFO] Watching for file changes with StatReloader
+2024-06-16 22:05:28,652 [DEBUG] Pobrano czêœæ wpisów
+2024-06-16 22:05:36,758 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 22:05:38,654 [DEBUG] Pobrano czêœæ wpisów
+2024-06-16 22:05:39,701 [DEBUG] Widok szczegó³owy dla realizacji 1
+2024-06-16 22:05:47,663 [INFO] Nowy komentarz dodany przez Mietek do realizacji 1
+2024-06-16 22:05:47,674 [DEBUG] Widok szczegó³owy dla realizacji 1
+2024-06-16 22:11:08,440 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\views.py changed, reloading.
+2024-06-16 22:11:09,190 [INFO] Watching for file changes with StatReloader
+2024-06-16 22:11:12,672 [DEBUG] Widok szczegó³owy dla realizacji 1
+2024-06-16 22:11:31,326 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 22:11:32,624 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 22:11:34,771 [DEBUG] Pobrano czêœæ wpisów
+2024-06-16 22:11:36,002 [DEBUG] Widok szczegó³owy dla realizacji 1
+2024-06-16 22:11:45,682 [INFO] Nowy komentarz dodany przez Mietek do realizacji 1
+2024-06-16 22:11:45,692 [DEBUG] Widok szczegó³owy dla realizacji 1
+2024-06-16 22:13:05,246 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 22:13:06,615 [DEBUG] Pobrano czêœæ wpisów
+2024-06-16 22:13:08,243 [DEBUG] Widok szczegó³owy dla realizacji 2
+2024-06-16 22:13:13,416 [INFO] Nowy komentarz dodany przez Mietek do realizacji 2
+2024-06-16 22:13:13,426 [DEBUG] Widok szczegó³owy dla realizacji 2
+2024-06-16 22:13:22,098 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 22:14:21,101 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\views.py changed, reloading.
+2024-06-16 22:14:21,850 [INFO] Watching for file changes with StatReloader
+2024-06-16 22:15:37,911 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 22:15:39,043 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 22:15:47,148 [DEBUG] Data submitted: <QueryDict: {'csrfmiddlewaretoken': ['c2eflHKNaVBrgB99gdKCnvu8xpwqW6bT3Qo3kmxKS2KFVYZXtIr71GhXBr017PfY'], 'description': ['TAK TAK'], 'date': ['16.06.2024'], 'initial-date': ['2024-06-16 22:15:39'], 'Rezerwuj': ['']}>
+2024-06-16 22:15:47,163 [INFO] Wizyta utworzona na 2024-06-16 00:00:00+02:00 z opisem TAK TAK
+2024-06-16 22:15:47,163 [INFO] Wys³ano e-mail potwierdzaj¹cy wizytê.
+2024-06-16 22:15:47,168 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 22:17:08,149 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\views.py changed, reloading.
+2024-06-16 22:17:08,909 [INFO] Watching for file changes with StatReloader
+2024-06-16 22:17:13,471 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 22:17:14,153 [DEBUG] Pobrano czêœæ wpisów
+2024-06-16 22:17:14,653 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 22:17:16,721 [DEBUG] Data submitted: <QueryDict: {'csrfmiddlewaretoken': ['8r3KogkTsPBg5vnnKWlk0oit9VhtG6n7ZfdynV7QaWKuKSdbXr2PEz5idXL4RPrc'], 'description': ['asdasdasdasdasd'], 'date': ['16.06.2024'], 'initial-date': ['2024-06-16 22:17:14'], 'Rezerwuj': ['']}>
+2024-06-16 22:17:16,734 [INFO] Wizyta utworzona na 2024-06-16 00:00:00+02:00 z opisem asdasdasdasdasd
+2024-06-16 22:17:16,734 [INFO] Wys³ano e-mail potwierdzaj¹cy wizytê.
+2024-06-16 22:17:16,743 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 22:17:54,774 [INFO] C:\Users\mixer\PycharmProjects\budowlanka\mainapp\views.py changed, reloading.
+2024-06-16 22:17:55,526 [INFO] Watching for file changes with StatReloader
+2024-06-16 22:18:07,229 [DEBUG] Pobrano czêœæ wpisów
+2024-06-16 22:18:07,961 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 22:18:10,322 [DEBUG] Data submitted: <QueryDict: {'csrfmiddlewaretoken': ['myDXtPrpNTfxTgwzWLmHxD83JdIP1HbYdmNLsuemv0oLyDmn9g3cbOVSNfcqcqf3'], 'description': ['asdfasdfasdfsdafsdfa'], 'date': ['16.06.2024'], 'initial-date': ['2024-06-16 22:18:07'], 'Rezerwuj': ['']}>
+2024-06-16 22:18:10,335 [INFO] Wizyta utworzona na 2024-06-16 00:00:00+02:00 z opisem asdfasdfasdfsdafsdfa
+2024-06-16 22:18:10,335 [INFO] Wys³ano e-mail potwierdzaj¹cy wizytê.
+2024-06-16 22:18:10,343 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 22:18:28,585 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 22:18:42,663 [ERROR] B³¹d w widoku wiadomoœci: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-a6f56f9806csm440263666b.195 - gsmtp')
+2024-06-16 22:18:53,985 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 22:19:52,980 [DEBUG] Pobrano czêœæ wpisów
+2024-06-16 22:19:53,597 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 22:20:00,923 [ERROR] B³¹d w widoku wiadomoœci: (535, b'5.7.8 Username and Password not accepted. For more information, go to\n5.7.8  https://support.google.com/mail/?p=BadCredentials a640c23a62f3a-a6f56db5c32sm438335266b.70 - gsmtp')
+2024-06-16 22:20:03,153 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 22:20:12,723 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 22:20:27,084 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 22:21:26,087 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 22:21:34,869 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 22:21:50,194 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 22:22:07,752 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 22:28:32,387 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 22:28:50,561 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 22:33:10,463 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 22:33:11,802 [DEBUG] Pobrano czêœæ wpisów
+2024-06-16 22:33:12,998 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 22:33:19,177 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 22:33:20,427 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 22:33:21,525 [DEBUG] Pobrano czêœæ wpisów
+2024-06-16 22:33:22,359 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 22:35:09,853 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 22:35:10,968 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 22:35:11,705 [DEBUG] Pobrano czêœæ wpisów
+2024-06-16 22:35:12,240 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 22:35:12,950 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 22:35:14,382 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 22:36:43,338 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 22:36:43,993 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 22:36:44,464 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 22:36:45,081 [DEBUG] Pobrano czêœæ wpisów
+2024-06-16 22:36:45,682 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 22:36:47,290 [DEBUG] Pobrano czêœæ wpisów
+2024-06-16 22:36:47,674 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 22:39:28,223 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 22:39:29,252 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 22:39:30,921 [DEBUG] Pobrano czêœæ wpisów
+2024-06-16 22:39:31,645 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 22:39:32,239 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 22:42:25,139 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 22:42:26,905 [DEBUG] Pobrano czêœæ wpisów
+2024-06-16 22:42:27,767 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 22:44:38,403 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 22:44:40,559 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 22:44:41,268 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 22:44:42,047 [DEBUG] Pobrano czêœæ wpisów
+2024-06-16 22:46:02,949 [INFO] Watching for file changes with StatReloader
+2024-06-16 22:46:10,225 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 22:46:11,859 [DEBUG] Pobrano czêœæ wpisów
+2024-06-16 22:46:14,031 [DEBUG] Pobrano czêœæ wpisów
+2024-06-16 22:46:14,727 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 22:46:17,130 [DEBUG] Pobrano czêœæ wpisów
+2024-06-16 22:46:46,413 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 22:46:53,693 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 22:48:40,678 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 22:48:43,235 [DEBUG] Pobrano czêœæ wpisów
+2024-06-16 22:48:44,399 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 22:48:45,251 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 22:48:46,505 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 22:48:47,354 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 22:48:49,237 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 22:48:49,899 [DEBUG] Pobrano czêœæ wpisów
+2024-06-16 22:49:28,447 [DEBUG] Widok szczegó³owy dla realizacji 1
+2024-06-16 22:53:39,911 [INFO] Watching for file changes with StatReloader
+2024-06-16 22:53:44,575 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 22:53:46,441 [DEBUG] Renderowanie strony g³ównej
+2024-06-16 22:53:47,507 [DEBUG] Pobrano czêœæ wpisów
+2024-06-16 22:53:49,374 [DEBUG] Renderowanie formularza wizyty
+2024-06-16 22:53:50,980 [DEBUG] Renderowanie formularza kontaktowego
+2024-06-16 22:53:54,178 [DEBUG] Renderowanie strony g³ównej

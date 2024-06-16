@@ -1,7 +1,10 @@
 {% extends 'mainapp/base.html' %}
 
 {% block content %}
-    <article>
+
+<div class="col-12">
+        <article class="row text-center justify-content-center">
+        <div class="col-2">
         {% if form.errors %}
         <p>Twoja nazwa użytkownika lub hasło są niepoprawne. Spróbuj jeszcze raz.</p>
         {% endif %}
@@ -11,7 +14,8 @@
             {{ form.as_div }}
             <button name="zaloguj" class="btn btn-primary">Zaloguj się</button>
         </form>
-    </article>
-    
+        </div>
+    </article>                
+</div>
 
 {% endblock content %}

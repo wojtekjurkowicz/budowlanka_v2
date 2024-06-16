@@ -2,12 +2,12 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib import messages
-from .forms import UserCreationFormWithEmail
+from .forms import UserCreationFormWithEmail, UserAuth
 
 
 def login_view(request):
     if request.method == 'POST':
-        form = AuthenticationForm(request, data=request.POST)
+        form = UserAuth(request, data=request.POST)
         if form.is_valid():
             username = form.cleaned_data.get('username')
             password = form.cleaned_data.get('password')
@@ -21,7 +21,7 @@ def login_view(request):
         else:
             messages.error(request, 'Nieprawidłowe dane logowania.')
     else:
-        form = AuthenticationForm()
+        form = UserAuth()
     return render(request, 'registration/login.html', {'form': form})
 
 
@@ -39,7 +39,8 @@ def register_view(request):
             login(request, new_user)
             messages.success(request, 'Rejestracja zakończona sukcesem.')
             return redirect('mainapp:index')
-
+        else:
+            messages.error(request, 'Hasła nie są takie same')
     # Display a blank or invalid form
     context = {'form': form}
     return render(request, 'registration/register.html', context)

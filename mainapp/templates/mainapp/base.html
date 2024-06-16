@@ -55,6 +55,10 @@
             height: 600px;
             max-height: 100%;
         }
+        .padding
+        {
+            padding: 10px;
+        }
     </style>
 </head>
 <body>
@@ -96,12 +100,7 @@
         </div>
         <div class = "container-fluid container-md-8">
             <div class="row" >
-                <div class="col-xxl-4 order-xxl-last col-md-12 order-md-first" style="padding: 5px;">
-                    {% block content2 %}{% endblock content2 %}
-                </div>
-                <div class="col-xxl-8 order-xxl-first col-md-12 order-md-last">
-                    {% block content %}{% endblock content %}
-                </div>
+                {% block content %}{% endblock content %}
             </div>
          <div class="row" style="position: relative;">
              <article>

@@ -1,20 +1,7 @@
 {% extends 'mainapp/base.html' %}
 
 {% block content %}
-    <article>
-        <div style="max-width: 350px; margin:auto">
-            <h1>Napisz do nas wiadomość</h1>
-            <form action="{% url 'budowlanka_project:contact' %}" method="post">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button type="submit" name="submit" class="btn btn-primary">Wyślij</button>
-            </form>
-        </div>
-
-    </article>
-
-{% endblock content %}
-{% block content2 %}
+<div class="col-xxl-4 order-xxl-last col-md-12 order-md-first" style="padding: 5px;">
     <article>
         <h2>Kontakt:</h2>
         <ul style="list-style-type:none; font-size: large">
@@ -29,5 +16,26 @@
             <gmp-map center="54.110198974609375,22.935564041137695" zoom="14" map-id="DEMO_MAP_ID" class="col-12">
                 <gmp-advanced-marker position="54.110198974609375,22.935564041137695" title="My location"></gmp-advanced-marker>
             </gmp-map>
+</div>
+<div class="col-xxl-8 order-xxl-first col-md-12 order-md-last">
+        <article>
+        <div style="max-width: 350px; margin:auto">
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+            <h1>Napisz do nas wiadomość</h1>
+            <form action="{% url 'budowlanka_project:contact' %}" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" name="submit" class="btn btn-primary">Wyślij</button>
+            </form>
+        </div>
 
-{% endblock content2 %}
+    </article>
+</div>
+{% endblock content %}

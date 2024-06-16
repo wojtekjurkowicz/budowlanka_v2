@@ -78,6 +78,7 @@ def detail(request, entry_id):
                 comment.author = request.user
                 comment.realization = entry
                 comment.save()
+                messages.success(request, "Komentarz został dodany.")
                 logger.info(f"Nowy komentarz dodany przez {request.user} do realizacji {entry_id}")
                 return redirect('mainapp:detail', entry_id=entry.id)
         else:
@@ -156,6 +157,7 @@ def appointment(request):
                     fail_silently=False,
                 )
                 logger.info(f"Wizyta utworzona na {appointment.date} z opisem {appointment.description}")
+                messages.success(request, f"Wizyta utworzona na {appointment.date.day}-{appointment.date.month}-{appointment.date.year} z opisem {appointment.description}")
                 logger.info("Wysłano e-mail potwierdzający wizytę.")
                 # Always redirect back to the appointment page after a successful submission
                 return redirect('mainapp:appointment')

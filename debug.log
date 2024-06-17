@@ -5313,3 +5313,61 @@ django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '
 2024-06-17 00:16:28,692 [INFO] Wizyta utworzona na 2024-06-17 00:00:00+02:00 z opisem essa
 2024-06-17 00:16:28,692 [INFO] Wys³ano e-mail potwierdzaj¹cy wizytê.
 2024-06-17 00:16:28,696 [DEBUG] Renderowanie formularza wizyty
+2024-06-17 19:53:09,955 [INFO] Watching for file changes with StatReloader
+2024-06-17 19:53:12,759 [DEBUG] Renderowanie strony g³ównej
+2024-06-17 19:53:16,511 [DEBUG] Pobrano czêœæ wpisów
+2024-06-17 19:53:34,103 [DEBUG] Renderowanie strony g³ównej
+2024-06-17 19:53:37,123 [DEBUG] Pobrano czêœæ wpisów
+2024-06-17 19:53:38,495 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 19:53:55,675 [INFO] Nowy komentarz dodany przez Mietek do realizacji 4
+2024-06-17 19:53:55,687 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:01:09,989 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:01:43,792 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:02:38,654 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:02:49,825 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:06:08,894 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:06:54,930 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:06:55,545 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:06:55,851 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:06:56,066 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:06:56,300 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:07:51,973 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:07:54,922 [DEBUG] Pobrano czêœæ wpisów
+2024-06-17 20:07:56,504 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:08:35,766 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:08:36,670 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:08:36,997 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:08:37,189 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:08:37,357 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:08:37,546 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:08:37,715 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:08:37,908 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:08:38,069 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:08:38,248 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:08:38,386 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:08:38,555 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:08:38,717 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:08:38,938 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:09:01,152 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:09:02,340 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:09:02,771 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:09:02,947 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:09:03,122 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:09:03,288 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:09:48,613 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:09:49,806 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:10:35,407 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:10:44,250 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:10:53,988 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:11:06,914 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:11:07,850 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:11:08,796 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:12:28,681 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:13:32,666 [DEBUG] Pobrano czêœæ wpisów
+2024-06-17 20:13:46,864 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:14:25,980 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:14:53,239 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:15:06,549 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:15:15,865 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:16:04,581 [DEBUG] Pobrano czêœæ wpisów
+2024-06-17 20:16:22,916 [DEBUG] Widok szczegó³owy dla realizacji 4

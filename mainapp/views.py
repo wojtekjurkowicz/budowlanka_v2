@@ -181,12 +181,13 @@ def appointment(request):
 
                 send_mail(
                     'Potwierdzenie wizyty',
-                    f'Twoja wizyta została umówiona na {appointment.day}-{appointment.month}-{appointment.year}. Opis: {appointment.description}',
+                    f'Twoja wizyta została umówiona na {appointment.date.day}-{appointment.date.month}-{appointment.date.year}. Opis: {appointment.description}',
                     "wojtek.jurkowicz@gmail.com",
                     [request.user.email],
                     fail_silently=False,
                 )
-                logger.info(f"Wizyta utworzona na {appointment.day}-{appointment.month}-{appointment.year} z opisem {appointment.description}")
+                logger.info(f"Wizyta utworzona na {appointment.date.day}-{appointment.date.month}-{appointment.date.year} z opisem {appointment.description}")
+                messages.success(request, f"Wizyta utworzona na {appointment.date.day}-{appointment.date.month}-{appointment.date.year} z opisem {appointment.description}")
                 logger.info("Wysłano e-mail potwierdzający wizytę.")
                 # Always redirect back to the appointment page after a successful submission
                 return redirect('mainapp:appointment')

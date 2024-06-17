@@ -13,7 +13,7 @@ class Appointment(models.Model):
         description (str): The description of the appointment.
         date (datetime): The date and time of the appointment.
     """
-    description = models.CharField(max_length=500, verbose_name="Opis projektu")  # Description of the appointment
+    description = models.TextField(max_length=500, verbose_name="Opis projektu")  # Description of the appointment
     date = models.DateTimeField(default=timezone.now, verbose_name="Data")  # Date and time of the appointment
 
     def __str__(self):
@@ -39,7 +39,7 @@ class Realization(models.Model):
         date (datetime): The date and time when the realization was added.
     """
     title = models.CharField(max_length=100, verbose_name="Tytuł")  # Title of the realization
-    content = models.CharField(max_length=500, verbose_name="Opis")  # Description of the realization
+    content = models.CharField(max_length=1000, verbose_name="Opis")  # Description of the realization
     date = models.DateTimeField(default=timezone.now,
                                 verbose_name="Data dodania")  # Date and time when the realization was added
     image = models.ImageField(upload_to='realizations_images/', null=True, blank=True, verbose_name="Zdjęcie główne") # Image of the realization

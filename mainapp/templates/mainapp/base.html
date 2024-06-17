@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <title>Jasion Dachy</title>
         {% load django_bootstrap5 %}
         {% bootstrap_css %}
@@ -29,8 +30,7 @@
         }
         .text-blue,p
         {
-            color: #127586;
-            #background-color: #313445;
+            color: white;
         }
         body
         {
@@ -61,10 +61,14 @@
         }
         .blog_img
         {
-            width: auto;
-            height: 300px;
+            max-width: 450px;
+            height: auto;
             border-radius: 10px;
-            margin-right: 20px;
+        }
+         .carousel-item img {
+            #height: 300px;
+            #width: auto;
+            margin: 0 auto;
         }
     </style>
 </head>
@@ -89,13 +93,13 @@
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     {% if user.is_authenticated %}
-                                    <p class="dropdown-item text-blue">Witaj, {{ user.username }}.</p>
-                                    <a class="dropdown-item text-blue" href="{% url 'accounts:logout' %}">Wyloguj</a>
+                                    <p class="dropdown-item">Witaj, {{ user.username }}.</p>
+                                    <a class="dropdown-item" href="{% url 'accounts:logout' %}">Wyloguj</a>
 
                                     {% else %}
 
-                                    <a class="dropdown-item text-blue" href="{% url 'accounts:login' %}">Zaloguj się</a>
-                                    <a class="dropdown-item text-blue" href="{% url 'accounts:register' %}">Zarejestruj się</a>
+                                    <a class="dropdown-item" href="{% url 'accounts:login' %}">Zaloguj się</a>
+                                    <a class="dropdown-item" href="{% url 'accounts:register' %}">Zarejestruj się</a>
 
                                     {% endif %}
                                 </div></li>
@@ -111,47 +115,8 @@
             </div>
          <div class="row" style="position: relative;">
              <article>
-                 <h1 class="col text-center">FOOTER</h1>
-             <p>
-                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc faucibus odio id metus auctor sodales.
-                 Nunc cursus lectus sollicitudin urna lacinia, lobortis ornare lectus ultricies. Quisque et lacinia nisi.
-                 Aliquam maximus tellus neque, pulvinar tincidunt nunc convallis ac. Suspendisse fermentum volutpat cursus.
-                 Maecenas mattis pellentesque odio vitae scelerisque. In ex velit, lobortis nec dolor in, blandit convallis mi.
-                 In luctus dui ut ante varius posuere. Aenean et diam ut felis vestibulum elementum.
-                 Donec urna justo, pellentesque ac massa sit amet, malesuada varius eros.
-                 Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
-                 Proin maximus massa volutpat ipsum rutrum laoreet. Suspendisse faucibus non risus et venenatis.
-
-                 Morbi ut ex et sapien convallis faucibus at at nisi. Aliquam erat volutpat. Suspendisse sit amet mollis nisl.
-                 Integer nec hendrerit erat, ut ullamcorper lectus.
-                 Proin venenatis, nibh quis tristique congue, mauris nisi hendrerit nunc, at convallis erat mi at libero.
-                 Donec convallis dignissim purus, eget laoreet magna cursus at.
-                 Cras mattis, nisl ut posuere dapibus, augue nibh blandit sem, in bibendum arcu magna id nulla.
-
-                 Integer hendrerit massa non accumsan molestie. Curabitur eu finibus eros, eget dignissim arcu.
-                 Nulla a sem et nibh consequat imperdiet. Praesent ullamcorper porttitor hendrerit.
-                 Etiam ut sapien laoreet, lobortis nisi at, hendrerit velit. Praesent sollicitudin vulputate mi, sed rhoncus massa sodales a.
-                 Nulla posuere nisi magna, id malesuada odio bibendum eget. Vestibulum non interdum nisl, eu semper nulla.
-                 Pellentesque sem ante, ultrices non ultricies nec, tempor venenatis sapien.
-
-                 Suspendisse massa arcu, eleifend accumsan metus euismod, condimentum dictum ipsum.
-                 Nunc posuere vulputate lectus eu pharetra. Proin quis neque ut sapien sodales congue.
-                 Nulla eget quam vitae lectus hendrerit fringilla egestas quis eros.
-                 Pellentesque faucibus sagittis purus, vulputate vulputate erat imperdiet convallis.
-                 Aliquam massa elit, porta ultricies accumsan id, volutpat a est. Donec placerat egestas enim non aliquet.
-                 Aliquam vitae suscipit est, quis varius nisl. Suspendisse quis tortor dictum, tincidunt diam eget, ornare mauris.
-                 Phasellus eget ipsum eget lorem interdum lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
-                 Duis elementum quam quis lectus tristique, sit amet pharetra ligula semper.
-                 Cras hendrerit, est eget ullamcorper blandit, diam ex feugiat lectus, nec varius quam neque at quam.
-                 Donec lobortis lectus lectus, blandit pulvinar quam varius id.
-                 Donec tortor libero, venenatis in massa id, iaculis dignissim orci.
-                 Curabitur rhoncus vestibulum nisl, id sollicitudin metus bibendum sit amet.
-
-                 Mauris dapibus convallis massa eget venenatis.
-                 Pellentesque enim mauris, blandit ac ex finibus, porttitor semper velit. Sed vitae velit tempor, tincidunt diam quis, tristique nisl.
-                 Etiam ornare vehicula posuere. Phasellus varius sit amet justo semper scelerisque.
-                 Quisque iaculis tellus nec eros semper, eget feugiat eros scelerisque. Sed vitae maximus turpis, eget hendrerit lectus.</p>
+                 <h1 class="col text-center">Prace wykonali</h1>
+                 <p class="col text-center">Nikodem Jasionowski<br>Jakub Jaworski<br>Wojciech Jurkowicz<br>Adrianna Kolenda</p>
 
              </article>
             </div>

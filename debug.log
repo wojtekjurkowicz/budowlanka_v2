@@ -5371,3 +5371,247 @@ django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '
 2024-06-17 20:15:15,865 [DEBUG] Widok szczegó³owy dla realizacji 4
 2024-06-17 20:16:04,581 [DEBUG] Pobrano czêœæ wpisów
 2024-06-17 20:16:22,916 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 20:52:15,878 [INFO] Watching for file changes with StatReloader
+2024-06-17 20:52:16,977 [DEBUG] Renderowanie strony g³ównej
+2024-06-17 20:52:21,034 [WARNING] Not Found: /favicon.ico
+2024-06-17 20:58:17,090 [INFO] Watching for file changes with StatReloader
+2024-06-17 20:58:48,111 [INFO] C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\mainapp\admin.py changed, reloading.
+2024-06-17 20:58:48,788 [INFO] Watching for file changes with StatReloader
+2024-06-17 20:59:15,557 [INFO] C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\mainapp\admin.py changed, reloading.
+2024-06-17 20:59:16,289 [INFO] Watching for file changes with StatReloader
+2024-06-17 21:03:27,581 [INFO] C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\mainapp\models.py changed, reloading.
+2024-06-17 21:03:28,251 [INFO] Watching for file changes with StatReloader
+2024-06-17 21:04:33,600 [ERROR] Internal Server Error: /admin/mainapp/realization/4/change/
+Traceback (most recent call last):
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\contrib\admin\options.py", line 809, in get_form
+    return modelform_factory(self.model, **defaults)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\forms\models.py", line 642, in modelform_factory
+    return type(form)(class_name, (form,), form_class_attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\forms\models.py", line 321, in __new__
+    raise FieldError(message)
+django.core.exceptions.FieldError: Unknown field(s) (image) specified for Realization
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\contrib\admin\options.py", line 1889, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\contrib\admin\options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\contrib\admin\options.py", line 1782, in _changeform_view
+    ModelForm = self.get_form(
+                ^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\contrib\admin\options.py", line 811, in get_form
+    raise FieldError(
+django.core.exceptions.FieldError: Unknown field(s) (image) specified for Realization. Check fields/fieldsets/exclude attributes of class RealizationAdmin.
+2024-06-17 21:04:54,473 [INFO] C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\mainapp\models.py changed, reloading.
+2024-06-17 21:04:55,300 [INFO] Watching for file changes with StatReloader
+2024-06-17 21:05:59,483 [INFO] C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\mainapp\models.py changed, reloading.
+2024-06-17 21:06:00,150 [INFO] Watching for file changes with StatReloader
+2024-06-17 21:06:10,004 [INFO] C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\mainapp\models.py changed, reloading.
+2024-06-17 21:06:10,682 [INFO] Watching for file changes with StatReloader
+2024-06-17 21:06:17,442 [INFO] C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\mainapp\admin.py changed, reloading.
+2024-06-17 21:06:18,146 [INFO] Watching for file changes with StatReloader
+2024-06-17 21:06:22,832 [INFO] C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\mainapp\models.py changed, reloading.
+2024-06-17 21:06:23,589 [INFO] Watching for file changes with StatReloader
+2024-06-17 21:07:42,215 [INFO] C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\mainapp\views.py changed, reloading.
+2024-06-17 21:07:42,911 [INFO] Watching for file changes with StatReloader
+2024-06-17 21:08:10,487 [INFO] C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\mainapp\views.py changed, reloading.
+2024-06-17 21:08:11,265 [INFO] Watching for file changes with StatReloader
+2024-06-17 21:08:41,000 [INFO] C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\mainapp\views.py changed, reloading.
+2024-06-17 21:08:41,748 [INFO] Watching for file changes with StatReloader
+2024-06-17 21:10:45,500 [INFO] Watching for file changes with StatReloader
+2024-06-17 21:11:10,308 [ERROR] Internal Server Error: /admin/mainapp/realization/4/change/
+Traceback (most recent call last):
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sqlite3.OperationalError: no such table: mainapp_realizationimage
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\contrib\admin\options.py", line 1889, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\contrib\admin\options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\contrib\admin\options.py", line 1844, in _changeform_view
+    media += inline_formset.media
+             ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\contrib\admin\helpers.py", line 457, in media
+    media = self.opts.media + self.formset.media
+                              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\forms\formsets.py", line 521, in media
+    if self.forms:
+       ^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\forms\formsets.py", line 207, in forms
+    for i in range(self.total_form_count())
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\forms\formsets.py", line 182, in total_form_count
+    initial_forms = self.initial_form_count()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\forms\models.py", line 1108, in initial_form_count
+    return super().initial_form_count()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\forms\models.py", line 685, in initial_form_count
+    return len(self.get_queryset())
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\db\models\query.py", line 380, in __len__
+    self._fetch_all()
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\db\models\query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\db\models\query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\wojte\Pulpit\szkola\semestr_4\szkieletory\budowlanka\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 328, in execute
+    return super().execute(query, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.OperationalError: no such table: mainapp_realizationimage
+2024-06-17 21:11:30,246 [INFO] Watching for file changes with StatReloader
+2024-06-17 21:12:00,765 [DEBUG] STREAM b'IHDR' 16 13
+2024-06-17 21:12:00,765 [DEBUG] STREAM b'sRGB' 41 1
+2024-06-17 21:12:00,765 [DEBUG] STREAM b'gAMA' 54 4
+2024-06-17 21:12:00,765 [DEBUG] STREAM b'pHYs' 70 9
+2024-06-17 21:12:00,766 [DEBUG] STREAM b'IDAT' 91 65445
+2024-06-17 21:12:00,766 [DEBUG] Importing BlpImagePlugin
+2024-06-17 21:12:00,768 [DEBUG] Importing BmpImagePlugin
+2024-06-17 21:12:00,768 [DEBUG] Importing BufrStubImagePlugin
+2024-06-17 21:12:00,769 [DEBUG] Importing CurImagePlugin
+2024-06-17 21:12:00,770 [DEBUG] Importing DcxImagePlugin
+2024-06-17 21:12:00,772 [DEBUG] Importing DdsImagePlugin
+2024-06-17 21:12:00,777 [DEBUG] Importing EpsImagePlugin
+2024-06-17 21:12:00,780 [DEBUG] Importing FitsImagePlugin
+2024-06-17 21:12:00,781 [DEBUG] Importing FliImagePlugin
+2024-06-17 21:12:00,783 [DEBUG] Importing FpxImagePlugin
+2024-06-17 21:12:00,785 [DEBUG] Image: failed to import FpxImagePlugin: No module named 'olefile'
+2024-06-17 21:12:00,785 [DEBUG] Importing FtexImagePlugin
+2024-06-17 21:12:00,787 [DEBUG] Importing GbrImagePlugin
+2024-06-17 21:12:00,788 [DEBUG] Importing GifImagePlugin
+2024-06-17 21:12:00,788 [DEBUG] Importing GribStubImagePlugin
+2024-06-17 21:12:00,790 [DEBUG] Importing Hdf5StubImagePlugin
+2024-06-17 21:12:00,792 [DEBUG] Importing IcnsImagePlugin
+2024-06-17 21:12:00,796 [DEBUG] Importing IcoImagePlugin
+2024-06-17 21:12:00,799 [DEBUG] Importing ImImagePlugin
+2024-06-17 21:12:00,800 [DEBUG] Importing ImtImagePlugin
+2024-06-17 21:12:00,802 [DEBUG] Importing IptcImagePlugin
+2024-06-17 21:12:00,803 [DEBUG] Importing JpegImagePlugin
+2024-06-17 21:12:00,804 [DEBUG] Importing Jpeg2KImagePlugin
+2024-06-17 21:12:00,804 [DEBUG] Importing McIdasImagePlugin
+2024-06-17 21:12:00,806 [DEBUG] Importing MicImagePlugin
+2024-06-17 21:12:00,808 [DEBUG] Image: failed to import MicImagePlugin: No module named 'olefile'
+2024-06-17 21:12:00,808 [DEBUG] Importing MpegImagePlugin
+2024-06-17 21:12:00,809 [DEBUG] Importing MpoImagePlugin
+2024-06-17 21:12:00,814 [DEBUG] Importing MspImagePlugin
+2024-06-17 21:12:00,815 [DEBUG] Importing PalmImagePlugin
+2024-06-17 21:12:00,817 [DEBUG] Importing PcdImagePlugin
+2024-06-17 21:12:00,819 [DEBUG] Importing PcxImagePlugin
+2024-06-17 21:12:00,819 [DEBUG] Importing PdfImagePlugin
+2024-06-17 21:12:00,827 [DEBUG] Importing PixarImagePlugin
+2024-06-17 21:12:00,827 [DEBUG] Importing PngImagePlugin
+2024-06-17 21:12:00,828 [DEBUG] Importing PpmImagePlugin
+2024-06-17 21:12:00,828 [DEBUG] Importing PsdImagePlugin
+2024-06-17 21:12:00,829 [DEBUG] Importing QoiImagePlugin
+2024-06-17 21:12:00,830 [DEBUG] Importing SgiImagePlugin
+2024-06-17 21:12:00,833 [DEBUG] Importing SpiderImagePlugin
+2024-06-17 21:12:00,835 [DEBUG] Importing SunImagePlugin
+2024-06-17 21:12:00,837 [DEBUG] Importing TgaImagePlugin
+2024-06-17 21:12:00,838 [DEBUG] Importing TiffImagePlugin
+2024-06-17 21:12:00,839 [DEBUG] Importing WebPImagePlugin
+2024-06-17 21:12:00,856 [DEBUG] Importing WmfImagePlugin
+2024-06-17 21:12:00,858 [DEBUG] Importing XbmImagePlugin
+2024-06-17 21:12:00,859 [DEBUG] Importing XpmImagePlugin
+2024-06-17 21:12:00,861 [DEBUG] Importing XVThumbImagePlugin
+2024-06-17 21:12:00,863 [DEBUG] STREAM b'IHDR' 16 13
+2024-06-17 21:12:00,864 [DEBUG] STREAM b'sRGB' 41 1
+2024-06-17 21:12:00,864 [DEBUG] STREAM b'gAMA' 54 4
+2024-06-17 21:12:00,864 [DEBUG] STREAM b'pHYs' 70 9
+2024-06-17 21:12:00,864 [DEBUG] STREAM b'IDAT' 91 65445
+2024-06-17 21:12:00,865 [DEBUG] STREAM b'IHDR' 16 13
+2024-06-17 21:12:00,865 [DEBUG] STREAM b'sRGB' 41 1
+2024-06-17 21:12:00,866 [DEBUG] STREAM b'gAMA' 54 4
+2024-06-17 21:12:00,866 [DEBUG] STREAM b'pHYs' 70 9
+2024-06-17 21:12:00,866 [DEBUG] STREAM b'IDAT' 91 65445
+2024-06-17 21:12:03,609 [DEBUG] Renderowanie strony g³ównej
+2024-06-17 21:12:05,926 [DEBUG] Pobrano czêœæ wpisów
+2024-06-17 21:12:07,272 [DEBUG] Widok szczegó³owy dla realizacji 4
+2024-06-17 21:12:29,723 [DEBUG] Pobrano czêœæ wpisów
+2024-06-17 21:12:33,038 [DEBUG] Widok szczegó³owy dla realizacji 4

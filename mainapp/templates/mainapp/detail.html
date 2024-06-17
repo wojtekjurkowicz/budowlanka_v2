@@ -6,9 +6,15 @@
     <h1>{{ entry.title }}</h1>
     <div class = "row">
         <div class = "col-8 order-first">{{ entry.content|linebreaks }}</div>
-        {% if entry.image %}
-            <div class="col-4 order-last d-flex flex-row-reverse"><img class = "blog_img" src="{{ entry.image.url }}" alt="{{ entry.title }}"></div>
-        {% endif %}
+        <div class="row">
+        {% for img in images %}
+            <div class="col-4">
+                <img class="gallery_img" src="{{ img.image.url }}" alt="Image for {{ entry.title }}">
+            </div>
+        {% empty %}
+            <p>Brak dodatkowych zdjęć</p>
+        {% endfor %}
+    </div>
     </div>
 
     <p>Dodano: {{ entry.date }}</p>

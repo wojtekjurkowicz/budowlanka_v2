@@ -12,7 +12,7 @@ from django.utils.safestring import mark_safe
 from django.views.decorators.http import require_http_methods
 
 from .forms import AppointmentForm, CommentForm, ContactForm
-from .models import Realization, Comment, Appointment
+from .models import Realization, Comment, Appointment, RealizationImage
 
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
@@ -38,7 +38,7 @@ def index(request):
 
 def blog(request):
     """
-    Show all entries.
+    Show all entries and main image (if it exists).
 
     Args:
         request (HttpRequest): The request object.
@@ -66,7 +66,7 @@ def blog(request):
 @require_http_methods(["GET", "POST"])
 def detail(request, entry_id):
     """
-    Show entry and its comments.
+    Show entry, its comments and images.
 
     Args:
         request (HttpRequest): The request object.
@@ -77,6 +77,7 @@ def detail(request, entry_id):
     """
     try:
         entry = get_object_or_404(Realization, pk=entry_id)
+        images = RealizationImage.objects.filter(realization=entry)
         comments = Comment.objects.filter(realization=entry)  # Get comments related to the realization
 
         if request.method == 'POST':
@@ -91,7 +92,7 @@ def detail(request, entry_id):
                 return redirect('mainapp:detail', entry_id=entry.id)
         else:
             comment_form = CommentForm()
-        context = {'entry': entry, 'comments': comments, 'comment_form': comment_form}
+        context = {'entry': entry, 'comments': comments, 'comment_form': comment_form, 'images': images}
         logger.debug(f"Widok szczegółowy dla realizacji {entry_id}")
         return render(request, 'mainapp/detail.html', context)
     except Realization.DoesNotExist:

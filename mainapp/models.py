@@ -42,7 +42,7 @@ class Realization(models.Model):
     content = models.CharField(max_length=500, verbose_name="Opis")  # Description of the realization
     date = models.DateTimeField(default=timezone.now,
                                 verbose_name="Data dodania")  # Date and time when the realization was added
-    image = models.ImageField(upload_to='realizations_images/', null=True, blank=True, verbose_name="Zdjęcie") # Image of the realization
+    image = models.ImageField(upload_to='realizations_images/', null=True, blank=True, verbose_name="Zdjęcie główne") # Image of the realization
 
     def __str__(self):
         """
@@ -56,6 +56,21 @@ class Realization(models.Model):
     class Meta:
         verbose_name_plural = "Realizacje"  # Plural name for the Realization model
         ordering = ['-date']  # Default ordering by date
+
+
+class RealizationImage(models.Model):
+    """
+    Represents a project image.
+
+    Attributes:
+        realization (Realization): The associated realization.
+        image (str): Image of the realization.
+    """
+    realization = models.ForeignKey(Realization, related_name='images', on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='realizations_images/')
+
+    def __str__(self):
+        return f"{self.realization.title} Image"
 
 
 class Comment(models.Model):

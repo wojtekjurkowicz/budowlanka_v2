@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Realization, Appointment, Comment
+from .models import Realization, Appointment, Comment, RealizationImage
 from django.http import HttpResponse
 from reportlab.pdfgen import canvas
 import io
@@ -74,12 +74,18 @@ class AppointmentAdmin(admin.ModelAdmin, ExportPDFMixin):
     actions = ['export_to_pdf']
 
 
+class RealizationImageInline(admin.TabularInline):
+    model = RealizationImage
+    extra = 1
+
+
 # Admin class for Realization model with PDF export functionality
 class RealizationAdmin(admin.ModelAdmin, ExportPDFMixin):
-    list_display = ('title', 'content', 'date', 'image')
+    list_display = ('title', 'date')
     list_filter = ('date',)
     search_fields = ('title', 'content')
     ordering = ('-date',)
+    inlines = [RealizationImageInline]
 
     fieldsets = (
         (None, {

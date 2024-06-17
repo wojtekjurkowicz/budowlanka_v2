@@ -11,7 +11,9 @@
                     <div class = "row">
                         <div class = "col-8 order-first">{{ entry.content|linebreaks }}</div>
                         {% if entry.image %}
-                            <div class="col-4 order-last d-flex flex-row-reverse"><img class = "blog_img" src="{{ entry.image.url }}" alt="{{ entry.title }}"></div>
+                            <div class="col-4 order-last d-flex flex-row-reverse">
+                                <img class="blog_img" src="{{ entry.image.url }}" alt="{{ entry.title }}">
+                            </div>
                         {% endif %}
                     </div>
                     <p>Dodano: {{ entry.date }}</p>

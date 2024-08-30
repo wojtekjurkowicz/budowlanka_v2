@@ -5,42 +5,22 @@ from django.urls import reverse
 from django.core.paginator import Page
 from django.contrib.admin.sites import AdminSite
 
-from .forms import AppointmentForm, CommentForm, ContactForm
-from .models import Appointment, Realization, Comment
-from .admin import RealizationAdmin, AppointmentAdmin, CommentAdmin
+from .forms import ContactForm
+from .models import Realization
+from .admin import RealizationAdmin
 from .views import CalendarView
 
 
 # Model tests
 class TestModels(TestCase):
-    def test_appointment_str_representation(self):
-        """Test string representation of Appointment model"""
-        appointment = Appointment(description="Test Appointment", date="2024-05-21")
-        self.assertEqual(str(appointment), "Test Appointment")
-
     def test_realization_str_representation(self):
         """Test string representation of Realization model"""
         realization = Realization(title="Test", content="Test Realization", date="2024-05-21")
         self.assertEqual(str(realization), "Test")
 
-    def test_comment_str_representation(self):
-        """Test string representation of Comment model"""
-        comment = Comment(realization_id=1, author_id=1, content="Test Comment", date="2024-05-21")
-        self.assertEqual(str(comment), "Test Comment")
-
 
 # Forms tests
 class TestForms(TestCase):
-    def test_appointment_valid_form(self):
-        """Test valid AppointmentForm"""
-        form = AppointmentForm(data={'description': 'Test Description', 'date': "2024-05-21"})
-        self.assertTrue(form.is_valid())
-
-    def test_comment_valid_form(self):
-        """Test valid CommentForm"""
-        form = CommentForm(data={'content': 'Test Content', 'date': "2024-05-21"})
-        self.assertTrue(form.is_valid())
-
     def test_contact_form_valid(self):
         form = ContactForm(
             data={'first_name': 'Test', 'last_name': 'User', 'email': 'test@example.com', 'message': 'Test Message'})
@@ -107,12 +87,6 @@ class TestViews(TestCase):
 
         self.assertTemplateUsed(response, 'mainapp/index.html')
 
-    def test_comment_creation(self):
-        """Test comment creation"""
-        response = self.client.post(self.detail_url, {'content': 'New Test Comment', 'date': '2024-05-21'})
-        self.assertEqual(response.status_code, 302)  # Should redirect after successful post
-        self.assertEqual(Comment.objects.count(), 1)  # Ensure that the comment is created
-
 
 # Email sending tests
 class TestEmail(TestCase):
@@ -178,43 +152,11 @@ class MockRequest:
 # Admin PDF export tests
 class AdminExportPDFTest(TestCase):
     """Tests for PDF export through admin panel"""
-
-    def setUp(self):
-        """Setup before tests"""
-        self.site = AdminSite()
-
-        self.realization_admin = RealizationAdmin(Realization, self.site)
-        self.appointment_admin = AppointmentAdmin(Appointment, self.site)
-        self.comment_admin = CommentAdmin(Comment, self.site)
-
-        self.realization = Realization.objects.create(title="Test Title", content="Test Content")
-        self.appointment = Appointment.objects.create(description="Test Appointment", date="2024-05-21")
-        self.comment = Comment.objects.create(realization=self.realization,
-                                              author=User.objects.create(username='testuser'), content="Test Comment")
-
     def test_realization_export_to_pdf(self):
         """Test exporting realizations to PDF"""
         queryset = Realization.objects.all()
         request = MockRequest()
         response = self.realization_admin.export_to_pdf(request, queryset)
-        self.assertEqual(response.status_code, 200)
-        self.assertEqual(response['Content-Type'], 'application/pdf')
-        self.assertIn('attachment; filename="database_report.pdf"', response['Content-Disposition'])
-
-    def test_appointment_export_to_pdf(self):
-        """Test exporting appointments to PDF"""
-        queryset = Appointment.objects.all()
-        request = MockRequest()
-        response = self.appointment_admin.export_to_pdf(request, queryset)
-        self.assertEqual(response.status_code, 200)
-        self.assertEqual(response['Content-Type'], 'application/pdf')
-        self.assertIn('attachment; filename="database_report.pdf"', response['Content-Disposition'])
-
-    def test_comment_export_to_pdf(self):
-        """Test exporting comments to PDF"""
-        queryset = Comment.objects.all()
-        request = MockRequest()
-        response = self.comment_admin.export_to_pdf(request, queryset)
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response['Content-Type'], 'application/pdf')
         self.assertIn('attachment; filename="database_report.pdf"', response['Content-Disposition'])

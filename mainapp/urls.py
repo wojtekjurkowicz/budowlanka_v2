@@ -15,9 +15,6 @@ urlpatterns = [
     # Detail page for a single entry on blog
     path('blog/<int:entry_id>/', views.detail, name='detail'),
 
-    # Appointments page
-    path('umowwizyte/', views.appointment, name='appointment'),
-
     # Contact page
     path('kontakt/', views.contact, name='contact'),
 ]

@@ -5963,3 +5963,31 @@ django.db.utils.OperationalError: no such table: mainapp_realizationimage
 2024-06-17 23:19:03,659 [DEBUG] Renderowanie strony g³ównej
 2024-06-17 23:19:21,718 [DEBUG] Renderowanie strony g³ównej
 2024-06-17 23:19:33,024 [DEBUG] Renderowanie strony g³ównej
+2024-08-30 21:49:05,008 [INFO] Watching for file changes with StatReloader
+2024-08-30 21:49:07,501 [DEBUG] Renderowanie strony g³ównej
+2024-08-30 21:49:13,382 [DEBUG] Pobrano czêœæ wpisów
+2024-08-30 21:49:19,701 [DEBUG] Renderowanie strony g³ównej
+2024-08-30 21:52:58,207 [INFO] Watching for file changes with StatReloader
+2024-08-30 21:58:27,084 [INFO] Watching for file changes with StatReloader
+2024-08-30 21:58:29,840 [DEBUG] Renderowanie strony g³ównej
+2024-08-30 21:58:31,199 [DEBUG] Renderowanie strony g³ównej
+2024-08-30 21:58:32,489 [DEBUG] Pobrano czêœæ wpisów
+2024-08-30 21:58:35,232 [DEBUG] Renderowanie formularza wizyty
+2024-08-30 21:58:37,937 [DEBUG] Pobrano czêœæ wpisów
+2024-08-30 21:58:39,119 [DEBUG] Widok szczegó³owy dla realizacji 6
+2024-08-30 22:05:54,654 [INFO] Watching for file changes with StatReloader
+2024-08-30 22:05:57,555 [DEBUG] Renderowanie strony g³ównej
+2024-08-30 22:05:57,566 [ERROR] Problem przy renderowaniu strony g³ównej: Reverse for 'appointment' not found. 'appointment' is not a valid view function or pattern name.
+2024-08-30 22:09:13,922 [INFO] Watching for file changes with StatReloader
+2024-08-30 22:09:16,035 [DEBUG] Renderowanie strony g³ównej
+2024-08-30 22:09:24,075 [DEBUG] Pobrano czêœæ wpisów
+2024-08-30 22:09:27,626 [DEBUG] Widok szczegó³owy dla realizacji 6
+2024-08-30 22:09:34,649 [DEBUG] Renderowanie formularza kontaktowego
+2024-08-30 22:09:37,019 [DEBUG] Renderowanie strony g³ównej
+2024-08-30 22:10:25,510 [INFO] Watching for file changes with StatReloader
+2024-08-30 22:10:29,441 [DEBUG] Renderowanie strony g³ównej
+2024-08-30 22:12:33,430 [INFO] Watching for file changes with StatReloader
+2024-08-30 22:12:34,354 [DEBUG] Renderowanie strony g³ównej
+2024-08-30 22:12:41,051 [DEBUG] Renderowanie formularza kontaktowego
+2024-08-30 22:12:52,437 [DEBUG] Pobrano czêœæ wpisów
+2024-08-30 22:12:54,016 [DEBUG] Renderowanie strony g³ównej

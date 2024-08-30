@@ -11,8 +11,8 @@ from django.utils import timezone
 from django.utils.safestring import mark_safe
 from django.views.decorators.http import require_http_methods
 
-from .forms import AppointmentForm, CommentForm, ContactForm
-from .models import Realization, Comment, Appointment, RealizationImage
+from .forms import ContactForm
+from .models import Realization, RealizationImage
 
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
@@ -62,7 +62,6 @@ def blog(request):
         return render(request, 'mainapp/error.html', {'error': str(e)})
 
 
-@login_required
 @require_http_methods(["GET", "POST"])
 def detail(request, entry_id):
     """
@@ -78,21 +77,8 @@ def detail(request, entry_id):
     try:
         entry = get_object_or_404(Realization, pk=entry_id)
         images = RealizationImage.objects.filter(realization=entry)
-        comments = Comment.objects.filter(realization=entry)  # Get comments related to the realization
 
-        if request.method == 'POST':
-            comment_form = CommentForm(request.POST)
-            if comment_form.is_valid():
-                # Save comment with author and related realization
-                comment = comment_form.save(commit=False)
-                comment.author = request.user
-                comment.realization = entry
-                comment.save()
-                logger.info(f"Nowy komentarz dodany przez {request.user} do realizacji {entry_id}")
-                return redirect('mainapp:detail', entry_id=entry.id)
-        else:
-            comment_form = CommentForm()
-        context = {'entry': entry, 'comments': comments, 'comment_form': comment_form, 'images': images}
+        context = {'entry': entry, 'images': images}
         logger.debug(f"Widok szczegółowy dla realizacji {entry_id}")
         return render(request, 'mainapp/detail.html', context)
     except Realization.DoesNotExist:
@@ -103,118 +89,6 @@ def detail(request, entry_id):
         return render(request, 'mainapp/error.html', {'error': str(e)})
 
 
-class CalendarView(HTMLCalendar):
-    """
-    A class to represent a monthly calendar with appointments.
-    """
-
-    def formatday(self, day, weekday, appointments):
-        """
-        Return a day as a table cell.
-
-        Args:
-            day (int): The day number.
-            weekday (int): The weekday number (0-6).
-            appointments (QuerySet): QuerySet of appointments for the given day.
-
-        Returns:
-            str: HTML representation of the day's cell.
-        """
-        appointments_per_day = appointments.filter(date__day=day)
-        d = ''.join(f'<li> Zajęty termin</li>' for appointment in appointments_per_day)  # {appointment.description}
-        return f"<td><span class='date'>{day}</span><ul style='list-style-type:none;'> {d} </ul></td>" if day != 0 else '<td></td>'
-
-    def formatweek(self, theweek, appointments):
-        """
-        Return a complete week as a table row.
-
-        Args:
-            theweek (list): List of tuples containing (day, weekday) for the week.
-            appointments (QuerySet): QuerySet of appointments for the given week.
-
-        Returns:
-            str: HTML representation of the week's row.
-        """
-        return f'<tr> {" ".join(self.formatday(d, wd, appointments) for (d, wd) in theweek)} </tr>'
-
-    def formatmonth(self, theyear, themonth, withyear=True):
-        """
-        Return a formatted month as a table.
-
-        Args:
-            theyear (int): The year of the month.
-            themonth (int): The month to format.
-            withyear (bool): Whether to include the year in the month name.
-
-        Returns:
-            str: HTML representation of the month's table.
-        """
-        appointments = Appointment.objects.filter(date__year=theyear, date__month=themonth)
-        return ''.join([
-            f'<table class="table table-bordered">\n',
-            f'{self.formatmonthname(theyear, themonth, withyear=withyear)}\n',
-            f'{self.formatweekheader()}\n',
-            ''.join(self.formatweek(week, appointments) for week in self.monthdays2calendar(theyear, themonth)),
-            '\n</table>'
-        ])
-
-
-@require_http_methods(["GET", "POST"])
-def appointment(request):
-    """
-    Try to reserve an appointment.
-
-    Args:
-        request (HttpRequest): The request object.
-
-    Returns:
-        HttpResponse: The rendered appointment page.
-    """
-    try:
-        if request.method == 'POST':
-            # POST data submitted
-            form = AppointmentForm(data=request.POST)
-            logger.debug(f"Data submitted: {request.POST}")
-            if form.is_valid():
-                # Form is valid, process the data
-                appointment = form.save()
-
-                send_mail(
-                    'Potwierdzenie wizyty',
-                    f'Twoja wizyta została umówiona na {appointment.date.day}-{appointment.date.month}-{appointment.date.year}. Opis: {appointment.description}',
-                    "wojtek.jurkowicz@gmail.com",
-                    [request.user.email],
-                    fail_silently=False,
-                )
-                logger.info(f"Wizyta utworzona na {appointment.date.day}-{appointment.date.month}-{appointment.date.year} z opisem {appointment.description}")
-                messages.success(request, f"Wizyta utworzona na {appointment.date.day}-{appointment.date.month}-{appointment.date.year} z opisem {appointment.description}")
-                logger.info("Wysłano e-mail potwierdzający wizytę.")
-                # Always redirect back to the appointment page after a successful submission
-                return redirect('mainapp:appointment')
-            else:
-                logger.error(f"Formularz wizyty nie jest poprawny: {form.errors}")
-        else:
-            # No data submitted
-            form = AppointmentForm()
-            logger.debug("Renderowanie formularza wizyty")
-
-        cal = CalendarView()
-        now = timezone.now()
-        html_cal = cal.formatmonth(now.year, now.month)
-
-        context = {
-            'form': form,
-            'calendar': mark_safe(html_cal),
-            'current_year': now.year,
-            'current_month': now.month,
-        }
-        return render(request, 'mainapp/appointment.html', context)
-    except Exception as e:
-        logger.error(f"Błąd w widoku wizyty: {e}")
-        return render(request, 'mainapp/error.html', {'error': str(e)})
-
-
-@login_required
 @require_http_methods(["GET", "POST"])
 def contact(request):
     """

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Realization, Appointment, Comment, RealizationImage
+from .models import Realization, RealizationImage
 from django.http import HttpResponse
 from reportlab.pdfgen import canvas
 import io
@@ -32,20 +32,6 @@ class ExportPDFMixin:
                 p.drawString(100, 710, f"Data: {obj.date.strftime('%Y-%m-%d %H:%M:%S')}")
                 p.showPage()
 
-        elif model == Appointment:
-            for obj in queryset:
-                p.drawString(100, 750, f"Opis projektu: {obj.description}")
-                p.drawString(100, 730, f"Data: {obj.date.strftime('%Y-%m-%d %H:%M:%S')}")
-                p.showPage()
-
-        elif model == Comment:
-            for obj in queryset:
-                p.drawString(100, 750, f"Realizacja: {obj.realization}")
-                p.drawString(100, 730, f"Autor: {obj.author}")
-                p.drawString(100, 710, f"Treść: {obj.content}")
-                p.drawString(100, 690, f"Data: {obj.date.strftime('%Y-%m-%d %H:%M:%S')}")
-                p.showPage()
-
         p.save()
 
         buffer.seek(0)
@@ -54,24 +40,6 @@ class ExportPDFMixin:
         return response
 
     export_to_pdf.short_description = "Export to PDF"
-
-
-# Admin class for Appointment model with PDF export functionality
-class AppointmentAdmin(admin.ModelAdmin, ExportPDFMixin):
-    list_display = ('description', 'date')
-    list_filter = ('date',)
-    search_fields = ('description',)
-    ordering = ('date',)
-    fieldsets = (
-        (None, {
-            'fields': ('description',)
-        }),
-        ('Informacje o dacie', {
-            'fields': ('date',),
-            'description': 'Pola powiązane z datą wizyty'
-        }),
-    )
-    actions = ['export_to_pdf']
 
 
 class RealizationImageInline(admin.TabularInline):
@@ -99,25 +67,5 @@ class RealizationAdmin(admin.ModelAdmin, ExportPDFMixin):
     actions = ['export_to_pdf']
 
 
-# Admin class for Comment model with PDF export functionality
-class CommentAdmin(admin.ModelAdmin, ExportPDFMixin):
-    list_display = ('realization', 'author', 'content', 'date')
-    list_filter = ('date', 'author')
-    search_fields = ('content',)
-    ordering = ('-date',)
-    fieldsets = (
-        (None, {
-            'fields': ('realization', 'author')
-        }),
-        ('Informacje o komentarzu', {
-            'fields': ('content', 'date'),
-            'description': 'Pole powiązane z komentarzem'
-        }),
-    )
-    actions = ['export_to_pdf']
-
-
 # Register the models with their respective admin classes
-admin.site.register(Appointment, AppointmentAdmin)
-admin.site.register(Comment, CommentAdmin)
 admin.site.register(Realization, RealizationAdmin)

@@ -48,7 +48,6 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     # Our apps.
     'mainapp.apps.MainappConfig',
-    'accounts',
 
     # Third-party apps
     'django_bootstrap5',

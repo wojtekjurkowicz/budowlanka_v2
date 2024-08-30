@@ -33,29 +33,7 @@
 
     <p>Dodano: {{ entry.date }}</p>
     </article>
-    <h2>Komentarze</h2>
-    {% if messages %}
-    {% for message in messages %}
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-            {{ message }}
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-    {% endfor %}
-{% endif %}
-    <form action="{% url 'mainapp:detail' entry.id %}" method="post">
-        {% csrf_token %}
-        {{ comment_form.as_p }}
-        <button name="submit" class="btn btn-primary">Dodaj</button><br><br>
-    </form>
-        {% for comment in comments %}
-            <article>
-                <h5>{{ comment.author }}</h5>
-                <p>{{ comment.content }}</p>
-                <p style="font-size: small; text-align:right;">{{ comment.date }}</p>
-            </article>
-        {% empty %}
-            Brak komentarzy, napisz pierwszy!
-        {% endfor %}
+
 </div>
 
 {% endblock content %}

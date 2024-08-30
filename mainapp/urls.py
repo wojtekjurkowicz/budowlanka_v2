@@ -1,4 +1,4 @@
-"""Defines URL patterns for budowlanka project"""
+"""Defines URL patterns for budowlanka_v2 project"""
 
 from django.urls import path
 
